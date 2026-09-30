@@ -32,13 +32,6 @@
 </head>
 <body>
 
-  <!-- Notice Bar for R-37 Design Direction Transparency -->
-  <div class="draft-banner" role="status">
-    <div class="container draft-banner-content">
-      <span class="draft-pill">Draft Without Direction</span>
-      <span>Website profil ini menggunakan setelan visual institusional tenang (ENERGY 1, RHYTHM 1, MOTION 1).</span>
-    </div>
-  </div>
 
   <!-- Header / Navigation Bar -->
   <header class="header" id="header">
@@ -52,19 +45,29 @@
         </div>
       </a>
 
-      <!-- Desktop Navigation Menu -->
+      <!-- Navigation Menu -->
       <nav class="nav-menu" id="navMenu" aria-label="Menu Utama">
-        <a href="#beranda" class="nav-link active">Beranda</a>
-        <a href="#tentang" class="nav-link">Tentang</a>
-        <a href="#visimisi" class="nav-link">Visi &amp; Misi</a>
-        <a href="#pendidikan" class="nav-link">Pendidikan</a>
-        <a href="#keunggulan" class="nav-link">Keunggulan</a>
-        <a href="#fasilitas" class="nav-link">Fasilitas</a>
-        <a href="#kegiatan" class="nav-link">Kegiatan</a>
-        <a href="#prestasi" class="nav-link">Prestasi</a>
-        <a href="#informasi" class="nav-link">Informasi</a>
-        <a href="#pendaftaran" class="nav-link">PPDB</a>
-        <a href="#kontak" class="nav-link">Kontak</a>
+        <div class="nav-menu-links">
+          <a href="#beranda" class="nav-link active">Beranda</a>
+          <a href="#tentang" class="nav-link">Tentang</a>
+          <a href="#visimisi" class="nav-link">Visi &amp; Misi</a>
+          <a href="#pendidikan" class="nav-link">Pendidikan</a>
+          <a href="#keunggulan" class="nav-link">Keunggulan</a>
+          <a href="#fasilitas" class="nav-link">Fasilitas</a>
+          <a href="#kegiatan" class="nav-link">Kegiatan</a>
+          <a href="#prestasi" class="nav-link">Prestasi</a>
+          <a href="#informasi" class="nav-link">Informasi</a>
+          <a href="#pendaftaran" class="nav-link">PPDB</a>
+          <a href="#kontak" class="nav-link">Kontak</a>
+        </div>
+        <div class="nav-menu-mobile-footer">
+          <a href="https://forms.google.com/FORM-URL-DI-SINI" class="btn btn-primary btn-block" data-action="register">
+            Pendaftaran PPDB Online
+          </a>
+          <a href="https://wa.me/XXXXXXXXXXXX" class="btn btn-whatsapp btn-block" data-action="whatsapp">
+            Hubungi WhatsApp Sekolah
+          </a>
+        </div>
       </nav>
 
       <!-- Utilities & Mobile Toggle -->
@@ -845,7 +848,7 @@
             </button>
             <div class="faq-answer">
               <div class="faq-answer-inner">
-                Rincian biaya formulir, SPP, dan seragam dapat diminta langsung kepada panitia pendaftaran melalui nomor WhatsApp sekolah atau dengan mengisi formulir konsultasi di bawah ini.
+                Rincian biaya formulir, SPP, dan seragam dapat diminta langsung kepada panitia pendaftaran melalui kontak WhatsApp resmi sekolah atau berkunjung langsung ke sekretariat tata usaha.
               </div>
             </div>
           </div>
@@ -869,8 +872,8 @@
             <div class="contact-card-box">
               <span class="contact-label-title">Alamat Sekolah</span>
               <div class="contact-value-text">
-                Yayasan Harapan Bangsa Karawang<br>
-                <span class="admin-placeholder-tag">[Alamat Lengkap Sekolah / Yayasan, Karawang, Jawa Barat]</span>
+                Sekolah Harapan Bangsa Karawang<br>
+                Jl. R. E. Martadinata No. 8, Nagasari, Kec. Karawang Barat, Kabupaten Karawang, Jawa Barat 41312
               </div>
             </div>
 
@@ -890,67 +893,48 @@
             <div class="contact-card-box">
               <span class="contact-label-title">Surat Elektronik</span>
               <div class="contact-value-text">
-                Email: <span class="admin-placeholder-tag">[info@harapanbangsakarawang.sch.id]</span>
+                Email: info@harapanbangsakarawang.sch.id
               </div>
             </div>
 
             <div class="contact-card-box">
               <span class="contact-label-title">Waktu Layanan Tata Usaha</span>
               <div class="contact-value-text">
-                <span class="admin-placeholder-tag">[Senin s.d. Jumat: 07.30 - 15.00 WIB]</span>
+                Senin s.d. Jumat: 07.30 - 15.00 WIB
               </div>
             </div>
           </div>
 
-          <!-- Quick Consultation Form (Direct WhatsApp generator, R-26) -->
-          <div class="contact-form-container">
-            <h3 class="contact-form-title">Kirim Pertanyaan Cepat</h3>
-            <p class="contact-form-desc">
-              Pesan akan otomatis diformat dan diteruskan ke nomor WhatsApp resmi sekolah.
-            </p>
-
-            <form id="quickInquiryForm">
-              <div class="form-group">
-                <label for="inquiryName" class="form-label">Nama Orang Tua / Wali *</label>
-                <input type="text" id="inquiryName" class="form-input" placeholder="Nama lengkap Anda" required>
+          <!-- Interactive Google Maps Embed -->
+          <div class="map-card-box">
+            <div class="map-header">
+              <div>
+                <h3 class="map-title">Peta Lokasi Sekolah</h3>
+                <p class="map-subtitle">
+                  Jl. R. E. Martadinata No. 8, Karawang Barat
+                </p>
               </div>
-
-              <div class="form-group">
-                <label for="inquiryLevel" class="form-label">Jenjang Sekolah Diminati *</label>
-                <select id="inquiryLevel" class="form-select" required>
-                  <option value="" disabled selected>Pilih jenjang pendidikan</option>
-                  <option value="TK Harapan Bangsa">TK Harapan Bangsa</option>
-                  <option value="SD Harapan Bangsa">SD Harapan Bangsa</option>
-                  <option value="SMP Harapan Bangsa">SMP Harapan Bangsa</option>
-                  <option value="Pertanyaan Umum">Pertanyaan Umum Yayasan</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label for="inquiryPhone" class="form-label">Nomor Kontak WhatsApp Anda *</label>
-                <input type="tel" id="inquiryPhone" class="form-input" placeholder="Contoh: 081234567890" required>
-              </div>
-
-              <div class="form-group">
-                <label for="inquiryMessage" class="form-label">Pertanyaan yang Ingin Disampaikan *</label>
-                <textarea id="inquiryMessage" class="form-textarea" placeholder="Tuliskan pertanyaan seputar pendaftaran, biaya, atau program sekolah..." required></textarea>
-              </div>
-
-              <button type="submit" class="btn btn-whatsapp btn-block">
-                Kirim via WhatsApp
-              </button>
-            </form>
+              <a href="https://maps.app.goo.gl/98xcAMzhfpuxMYzk7" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm map-directions-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                  <circle cx="12" cy="9" r="2.5"/>
+                </svg>
+                Buka di Google Maps
+              </a>
+            </div>
+            <div class="map-frame-wrapper">
+              <iframe 
+                src="https://maps.google.com/maps?q=-6.3155209,107.304646&amp;hl=id&amp;z=16&amp;output=embed" 
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Peta Lokasi Sekolah Harapan Bangsa Karawang">
+              </iframe>
+            </div>
           </div>
-        </div>
-
-        <div class="map-container-box">
-          <h4 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.35rem;">Lokasi Yayasan Harapan Bangsa</h4>
-          <p style="font-size: 0.875rem; color: var(--color-text-muted);">
-            <span class="admin-placeholder-tag">[Alamat Lengkap Yayasan, Karawang, Jawa Barat]</span>
-          </p>
-          <p style="font-size: 0.8rem; color: var(--color-text-light); margin-top: 0.5rem;">
-            (Peta lokasi dapat disematkan melalui iframe resmi Google Maps pada file index.html)
-          </p>
         </div>
       </div>
     </section>
@@ -1012,9 +996,9 @@
         <div>
           <div class="footer-column-heading">Kontak Resmi</div>
           <ul class="footer-nav-list">
-            <li class="footer-nav-link"><span class="admin-placeholder-tag">[Alamat Yayasan / Karawang]</span></li>
+            <li class="footer-nav-link">Jl. R. E. Martadinata No. 8, Karawang Barat</li>
             <li class="footer-nav-link">WhatsApp: <span class="admin-placeholder-tag">[Nomor WhatsApp]</span></li>
-            <li class="footer-nav-link">Email: <span class="admin-placeholder-tag">[Email Yayasan]</span></li>
+            <li class="footer-nav-link">Email: info@harapanbangsakarawang.sch.id</li>
             <li class="footer-nav-link">Senin - Jumat: 07.30 - 15.00 WIB</li>
           </ul>
         </div>

@@ -14,7 +14,7 @@ const SCHOOL_CONFIG = {
   // Informasi kontak
   phone: "[Nomor telepon]",
   email: "info@harapanbangsakarawang.sch.id",
-  address: "[Alamat lengkap sekolah/yayasan, Karawang, Jawa Barat]",
+  address: "Jl. R. E. Martadinata No. 8, Nagasari, Kec. Karawang Barat, Karawang, Jawa Barat 41312",
   operationalHours: "Senin - Jumat: 07.30 - 15.00 WIB",
 
   // Media sosial
@@ -220,6 +220,15 @@ function initNavbar() {
           document.body.classList.remove("body-scroll-lock");
         }
       });
+    });
+
+    // Close mobile menu on Escape key (R-32)
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && navMenu.classList.contains("nav-menu-open")) {
+        navMenu.classList.remove("nav-menu-open");
+        navToggle.setAttribute("aria-expanded", "false");
+        document.body.classList.remove("body-scroll-lock");
+      }
     });
   }
 
