@@ -14,7 +14,7 @@ const SCHOOL_CONFIG = {
   // Informasi kontak
   phone: "[Nomor telepon]",
   email: "info@harapanbangsakarawang.sch.id",
-  address: "Jl. R. E. Martadinata No. 8, Nagasari, Kec. Karawang Barat, Karawang, Jawa Barat 41312",
+  address: "Jl. R.E.Martadinata No.8, Adiarsa Bar., Kec. Karawang Bar., Karawang, Jawa Barat 41311",
   operationalHours: "Senin - Jumat: 07.30 - 15.00 WIB",
 
   // Media sosial
@@ -146,10 +146,10 @@ document.addEventListener("DOMContentLoaded", () => {
   initNavbar();
   initFaqAccordion();
   initFacilityFilter();
-  initEducationModals();
   initActivityModals();
   initContactQuickForm();
   initBackToTop();
+  initHeroSlider();
 });
 
 // Dual theme switcher with localStorage persistence (R-21, R-34)
@@ -330,75 +330,7 @@ function initFacilityFilter() {
   });
 }
 
-// Modal dialog for education levels (R-26, R-32)
-function initEducationModals() {
-  const modal = document.getElementById("educationModal");
-  if (!modal) return;
 
-  const modalTitle = document.getElementById("eduModalTitle");
-  const modalSubtitle = document.getElementById("eduModalSubtitle");
-  const modalBadge = document.getElementById("eduModalBadge");
-  const modalImage = document.getElementById("eduModalImage");
-  const modalDesc = document.getElementById("eduModalDesc");
-  const modalHighlights = document.getElementById("eduModalHighlights");
-  const modalCurriculum = document.getElementById("eduModalCurriculum");
-  const modalHours = document.getElementById("eduModalHours");
-  const modalRegisterBtn = document.getElementById("eduModalRegisterBtn");
-  const closeBtn = modal.querySelector(".modal-close-btn");
-  const backdrop = modal.querySelector(".modal-backdrop");
-
-  const openLevel = (levelKey) => {
-    const data = EDUCATION_LEVEL_DATA[levelKey];
-    if (!data) return;
-
-    modalTitle.textContent = data.title;
-    modalSubtitle.textContent = data.subtitle;
-    modalBadge.textContent = data.badge;
-    modalImage.src = data.image;
-    modalImage.alt = data.title;
-    modalDesc.textContent = data.description;
-    modalCurriculum.textContent = data.curriculum;
-    modalHours.textContent = data.hours;
-
-    modalHighlights.innerHTML = "";
-    data.highlights.forEach(item => {
-      const li = document.createElement("li");
-      li.className = "modal-bullet-item";
-      li.innerHTML = `
-        <span class="modal-bullet-symbol">&bull;</span>
-        <span>${item}</span>
-      `;
-      modalHighlights.appendChild(li);
-    });
-
-    modalRegisterBtn.setAttribute("href", SCHOOL_CONFIG.googleFormUrl);
-    modal.classList.add("modal-open");
-    document.body.classList.add("body-scroll-lock");
-    closeBtn.focus();
-  };
-
-  const closeModal = () => {
-    modal.classList.remove("modal-open");
-    document.body.classList.remove("body-scroll-lock");
-  };
-
-  document.querySelectorAll("[data-level-info]").forEach(button => {
-    button.addEventListener("click", (e) => {
-      e.preventDefault();
-      const level = button.getAttribute("data-level-info");
-      openLevel(level);
-    });
-  });
-
-  if (closeBtn) closeBtn.addEventListener("click", closeModal);
-  if (backdrop) backdrop.addEventListener("click", closeModal);
-
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && modal.classList.contains("modal-open")) {
-      closeModal();
-    }
-  });
-}
 
 // Modal dialog for school activities (R-26, R-32)
 function initActivityModals() {
@@ -503,3 +435,19 @@ function initBackToTop() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 }
+
+// Background Hero Automatic Slideshow (cross-fade berganti otomatis setiap 2.5 detik)
+function initHeroSlider() {
+  const slides = document.querySelectorAll(".hero-bg-slide");
+  if (!slides || slides.length < 2) return;
+
+  let currentSlide = 0;
+  const slideInterval = 2500; // Pergantian slide setiap 2.5 detik
+
+  setInterval(() => {
+    slides[currentSlide].classList.remove("active");
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add("active");
+  }, slideInterval);
+}
+

@@ -7,8 +7,8 @@
   <!-- Primary Meta Tags -->
   <title>Yayasan Harapan Bangsa Karawang | TK, SD &amp; SMP</title>
   <meta name="title" content="Yayasan Harapan Bangsa Karawang | TK, SD &amp; SMP">
-  <meta name="description" content="Website resmi Yayasan Harapan Bangsa Karawang yang menaungi pendidikan jenjang TK, SD, dan SMP. Informasi profil sekolah, kurikulum, fasilitas, dan pendaftaran peserta didik baru.">
-  <meta name="keywords" content="Yayasan Harapan Bangsa Karawang, TK Harapan Bangsa, SD Harapan Bangsa, SMP Harapan Bangsa, Sekolah Karawang, PPDB Karawang">
+  <meta name="description" content="Website resmi Yayasan Harapan Bangsa Karawang yang menaungi pendidikan jenjang TK, SD, dan SMP. Informasi profil sekolah, kurikulum, fasilitas, dan pendaftaran murid baru (SPMB).">
+  <meta name="keywords" content="Yayasan Harapan Bangsa Karawang, TK Harapan Bangsa, SD Harapan Bangsa, SMP Harapan Bangsa, Sekolah Karawang, SPMB Karawang">
   <meta name="author" content="Yayasan Harapan Bangsa Karawang">
   <meta name="robots" content="index, follow">
 
@@ -17,10 +17,25 @@
   <meta property="og:url" content="./">
   <meta property="og:title" content="Yayasan Harapan Bangsa Karawang | TK, SD &amp; SMP">
   <meta property="og:description" content="Website resmi Yayasan Harapan Bangsa Karawang yang menaungi pendidikan jenjang TK, SD, dan SMP.">
-  <meta property="og:image" content="assets/images/hero-school.jpg">
+  <meta property="og:image" content="https://res.cloudinary.com/niixqrky/image/upload/v1790816269/Gedung.jpg">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <!-- Favicon (Cache Busting) -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg?v=20261001c">
+  <link rel="icon" type="image/png" href="favicon.png?v=20261001c">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?v=20261001c">
+  <script>
+    // Memaksa browser me-refresh favicon tab tanpa tertahan cache lama
+    (function() {
+      try {
+        var t = new Date().getTime();
+        var favicons = document.querySelectorAll("link[rel*='icon']");
+        favicons.forEach(function(link) {
+          var cleanHref = link.getAttribute("href").split("?")[0];
+          link.setAttribute("href", cleanHref + "?v=" + t);
+        });
+      } catch (e) {}
+    })();
+  </script>
 
   <!-- Google Fonts: Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,7 +53,7 @@
     <div class="container header-container">
       <!-- School Brand -->
       <a href="#beranda" class="brand-link" aria-label="Beranda Yayasan Harapan Bangsa Karawang">
-        <img src="assets/images/logo.svg" alt="Logo Yayasan Harapan Bangsa Karawang" class="brand-logo-img">
+        <img src="assets/images/logo-smp-harapan-bangsa.jpeg" alt="Logo SMP Harapan Bangsa" class="brand-logo-img">
         <div class="brand-title-group">
           <span class="brand-name">Harapan Bangsa</span>
           <span class="brand-sub">Yayasan Pendidikan Karawang</span>
@@ -57,12 +72,12 @@
           <a href="#kegiatan" class="nav-link">Kegiatan</a>
           <a href="#prestasi" class="nav-link">Prestasi</a>
           <a href="#informasi" class="nav-link">Informasi</a>
-          <a href="#pendaftaran" class="nav-link">PPDB</a>
+          <a href="#pendaftaran" class="nav-link">SPMB</a>
           <a href="#kontak" class="nav-link">Kontak</a>
         </div>
         <div class="nav-menu-mobile-footer">
           <a href="https://forms.google.com/FORM-URL-DI-SINI" class="btn btn-primary btn-block" data-action="register">
-            Pendaftaran PPDB Online
+            Pendaftaran SPMB Online
           </a>
           <a href="https://wa.me/XXXXXXXXXXXX" class="btn btn-whatsapp btn-block" data-action="whatsapp">
             Hubungi WhatsApp Sekolah
@@ -92,7 +107,7 @@
 
         <!-- Header Registration CTA -->
         <a href="https://forms.google.com/FORM-URL-DI-SINI" class="btn btn-primary btn-sm header-cta-btn" data-action="register">
-          Pendaftaran PPDB
+          Pendaftaran SPMB
         </a>
 
         <!-- Mobile Menu Toggle Button -->
@@ -106,49 +121,50 @@
   </header>
 
   <main>
-    <!-- Hero Section -->
+    <!-- Hero Section (Full-width Background Architecture, UBP Style) -->
     <section class="hero" id="beranda">
+      <!-- Background Image Slideshow (Auto-slides every 2-3s) -->
+      <div class="hero-bg-slider" id="heroBgSlider" aria-hidden="true">
+        <div class="hero-bg-slide active" style="background-image: url('https://res.cloudinary.com/niixqrky/image/upload/v1790816269/Gedung.jpg'), url('assets/images/gedung.jpg');"></div>
+        <div class="hero-bg-slide" style="background-image: url('https://res.cloudinary.com/niixqrky/image/upload/v1790818906/Gedung2.jpg'), url('assets/images/gedung2.jpg');"></div>
+        <div class="hero-bg-slide" style="background-image: url('https://res.cloudinary.com/niixqrky/image/upload/v1790818906/Gedung3.jpg'), url('assets/images/gedung3.jpg');"></div>
+      </div>
+      <div class="hero-backdrop-overlay"></div>
+
       <div class="container">
-        <div class="hero-grid">
-          <div class="hero-text-block">
-            <div class="hero-tagline">Pendidikan Terpadu Karawang</div>
-            <h1 class="hero-headline">
-              Membangun Generasi Berkarakter, Cerdas, dan Berdaya Saing
-            </h1>
+        <div class="hero-content-wrapper">
+          <div class="hero-tagline">Yayasan Harapan Bangsa Karawang</div>
+          <h1 class="hero-headline">
+            &ldquo;MEMBANGUN GENERASI BERKARAKTER, CERDAS &amp; BERDAYA SAING&rdquo;
+          </h1>
+          <div class="hero-subheadline-bar">
             <p class="hero-subheadline">
-              Yayasan Harapan Bangsa Karawang mengelola jenjang pendidikan berkesinambungan mulai dari TK, SD, hingga SMP dengan lingkungan belajar yang tertib, asri, dan aman bagi perkembangan anak.
+              Saatnya Menjadi Bagian Dari <strong>Yayasan Harapan Bangsa Karawang</strong>. Menyelenggarakan pendidikan terpadu jenjang TK, SD, dan SMP dengan pembinaan karakter kasih, nalar kritis, dan kemandirian siswa.
             </p>
-
-            <div class="hero-cta-group">
-              <a href="https://forms.google.com/FORM-URL-DI-SINI" class="btn btn-primary btn-lg" data-action="register">
-                Formulir Pendaftaran Siswa
-              </a>
-              <a href="#pendidikan" class="btn btn-secondary btn-lg">
-                Lihat Jenjang Pendidikan
-              </a>
-            </div>
-
-            <div class="hero-key-facts">
-              <div class="key-fact-item">
-                <span class="key-fact-title">TK, SD &amp; SMP</span>
-                <span class="key-fact-subtitle">Jenjang Pendidikan Terpadu</span>
-              </div>
-              <div class="key-fact-item">
-                <span class="key-fact-title">Kurikulum Nasional</span>
-                <span class="key-fact-subtitle">Terintegrasi Penguatan Karakter</span>
-              </div>
-              <div class="key-fact-item">
-                <span class="key-fact-title">Karawang</span>
-                <span class="key-fact-subtitle">Lokasi Strategis &amp; Nyaman</span>
-              </div>
-            </div>
           </div>
 
-          <div class="hero-media-wrapper">
-            <div class="hero-photo-frame">
-              <img src="assets/images/hero-school.jpg" alt="Aktivitas belajar peserta didik Yayasan Harapan Bangsa Karawang" class="hero-photo">
+          <div class="hero-cta-group">
+            <a href="https://forms.google.com/FORM-URL-DI-SINI" class="btn btn-hero-primary btn-lg" data-action="register">
+              Daftar Sekarang
+            </a>
+            <a href="#pendidikan" class="btn btn-hero-secondary btn-lg">
+              Lihat Jenjang Pendidikan
+            </a>
+          </div>
+
+          <div class="hero-key-facts">
+            <div class="key-fact-item">
+              <span class="key-fact-title">TK &bull; SD &bull; SMP</span>
+              <span class="key-fact-subtitle">Pendidikan Formal Terpadu</span>
             </div>
-            <p class="hero-photo-caption">Dokumentasi lingkungan dan ruang belajar peserta didik Harapan Bangsa</p>
+            <div class="key-fact-item">
+              <span class="key-fact-title">Kurikulum Nasional</span>
+              <span class="key-fact-subtitle">Terintegrasi Penguatan Karakter</span>
+            </div>
+            <div class="key-fact-item">
+              <span class="key-fact-title">Karawang Barat</span>
+              <span class="key-fact-subtitle">Gedung Representatif &amp; Nyaman</span>
+            </div>
           </div>
         </div>
       </div>
@@ -213,7 +229,7 @@
                 </tr>
                 <tr>
                   <th>Alamat Sekretariat</th>
-                  <td><span class="admin-placeholder-tag">[Alamat Lengkap Yayasan]</span></td>
+                  <td>Jl. R.E.Martadinata No.8, Adiarsa Bar., Kec. Karawang Bar., Karawang, Jawa Barat 41311</td>
                 </tr>
                 <tr>
                   <th>Wilayah</th>
@@ -318,9 +334,9 @@
                 </div>
               </div>
               <div class="edu-card-actions">
-                <button class="btn btn-secondary btn-sm" data-level-info="tk" aria-label="Lihat kurikulum dan jam belajar TK Harapan Bangsa">
+                <a href="jenjang/tk.html" class="btn btn-secondary btn-sm" aria-label="Lihat halaman lengkap profil dan program TK Harapan Bangsa">
                   Detail Program TK
-                </button>
+                </a>
                 <a href="https://forms.google.com/FORM-URL-DI-SINI" class="btn btn-primary btn-sm" data-action="register">
                   Daftar Jenjang TK
                 </a>
@@ -355,9 +371,9 @@
                 </div>
               </div>
               <div class="edu-card-actions">
-                <button class="btn btn-secondary btn-sm" data-level-info="sd" aria-label="Lihat kurikulum dan jam belajar SD Harapan Bangsa">
+                <a href="jenjang/sd.html" class="btn btn-secondary btn-sm" aria-label="Lihat halaman lengkap profil dan program SD Harapan Bangsa">
                   Detail Program SD
-                </button>
+                </a>
                 <a href="https://forms.google.com/FORM-URL-DI-SINI" class="btn btn-primary btn-sm" data-action="register">
                   Daftar Jenjang SD
                 </a>
@@ -392,9 +408,9 @@
                 </div>
               </div>
               <div class="edu-card-actions">
-                <button class="btn btn-secondary btn-sm" data-level-info="smp" aria-label="Lihat kurikulum dan jam belajar SMP Harapan Bangsa">
+                <a href="jenjang/smp.html" class="btn btn-secondary btn-sm" aria-label="Lihat halaman lengkap profil dan program SMP Harapan Bangsa">
                   Detail Program SMP
-                </button>
+                </a>
                 <a href="https://forms.google.com/FORM-URL-DI-SINI" class="btn btn-primary btn-sm" data-action="register">
                   Daftar Jenjang SMP
                 </a>
@@ -695,14 +711,14 @@
           <article class="news-card news-card-featured">
             <div class="news-meta-row">
               <span class="news-category-label">Penerimaan Siswa</span>
-              <span>Tahun Ajaran <span class="admin-placeholder-tag">[XXXX/XXXX]</span></span>
+              <span>Tahun Ajaran <span class="admin-placeholder-tag">[2027/2028]</span></span>
             </div>
-            <h3 class="news-title">Penerimaan Peserta Didik Baru (PPDB)</h3>
+            <h3 class="news-title">Sistem Penerimaan Murid Baru (SPMB)</h3>
             <p class="news-desc">
-              Pendaftaran peserta didik baru dibuka untuk jenjang TK, SD, dan SMP Harapan Bangsa. Pengisian berkas dilakukan secara online melalui Google Form resmi.
+              Pendaftaran murid baru (SPMB) dibuka untuk jenjang TK, SD, dan SMP Harapan Bangsa. Pengisian berkas dilakukan secara online melalui Google Form resmi.
             </p>
             <a href="https://forms.google.com/FORM-URL-DI-SINI" class="btn btn-primary btn-sm" data-action="register">
-              Buka Formulir PPDB
+              Buka Formulir SPMB
             </a>
           </article>
 
@@ -737,14 +753,14 @@
       </div>
     </section>
 
-    <!-- Section 10: PPDB Roadmap -->
+    <!-- Section 10: SPMB Roadmap -->
     <section class="ppdb-section" id="pendaftaran">
       <div class="container">
         <div class="ppdb-header">
           <div class="ppdb-tagline">Prosedur Penerimaan Siswa</div>
-          <h2 class="ppdb-title">Penerimaan Peserta Didik Baru (PPDB)</h2>
+          <h2 class="ppdb-title">Sistem Penerimaan Murid Baru (SPMB)</h2>
           <p class="ppdb-subtitle">
-            Alur pendaftaran peserta didik baru di Yayasan Harapan Bangsa Karawang untuk jenjang TK, SD, dan SMP.
+            Alur pendaftaran murid baru di Yayasan Harapan Bangsa Karawang untuk jenjang TK, SD, dan SMP.
           </p>
         </div>
 
@@ -761,7 +777,7 @@
             <div class="procedure-step-num">Tahap 2</div>
             <h3 class="procedure-step-title">Verifikasi Dokumen &amp; Observasi</h3>
             <p class="procedure-step-desc">
-              Panitia PPDB menghubungi orang tua untuk verifikasi dokumen (kartu keluarga, akta kelahiran) serta jadwal temu ramah.
+              Panitia SPMB menghubungi orang tua untuk verifikasi dokumen (kartu keluarga, akta kelahiran) serta jadwal temu ramah.
             </p>
           </div>
 
@@ -776,7 +792,7 @@
 
         <div class="ppdb-cta-box">
           <a href="https://forms.google.com/FORM-URL-DI-SINI" class="btn btn-accent btn-lg" data-action="register">
-            Isi Formulir Pendaftaran PPDB
+            Isi Formulir Pendaftaran SPMB
           </a>
           <p class="ppdb-note-text">
             Tautan formulir dikendalikan secara terpusat melalui konfigurasi sekolah.
@@ -806,7 +822,7 @@
             </button>
             <div class="faq-answer">
               <div class="faq-answer-inner">
-                Pendaftaran diawali dengan mengisi formulir Google Form resmi melalui tombol "Pendaftaran PPDB" pada website ini. Setelah data terkirim, panitia sekolah akan menghubungi nomor telepon orang tua untuk tahapan konfirmasi.
+                Pendaftaran diawali dengan mengisi formulir Google Form resmi melalui tombol "Pendaftaran SPMB" pada website ini. Setelah data terkirim, panitia sekolah akan menghubungi nomor telepon orang tua untuk tahapan konfirmasi.
               </div>
             </div>
           </div>
@@ -873,7 +889,7 @@
               <span class="contact-label-title">Alamat Sekolah</span>
               <div class="contact-value-text">
                 Sekolah Harapan Bangsa Karawang<br>
-                Jl. R. E. Martadinata No. 8, Nagasari, Kec. Karawang Barat, Kabupaten Karawang, Jawa Barat 41312
+                Jl. R.E.Martadinata No.8, Adiarsa Bar., Kec. Karawang Bar., Karawang, Jawa Barat 41311
               </div>
             </div>
 
@@ -911,7 +927,7 @@
               <div>
                 <h3 class="map-title">Peta Lokasi Sekolah</h3>
                 <p class="map-subtitle">
-                  Jl. R. E. Martadinata No. 8, Karawang Barat
+                  Jl. R.E.Martadinata No.8, Adiarsa Bar., Kec. Karawang Bar., Karawang, Jawa Barat 41311
                 </p>
               </div>
               <a href="https://maps.app.goo.gl/98xcAMzhfpuxMYzk7" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm map-directions-btn">
@@ -949,24 +965,80 @@
           <p class="footer-brand-desc">
             Lembaga penyelenggara pendidikan formal jenjang TK, SD, dan SMP di Kabupaten Karawang yang berorientasi pada pembinaan karakter dan nalar kritis.
           </p>
-          <div class="footer-social-row">
-            <a href="https://instagram.com/[username]" target="_blank" rel="noopener noreferrer" class="social-link-btn" data-social="instagram" aria-label="Kanal Instagram Harapan Bangsa">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-              </svg>
-            </a>
-            <a href="https://facebook.com/[username]" target="_blank" rel="noopener noreferrer" class="social-link-btn" data-social="facebook" aria-label="Halaman Facebook Harapan Bangsa">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-              </svg>
-            </a>
-            <a href="https://youtube.com/[username]" target="_blank" rel="noopener noreferrer" class="social-link-btn" data-social="youtube" aria-label="Kanal YouTube Harapan Bangsa">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33zM9.75 15.02l.01-6.54 5.75 3.27-5.76 3.27z"></path>
-              </svg>
-            </a>
+          <div class="footer-jenjang-socials">
+            <div class="footer-subheading">Media Sosial Satuan Pendidikan</div>
+
+            <!-- SMP Social Links (Active) -->
+            <div class="jenjang-social-block">
+              <div class="jenjang-social-header">
+                <span class="jenjang-social-title">SMP Harapan Bangsa</span>
+                <span class="jenjang-badge-tag badge-tag-smp">SMP</span>
+              </div>
+              <div class="jenjang-social-chips">
+                <a href="https://www.instagram.com/smpharapanbangsa?stkn=Z285eXR5M2R0OXFt" target="_blank" rel="noopener noreferrer" class="social-chip chip-instagram" aria-label="Instagram SMP Harapan Bangsa">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                  </svg>
+                  <span>@smpharapanbangsa</span>
+                </a>
+                <a href="https://youtube.com/@smpharapanbangsakarawang?si=vL2m-ycrEEQayYVH" target="_blank" rel="noopener noreferrer" class="social-chip chip-youtube" aria-label="YouTube SMP Harapan Bangsa">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33zM9.75 15.02l.01-6.54 5.75 3.27-5.76 3.27z"></path>
+                  </svg>
+                  <span>YouTube SMP</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- SD Social Links (Placeholder) -->
+            <div class="jenjang-social-block">
+              <div class="jenjang-social-header">
+                <span class="jenjang-social-title">SD Harapan Bangsa</span>
+                <span class="jenjang-badge-tag badge-tag-sd">SD</span>
+              </div>
+              <div class="jenjang-social-chips">
+                <span class="social-chip is-disabled" title="Akun resmi segera hadir">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                  </svg>
+                  <span>Instagram SD</span>
+                </span>
+                <span class="social-chip is-disabled" title="Kanal resmi segera hadir">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33zM9.75 15.02l.01-6.54 5.75 3.27-5.76 3.27z"></path>
+                  </svg>
+                  <span>YouTube SD</span>
+                </span>
+              </div>
+            </div>
+
+            <!-- TK Social Links (Placeholder) -->
+            <div class="jenjang-social-block">
+              <div class="jenjang-social-header">
+                <span class="jenjang-social-title">TK Harapan Bangsa</span>
+                <span class="jenjang-badge-tag badge-tag-tk">TK</span>
+              </div>
+              <div class="jenjang-social-chips">
+                <span class="social-chip is-disabled" title="Akun resmi segera hadir">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                  </svg>
+                  <span>Instagram TK</span>
+                </span>
+                <span class="social-chip is-disabled" title="Kanal resmi segera hadir">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33zM9.75 15.02l.01-6.54 5.75 3.27-5.76 3.27z"></path>
+                  </svg>
+                  <span>YouTube TK</span>
+                </span>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -985,21 +1057,39 @@
         <div>
           <div class="footer-column-heading">Jenjang Sekolah</div>
           <ul class="footer-nav-list">
-            <li><a href="#pendidikan" class="footer-nav-link" data-level-info="tk">TK Harapan Bangsa</a></li>
-            <li><a href="#pendidikan" class="footer-nav-link" data-level-info="sd">SD Harapan Bangsa</a></li>
-            <li><a href="#pendidikan" class="footer-nav-link" data-level-info="smp">SMP Harapan Bangsa</a></li>
-            <li><a href="#pendaftaran" class="footer-nav-link">Alur Pendaftaran PPDB</a></li>
-            <li><a href="https://forms.google.com/FORM-URL-DI-SINI" class="footer-nav-link" data-action="register">Google Form PPDB</a></li>
+            <li><a href="jenjang/tk.html" class="footer-nav-link">TK Harapan Bangsa</a></li>
+            <li><a href="jenjang/sd.html" class="footer-nav-link">SD Harapan Bangsa</a></li>
+            <li><a href="jenjang/smp.html" class="footer-nav-link">SMP Harapan Bangsa</a></li>
+            <li><a href="#pendaftaran" class="footer-nav-link">Alur Pendaftaran SPMB</a></li>
+            <li><a href="https://forms.google.com/FORM-URL-DI-SINI" class="footer-nav-link" data-action="register">Google Form SPMB</a></li>
           </ul>
         </div>
 
         <div>
           <div class="footer-column-heading">Kontak Resmi</div>
           <ul class="footer-nav-list">
-            <li class="footer-nav-link">Jl. R. E. Martadinata No. 8, Karawang Barat</li>
+            <li class="footer-nav-link">Jl. R.E.Martadinata No.8, Adiarsa Bar., Kec. Karawang Bar., Karawang, Jawa Barat 41311</li>
             <li class="footer-nav-link">WhatsApp: <span class="admin-placeholder-tag">[Nomor WhatsApp]</span></li>
-            <li class="footer-nav-link">Email: info@harapanbangsakarawang.sch.id</li>
-            <li class="footer-nav-link">Senin - Jumat: 07.30 - 15.00 WIB</li>
+            <li class="footer-nav-link">
+              <span style="font-weight: 700; color: #ffffff; display: block; margin-bottom: 0.35rem;">Email Resmi Satuan:</span>
+              <div class="footer-emails-list">
+                <div class="footer-email-row">
+                  <span class="email-unit-label">SMP:</span>
+                  <a href="mailto:smpharapanbangsa949@gmail.com" class="email-val-link">smpharapanbangsa949@gmail.com</a>
+                </div>
+                <div class="footer-email-row">
+                  <span class="email-unit-label">SD:</span>
+                  <span class="email-val-link is-muted">sdharapanbangsa@gmail.com</span>
+                  <span class="admin-tag-mini">Dummy</span>
+                </div>
+                <div class="footer-email-row">
+                  <span class="email-unit-label">TK:</span>
+                  <span class="email-val-link is-muted">tkharapanbangsa@gmail.com</span>
+                  <span class="admin-tag-mini">Dummy</span>
+                </div>
+              </div>
+            </li>
+            <li class="footer-nav-link" style="margin-top: 0.25rem;">Senin - Jumat: 07.30 - 15.00 WIB</li>
           </ul>
         </div>
       </div>
@@ -1029,56 +1119,7 @@
     </a>
   </div>
 
-  <!-- Modal 1: Detail Jenjang Pendidikan (TK, SD, SMP) -->
-  <div class="modal-overlay" id="educationModal" role="dialog" aria-modal="true" aria-labelledby="eduModalTitle">
-    <div class="modal-backdrop"></div>
-    <div class="modal-container">
-      <button class="modal-close-btn" aria-label="Tutup jendela modal">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-          <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
-        </svg>
-      </button>
 
-      <div class="modal-media-header">
-        <img id="eduModalImage" src="assets/images/hero-school.jpg" alt="Foto Jenjang Pendidikan" class="modal-media-img">
-      </div>
-
-      <div class="modal-content-body">
-        <span class="modal-label-badge" id="eduModalBadge">Jenjang Pendidikan</span>
-        <h3 class="modal-header-title" id="eduModalTitle">TK Harapan Bangsa</h3>
-        <div class="modal-header-subtitle" id="eduModalSubtitle">Pendidikan Anak Usia Dini</div>
-
-        <p class="modal-text-desc" id="eduModalDesc">
-          Deskripsi lengkap jenjang pendidikan dimuat di sini.
-        </p>
-
-        <div class="modal-meta-grid">
-          <div class="modal-meta-cell">
-            <span class="modal-meta-tag">Kurikulum Satuan</span>
-            <span class="modal-meta-val" id="eduModalCurriculum">Kurikulum Merdeka</span>
-          </div>
-          <div class="modal-meta-cell">
-            <span class="modal-meta-tag">Jam Pembelajaran</span>
-            <span class="modal-meta-val" id="eduModalHours">[07.30 - 11.30 WIB]</span>
-          </div>
-        </div>
-
-        <h4 style="font-size: 1rem; font-weight: 700; margin-bottom: 0.75rem;">Fokus dan Program Utama</h4>
-        <ul class="modal-bullets-list" id="eduModalHighlights">
-          <!-- Populated by JS -->
-        </ul>
-
-        <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
-          <a href="https://forms.google.com/FORM-URL-DI-SINI" class="btn btn-primary" id="eduModalRegisterBtn" data-action="register">
-            Daftar Jenjang Ini
-          </a>
-          <a href="https://wa.me/XXXXXXXXXXXX" class="btn btn-secondary" data-action="whatsapp">
-            Konsultasi via WhatsApp
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- Modal 2: Detail Kegiatan Sekolah -->
   <div class="modal-overlay" id="activityModal" role="dialog" aria-modal="true" aria-labelledby="actModalTitle">

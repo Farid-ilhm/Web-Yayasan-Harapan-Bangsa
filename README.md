@@ -10,16 +10,24 @@ Website company profile modern, profesional, informatif, dan responsif untuk **Y
 ```text
 Website_Sekolah/
 ├── index.html              # Halaman utama seluruh section website
-├── favicon.svg             # Favicon ikon website
+├── favicon.png             # Favicon resolusi tinggi
+├── favicon.ico             # Favicon standar browser
+├── favicon.svg             # Favicon SVG dengan embedded logo
 ├── README.md               # Dokumentasi dan panduan pengelolaan
+├── jenjang/                # Halaman detail mandiri setiap jenjang pendidikan
+│   ├── tk.html             # Halaman profil lengkap TK Harapan Bangsa
+│   ├── sd.html             # Halaman profil lengkap SD Harapan Bangsa
+│   └── smp.html            # Halaman profil lengkap SMP Harapan Bangsa
 ├── css/
 │   └── style.css           # Desain visual, tipografi, tema warna, & responsivitas
 ├── js/
 │   └── script.js           # Konfigurasi terpusat (Google Form & WA), accordion, modal
 └── assets/
     ├── images/             # Folder gambar dan aset visual
-    │   ├── logo.svg        # Logo resmi Yayasan Harapan Bangsa Karawang
-    │   ├── hero-school.jpg # Banner visual utama beranda
+    │   ├── logo-smp-harapan-bangsa.jpeg # Logo resmi SMP Harapan Bangsa
+    │   ├── gedung.jpg      # Foto arsitektur gedung sekolah 1 (slideshow hero)
+    │   ├── gedung2.jpg     # Foto arsitektur gedung sekolah 2 (slideshow hero)
+    │   ├── gedung3.jpg     # Foto arsitektur gedung sekolah 3 (slideshow hero)
     │   ├── jenjang-tk.jpg  # Foto profil jenjang TK
     │   ├── jenjang-sd.jpg  # Foto profil jenjang SD
     │   ├── jenjang-smp.jpg # Foto profil jenjang SMP
@@ -41,7 +49,7 @@ Cukup buka file `js/script.js` menggunakan text editor (Notepad, VS Code, dll.),
 ```javascript
 const SCHOOL_CONFIG = {
   // 1. LINK GOOGLE FORM RESMI
-  // Ganti URL ini saat formulir PPDB Google Form Anda sudah siap:
+  // Ganti URL ini saat formulir SPMB Google Form Anda sudah siap:
   googleFormUrl: "https://forms.google.com/FORM-URL-DI-SINI",
 
   // 2. NOMOR WHATSAPP RESMI
@@ -52,7 +60,7 @@ const SCHOOL_CONFIG = {
   // 3. KONTAK & ALAMAT
   phone: "0267-XXXXXXX",
   email: "info@harapanbangsakarawang.sch.id",
-  address: "Jl. Pendidikan No. XX, Karawang, Jawa Barat",
+  address: "Jl. R.E.Martadinata No.8, Adiarsa Bar., Kec. Karawang Bar., Karawang, Jawa Barat 41311",
   operationalHours: "Senin - Jumat: 07.30 - 15.00 WIB",
 
   // 4. MEDIA SOSIAL
@@ -65,7 +73,7 @@ const SCHOOL_CONFIG = {
 };
 ```
 
-> **Catatan Penting:** Begitu Anda mengubah `googleFormUrl` di atas, **seluruh tombol pendaftaran** di Navbar, Hero, Kartu Jenjang, Banner PPDB, dan Footer akan otomatis terhubung ke link Google Form tersebut!
+> **Catatan Penting:** Begitu Anda mengubah `googleFormUrl` di atas, **seluruh tombol pendaftaran** di Navbar, Hero, Kartu Jenjang, Banner SPMB, dan Footer akan otomatis terhubung ke link Google Form tersebut!
 
 ---
 
