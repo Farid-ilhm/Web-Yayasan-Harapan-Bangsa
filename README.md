@@ -42,28 +42,26 @@ Website_Sekolah/
 
 ## ⚙️ Panduan Pengaturan Administrator (Sangat Mudah)
 
-Semua tautan formulir pendaftaran, nomor WhatsApp, kontak, dan tautan media sosial dikendalikan dari **SATU TEMPAT TERPUSAT** pada file [`js/script.js`](file:///c:/laragon/www/Website_Sekolah/js/script.js).
+Semua tautan formulir pendaftaran, kontak kantor, dan tautan media sosial dikendalikan dari **SATU TEMPAT TERPUSAT** pada file [`js/script.js`](file:///c:/laragon/www/Website_Sekolah/js/script.js).
 
 Cukup buka file `js/script.js` menggunakan text editor (Notepad, VS Code, dll.), lalu perbarui bagian `SCHOOL_CONFIG` di baris teratas:
 
 ```javascript
 const SCHOOL_CONFIG = {
-  // 1. LINK GOOGLE FORM RESMI
-  // Ganti URL ini saat formulir SPMB Google Form Anda sudah siap:
-  googleFormUrl: "https://forms.google.com/FORM-URL-DI-SINI",
-
-  // 2. NOMOR WHATSAPP RESMI
-  // Gunakan kode negara (62 untuk Indonesia tanpa tanda '+')
-  whatsappNumber: "6281234567890",
-  whatsappDefaultMessage: "Halo Admin Yayasan Harapan Bangsa Karawang, saya ingin menanyakan informasi pendaftaran dan profil sekolah.",
-
-  // 3. KONTAK & ALAMAT
+  // 1. LINK GOOGLE FORM RESMI PER JENJANG (TK, SD, SMP)
+  // Ganti link TK dan SD saat formulir resminya sudah siap:
+  googleFormUrls: {
+    tk: "https://docs.google.com/forms/d/e/dummy-form-tk-harapan-bangsa/viewform", // Dummy sementara
+    sd: "https://docs.google.com/forms/d/e/dummy-form-sd-harapan-bangsa/viewform", // Dummy sementara
+    smp: "https://docs.google.com/forms/d/e/1FAIpQLSewWRQmo5NNYKYFYo50hCGS_VIiKhXM3bNNrOB65REKsDGXdQ/viewform?usp=header" // Resmi Aktif
+  },
+  // 2. KONTAK & ALAMAT
   phone: "0267-XXXXXXX",
   email: "info@harapanbangsakarawang.sch.id",
   address: "Jl. R.E.Martadinata No.8, Adiarsa Bar., Kec. Karawang Bar., Karawang, Jawa Barat 41311",
   operationalHours: "Senin - Jumat: 07.30 - 15.00 WIB",
 
-  // 4. MEDIA SOSIAL
+  // 3. MEDIA SOSIAL
   socialMedia: {
     instagram: "https://instagram.com/harapanbangsakarawang",
     facebook: "https://facebook.com/harapanbangsakarawang",
@@ -73,7 +71,9 @@ const SCHOOL_CONFIG = {
 };
 ```
 
-> **Catatan Penting:** Begitu Anda mengubah `googleFormUrl` di atas, **seluruh tombol pendaftaran** di Navbar, Hero, Kartu Jenjang, Banner SPMB, dan Footer akan otomatis terhubung ke link Google Form tersebut!
+> **Catatan Penting:** 
+> - Link formulir SMP sudah resmi aktif (`smp`).
+> - Untuk TK dan SD saat ini berstatus **dummy**. Saat nanti formulir TK atau SD resmi dari Google Form sudah dibuat, cukup ganti nilai link `tk` atau `sd` pada `googleFormUrls` di atas, dan hapus atribut `data-dummy="true"` jika ingin langsung membuka Google Form tanpa peringatan modal simulasi.
 
 ---
 
@@ -119,8 +119,7 @@ Website ini menggunakan path relatif murni tanpa build tool yang rumit, sehingga
 * **Navigasi Sticky & Mobile Drawer**: Navigasi atas tetap terlihat saat digulir, dilengkapi menu hamburger interaktif pada layar sentuh.
 * **Modal Interaktif Jenjang Pendidikan**: Pengunjung dapat mengklik *"Lihat Informasi TK/SD/SMP"* untuk membaca kurikulum, jam belajar, dan poin keunggulan tanpa harus berpindah halaman.
 * **FAQ Accordion**: Tanya jawab seputar proses pendaftaran dan jenjang sekolah dengan animasi ekspansi yang halus.
-* **Formulir Konsultasi Cepat WhatsApp**: Orang tua dapat menulis pertanyaan yang langsung membuka aplikasi WhatsApp sekolah dengan format pesan otomatis yang rapi.
-* **Aksesibilitas & SEO Lengkap**: Dilengkapi meta tags, Open Graph card untuk share WhatsApp/Facebook, heading hierarki semantik, dan teks alternatif gambar.
+* **Aksesibilitas & SEO Lengkap**: Dilengkapi meta tags, Open Graph card untuk share media sosial/Facebook, heading hierarki semantik, dan teks alternatif gambar.
 
 ---
 

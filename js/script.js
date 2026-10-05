@@ -4,12 +4,16 @@
  */
 
 const SCHOOL_CONFIG = {
-  // Link pendaftaran resmi (Google Form)
-  googleFormUrl: "https://forms.google.com/FORM-URL-DI-SINI",
+  // Link pendaftaran resmi (Google Form) per jenjang
+  // Admin / Pengurus sekolah dapat mengganti link TK dan SD di bawah ini saat formulir resmi telah siap:
+  googleFormUrls: {
+    tk: "https://docs.google.com/forms/d/e/dummy-form-tk-harapan-bangsa/viewform", // Dummy sementara
+    sd: "https://docs.google.com/forms/d/e/dummy-form-sd-harapan-bangsa/viewform", // Dummy sementara
+    smp: "https://docs.google.com/forms/d/e/1FAIpQLSewWRQmo5NNYKYFYo50hCGS_VIiKhXM3bNNrOB65REKsDGXdQ/viewform?usp=header"
+  },
 
-  // Nomor WhatsApp resmi sekolah (kode negara 62 tanpa tanda +)
-  whatsappNumber: "628XXXXXXXXXX",
-  whatsappDefaultMessage: "Halo Admin Yayasan Harapan Bangsa Karawang, saya ingin menanyakan informasi pendaftaran dan profil sekolah.",
+  // Fallback tautan pendaftaran umum
+  googleFormUrl: "https://docs.google.com/forms/d/e/1FAIpQLSewWRQmo5NNYKYFYo50hCGS_VIiKhXM3bNNrOB65REKsDGXdQ/viewform?usp=header",
 
   // Informasi kontak
   phone: "[Nomor telepon]",
@@ -147,7 +151,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initFaqAccordion();
   initFacilityFilter();
   initActivityModals();
-  initContactQuickForm();
+  initSpmbDummyHandler();
   initBackToTop();
   initHeroSlider();
 });
@@ -171,17 +175,23 @@ function initTheme() {
 
 // Bind registration and contact links to centralized SCHOOL_CONFIG
 function initCentralizedLinks() {
+  // Bind link spesifik per jenjang (TK, SD, SMP)
+  ["tk", "sd", "smp"].forEach(level => {
+    const levelElements = document.querySelectorAll(`[data-action="register-${level}"]`);
+    levelElements.forEach(el => {
+      const targetUrl = (SCHOOL_CONFIG.googleFormUrls && SCHOOL_CONFIG.googleFormUrls[level]) 
+        ? SCHOOL_CONFIG.googleFormUrls[level] 
+        : SCHOOL_CONFIG.googleFormUrl;
+      el.setAttribute("href", targetUrl);
+      el.setAttribute("target", "_blank");
+      el.setAttribute("rel", "noopener noreferrer");
+    });
+  });
+
+  // Bind link pendaftaran umum (fallback)
   const registerElements = document.querySelectorAll('[data-action="register"]');
   registerElements.forEach(el => {
     el.setAttribute("href", SCHOOL_CONFIG.googleFormUrl);
-    el.setAttribute("target", "_blank");
-    el.setAttribute("rel", "noopener noreferrer");
-  });
-
-  const waUrl = `https://wa.me/${SCHOOL_CONFIG.whatsappNumber}?text=${encodeURIComponent(SCHOOL_CONFIG.whatsappDefaultMessage)}`;
-  const waElements = document.querySelectorAll('[data-action="whatsapp"]');
-  waElements.forEach(el => {
-    el.setAttribute("href", waUrl);
     el.setAttribute("target", "_blank");
     el.setAttribute("rel", "noopener noreferrer");
   });
@@ -391,30 +401,94 @@ function initActivityModals() {
   });
 }
 
-// Quick contact form submission to WhatsApp (R-26)
-function initContactQuickForm() {
-  const form = document.getElementById("quickInquiryForm");
-  if (!form) return;
+// Handler for SPMB dummy links (TK & SD) with helpful parental guidance modal
+function initSpmbDummyHandler() {
+  const dummyLinks = document.querySelectorAll('[data-dummy="true"]');
+  if (dummyLinks.length === 0) return;
 
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
+  // Create or retrieve the SPMB dummy notice modal
+  let modal = document.getElementById("spmbDummyModal");
+  if (!modal) {
+    modal = document.createElement("div");
+    modal.className = "modal-overlay";
+    modal.id = "spmbDummyModal";
+    modal.setAttribute("role", "dialog");
+    modal.setAttribute("aria-modal", "true");
+    modal.setAttribute("aria-labelledby", "spmbDummyModalTitle");
+    modal.innerHTML = `
+      <div class="modal-backdrop"></div>
+      <div class="modal-container">
+        <button class="modal-close-btn" aria-label="Tutup jendela pemberitahuan">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+          </svg>
+        </button>
+        <div class="modal-content-body spmb-dummy-modal-body">
+          <h3 class="modal-header-title" id="spmbDummyModalTitle">Pemberitahuan Pendaftaran SPMB</h3>
+          <p class="modal-text-desc" id="spmbDummyModalDesc">
+            Formulir online Google Form untuk jenjang ini sedang dalam proses penyiapan sistem oleh panitia sekolah.
+          </p>
+          <div class="spmb-dummy-notice-box">
+            <strong>Pendaftaran Langsung:</strong>
+            <p>Bagi orang tua yang ingin mendaftarkan calon murid baru atau menanyakan kuota kelas, silakan hubungi sekretariat sekolah pada jam operasional kerja.</p>
+          </div>
+          <div class="spmb-dummy-modal-actions">
+            <a href="#kontak" class="btn btn-primary" id="spmbDummyContactBtn">
+              Lihat Kontak Sekretariat Sekolah
+            </a>
+            <a href="#" class="btn btn-secondary" id="spmbDummyOpenLinkBtn" target="_blank" rel="noopener noreferrer">
+              Buka Tautan Simulasi (Dummy)
+            </a>
+          </div>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(modal);
+  }
 
-    const name = document.getElementById("inquiryName").value.trim();
-    const level = document.getElementById("inquiryLevel").value;
-    const phone = document.getElementById("inquiryPhone").value.trim();
-    const message = document.getElementById("inquiryMessage").value.trim();
+  const closeBtn = modal.querySelector(".modal-close-btn");
+  const backdrop = modal.querySelector(".modal-backdrop");
+  
+  const titleEl = document.getElementById("spmbDummyModalTitle");
+  const descEl = document.getElementById("spmbDummyModalDesc");
+  const contactBtn = document.getElementById("spmbDummyContactBtn");
+  const openLinkBtn = document.getElementById("spmbDummyOpenLinkBtn");
 
-    const formattedMessage = 
-      `Halo Panitia Yayasan Harapan Bangsa Karawang,%0A%0A` +
-      `Saya ingin menanyakan informasi pendaftaran:%0A` +
-      `*Nama Orang Tua:* ${encodeURIComponent(name)}%0A` +
-      `*Minat Jenjang:* ${encodeURIComponent(level)}%0A` +
-      `*No. Kontak:* ${encodeURIComponent(phone)}%0A` +
-      `*Pertanyaan:* ${encodeURIComponent(message)}%0A%0A` +
-      `Terima kasih.`;
+  const closeModal = () => {
+    modal.classList.remove("modal-open");
+    document.body.classList.remove("body-scroll-lock");
+  };
 
-    const waUrl = `https://wa.me/${SCHOOL_CONFIG.whatsappNumber}?text=${formattedMessage}`;
-    window.open(waUrl, "_blank", "noopener,noreferrer");
+  if (closeBtn) closeBtn.addEventListener("click", closeModal);
+  if (backdrop) backdrop.addEventListener("click", closeModal);
+  if (contactBtn) {
+    contactBtn.addEventListener("click", () => {
+      closeModal();
+    });
+  }
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modal.classList.contains("modal-open")) {
+      closeModal();
+    }
+  });
+
+  dummyLinks.forEach(link => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const jenjang = link.getAttribute("data-jenjang") || "TK / SD";
+      const dummyUrl = link.getAttribute("href") || "#";
+
+      
+      titleEl.textContent = `Formulir SPMB ${jenjang} Harapan Bangsa`;
+      descEl.innerHTML = `Formulir online resmi Google Form untuk <strong>${jenjang} Harapan Bangsa</strong> saat ini sedang dipersiapkan oleh pihak sekolah (tautan formulir masih berstatus simulasi/dummy).`;
+
+      openLinkBtn.setAttribute("href", dummyUrl);
+
+      modal.classList.add("modal-open");
+      document.body.classList.add("body-scroll-lock");
+      if (closeBtn) closeBtn.focus();
+    });
   });
 }
 
