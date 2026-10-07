@@ -34,69 +34,151 @@
 </head>
 <body>
 
-  <!-- Header / Navigation Bar -->
+  <!-- Header / Navigation Bar (UNSIKA Architectural Style) -->
   <header class="header" id="header">
-    <div class="container header-container">
-      <!-- School Brand -->
-      <a href="../index.html" class="brand-link" aria-label="Beranda Yayasan Harapan Bangsa Karawang">
-        <img src="../assets/images/logo-smp-harapan-bangsa.jpeg" alt="Logo SMP Harapan Bangsa" class="brand-logo-img">
-        <div class="brand-title-group">
-          <span class="brand-name">Harapan Bangsa</span>
-          <span class="brand-sub">Yayasan Pendidikan Karawang</span>
-        </div>
-      </a>
-
-      <!-- Navigation Menu -->
-      <nav class="nav-menu" id="navMenu" aria-label="Menu Utama">
-        <div class="nav-menu-links">
-          <a href="../index.html#beranda" class="nav-link">Beranda</a>
-          <a href="../index.html#tentang" class="nav-link">Tentang</a>
-          <a href="../index.html#pendidikan" class="nav-link active">Jenjang Sekolah</a>
-          <a href="../index.html#fasilitas" class="nav-link">Fasilitas</a>
-          <a href="../index.html#kegiatan" class="nav-link">Kegiatan</a>
-          <a href="../index.html#prestasi" class="nav-link">Prestasi</a>
-          <a href="../index.html#informasi" class="nav-link">Informasi</a>
-          <a href="../index.html#pendaftaran" class="nav-link">SPMB</a>
-          <a href="../index.html#kontak" class="nav-link">Kontak</a>
-        </div>
-        <div class="nav-menu-mobile-footer">
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSewWRQmo5NNYKYFYo50hCGS_VIiKhXM3bNNrOB65REKsDGXdQ/viewform?usp=header" class="btn btn-primary btn-block" data-action="register-smp" data-jenjang="SMP">
-            Pendaftaran SPMB Online
-          </a>
+    <!-- Top Bar (Navy Banner with Slanted Cut) -->
+    <div class="header-topbar">
+      <div class="topbar-wrapper">
+        <div class="topbar-left-spacer"></div>
+        <div class="topbar-slanted-banner">
+          <div class="topbar-marquee-wrap">
+            <div class="topbar-marquee-track">
+              <span class="topbar-welcome-text" data-i18n="topbar_welcome">
+                SELAMAT DATANG DI WEBSITE RESMI YAYASAN HARAPAN BANGSA KARAWANG
+              </span>
+            </div>
           </div>
-      </nav>
+          <div class="topbar-right-group">
+            <div class="topbar-socials" aria-label="Media Sosial Resmi">
+              <a href="https://instagram.com/[username]" target="_blank" rel="noopener noreferrer" class="topbar-social-link" title="Instagram" aria-label="Instagram">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              </a>
+              <a href="https://twitter.com/[username]" target="_blank" rel="noopener noreferrer" class="topbar-social-link" title="Twitter / X" aria-label="Twitter">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+              <a href="https://youtube.com/[username]" target="_blank" rel="noopener noreferrer" class="topbar-social-link" title="YouTube" aria-label="YouTube">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              </a>
+            </div>
+            <!-- Language Flags (Indonesia / English) -->
+            <div class="topbar-flags" title="Pilihan Bahasa / Select Language">
+              <button type="button" class="flag-badge flag-id active" data-lang="id" title="Bahasa Indonesia" aria-label="Bahasa Indonesia">
+                <span class="flag-stripe-red"></span>
+                <span class="flag-stripe-white"></span>
+              </button>
+              <button type="button" class="flag-badge flag-en" data-lang="en" title="English" aria-label="English">
+                <svg viewBox="0 0 60 30" width="20" height="12" class="flag-svg-en">
+                  <clipPath id="uk-clip-smp"><path d="M0,0 v30 h60 v-30 z"/></clipPath>
+                  <g clip-path="url(#uk-clip-smp)">
+                    <path d="M0,0 v30 h60 v-30 z" fill="#012169"/>
+                    <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/>
+                    <path d="M0,0 L60,30 M60,0 L0,30" stroke="#C8102E" stroke-width="4"/>
+                    <path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/>
+                    <path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/>
+                  </g>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-      <!-- Utilities & Mobile Toggle -->
-      <div class="header-utilities">
-        <!-- Dual Theme Toggle (R-21 & R-34) -->
-        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Ganti tema tampilan terang atau gelap" title="Ganti Tema">
-          <svg class="theme-icon-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <circle cx="12" cy="12" r="5"></circle>
-            <line x1="12" y1="1" x2="12" y2="3"></line>
-            <line x1="12" y1="21" x2="12" y2="23"></line>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-            <line x1="1" y1="12" x2="3" y2="12"></line>
-            <line x1="21" y1="12" x2="23" y2="12"></line>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-          </svg>
-          <svg class="theme-icon-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-          </svg>
-        </button>
-
-        <!-- Header Registration CTA -->
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSewWRQmo5NNYKYFYo50hCGS_VIiKhXM3bNNrOB65REKsDGXdQ/viewform?usp=header" class="btn btn-primary btn-sm header-cta-btn" data-action="register-smp" data-jenjang="SMP">
-          Pendaftaran SPMB
+    <!-- Main Navigation Bar -->
+    <div class="header-main">
+      <div class="container header-container">
+        <!-- School Brand -->
+        <a href="../index.html" class="brand-link" aria-label="Beranda Yayasan Harapan Bangsa Karawang">
+          <img src="../assets/images/logo-smp-harapan-bangsa.png" alt="Logo SMP Harapan Bangsa" class="brand-logo-img">
+          <div class="brand-title-group">
+            <span class="brand-name">Harapan Bangsa</span>
+            <span class="brand-sub" data-i18n="brand_sub">Yayasan Pendidikan Karawang</span>
+          </div>
         </a>
 
-        <!-- Mobile Menu Toggle Button -->
-        <button class="nav-toggle" id="navToggle" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="navMenu">
-          <span class="nav-toggle-bar"></span>
-          <span class="nav-toggle-bar"></span>
-          <span class="nav-toggle-bar"></span>
-        </button>
+        <!-- Navigation Menu -->
+        <nav class="nav-menu" id="navMenu" aria-label="Menu Utama">
+          <div class="nav-menu-links">
+            <a href="../index.html#beranda" class="nav-link" data-i18n="nav_home">Home</a>
+            
+            <div class="nav-item-dropdown">
+              <a href="../index.html#tentang" class="nav-link nav-dropdown-trigger">
+                <span data-i18n="nav_profile">Profil</span> <svg class="nav-chevron" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+              </a>
+              <div class="nav-dropdown-menu">
+                <a href="../index.html#tentang" class="nav-dropdown-item" data-i18n="nav_about">Tentang Sekolah</a>
+                <a href="../index.html#visimisi" class="nav-dropdown-item" data-i18n="nav_vision">Visi &amp; Misi</a>
+                <a href="../index.html#keunggulan" class="nav-dropdown-item" data-i18n="nav_advantages">Keunggulan Lembaga</a>
+              </div>
+            </div>
+
+            <div class="nav-item-dropdown">
+              <a href="../index.html#pendidikan" class="nav-link nav-dropdown-trigger active">
+                <span data-i18n="nav_education">Pendidikan</span> <svg class="nav-chevron" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+              </a>
+              <div class="nav-dropdown-menu">
+                <a href="tk.html" class="nav-dropdown-item" data-i18n="nav_tk">TK Harapan Bangsa</a>
+                <a href="sd.html" class="nav-dropdown-item" data-i18n="nav_sd">SD Harapan Bangsa</a>
+                <a href="smp.html" class="nav-dropdown-item active" data-i18n="nav_smp">SMP Harapan Bangsa</a>
+              </div>
+            </div>
+
+            <a href="../index.html#fasilitas" class="nav-link" data-i18n="nav_facilities">Fasilitas</a>
+            <a href="../index.html#kegiatan" class="nav-link" data-i18n="nav_activities">Kegiatan</a>
+            <a href="../index.html#prestasi" class="nav-link" data-i18n="nav_achievements">Prestasi</a>
+
+            <div class="nav-item-dropdown">
+              <a href="../index.html#informasi" class="nav-link nav-dropdown-trigger">
+                <span data-i18n="nav_information">Informasi</span> <svg class="nav-chevron" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+              </a>
+              <div class="nav-dropdown-menu">
+                <a href="../index.html#informasi" class="nav-dropdown-item" data-i18n="nav_news">Agenda &amp; Berita</a>
+                <a href="../index.html#faq" class="nav-dropdown-item" data-i18n="nav_faq">Tanya Jawab (FAQ)</a>
+              </div>
+            </div>
+
+            <a href="../index.html#pendaftaran" class="nav-link" data-i18n="nav_spmb">SPMB</a>
+            <a href="../index.html#kontak" class="nav-link" data-i18n="nav_contact">Kontak</a>
+          </div>
+          <div class="nav-menu-mobile-footer">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSewWRQmo5NNYKYFYo50hCGS_VIiKhXM3bNNrOB65REKsDGXdQ/viewform?usp=header" class="btn btn-primary btn-block" data-action="register-smp" data-jenjang="SMP" data-i18n="nav_spmb_mobile">
+              Pendaftaran SPMB Online
+            </a>
+          </div>
+        </nav>
+
+        <!-- Utilities & Mobile Toggle -->
+        <div class="header-utilities">
+          <!-- Dual Theme Toggle (R-21 & R-34) -->
+          <button class="header-icon-btn theme-toggle-btn" id="themeToggleBtn" aria-label="Ganti tema tampilan terang atau gelap" title="Ganti Tema">
+            <svg class="theme-icon-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg class="theme-icon-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+
+          <!-- Header Registration CTA -->
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSewWRQmo5NNYKYFYo50hCGS_VIiKhXM3bNNrOB65REKsDGXdQ/viewform?usp=header" class="btn btn-primary btn-sm header-cta-btn" data-action="register-smp" data-jenjang="SMP" data-i18n="header_cta_spmb">
+            SPMB
+          </a>
+
+          <!-- Mobile Menu Toggle Button -->
+          <button class="nav-toggle" id="navToggle" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="navMenu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+          </button>
+        </div>
       </div>
     </div>
   </header>

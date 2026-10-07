@@ -144,16 +144,127 @@ const ACTIVITY_MODAL_DATA = {
   }
 };
 
+// Multi-Language Dictionary (ID & EN)
+const I18N_DICTIONARY = {
+  id: {
+    // Topbar & Brand
+    topbar_welcome: "SELAMAT DATANG DI WEBSITE RESMI YAYASAN HARAPAN BANGSA KARAWANG",
+    brand_sub: "Yayasan Pendidikan Karawang",
+
+    // Navigation Menu
+    nav_home: "Home",
+    nav_profile: "Profil",
+    nav_about: "Tentang Sekolah",
+    nav_vision: "Visi & Misi",
+    nav_advantages: "Keunggulan Lembaga",
+    nav_education: "Pendidikan",
+    nav_tk: "TK Harapan Bangsa",
+    nav_sd: "SD Harapan Bangsa",
+    nav_smp: "SMP Harapan Bangsa",
+    nav_facilities: "Fasilitas",
+    nav_activities: "Kegiatan",
+    nav_achievements: "Prestasi",
+    nav_information: "Informasi",
+    nav_news: "Agenda & Berita",
+    nav_faq: "Tanya Jawab (FAQ)",
+    nav_spmb: "SPMB",
+    nav_contact: "Kontak",
+    nav_spmb_mobile: "Pendaftaran SPMB Online",
+    header_cta_spmb: "SPMB",
+
+    // Hero Section
+    hero_tagline: "Yayasan Harapan Bangsa Karawang",
+    hero_prefix: "“MEMBANGUN GENERASI",
+    hero_subheadline: "Saatnya Menjadi Bagian Dari <strong>Yayasan Harapan Bangsa Karawang</strong>. Menyelenggarakan pendidikan terpadu jenjang TK, SD, dan SMP dengan pembinaan karakter kasih, nalar kritis, dan kemandirian siswa.",
+    hero_btn_register: "Daftar Sekarang (SPMB)",
+    hero_btn_explore: "Lihat Jenjang Pendidikan",
+    hero_fact1_sub: "Pendidikan Formal Terpadu",
+    hero_fact2_title: "Kurikulum Nasional",
+    hero_fact2_sub: "Terintegrasi Penguatan Karakter",
+    hero_fact3_title: "Karawang Barat",
+    hero_fact3_sub: "Gedung Representatif & Nyaman",
+
+    // Section Titles
+    sec_about_label: "Profil Kelembagaan",
+    sec_about_title: "Mengenal Yayasan Harapan Bangsa Karawang",
+    sec_about_desc: "Lembaga pendidikan formal yang berkomitmen menyediakan pendidikan bermutu dan berkeadaban di wilayah Kabupaten Karawang.",
+    sec_visimisi_label: "Arah & Landasan",
+    sec_visimisi_title: "Visi dan Misi Pendidikan",
+    sec_visimisi_desc: "Prinsip pemandu seluruh kegiatan belajar mengajar dan pembinaan karakter di Yayasan Harapan Bangsa Karawang.",
+    sec_edu_label: "Satuan Pendidikan",
+    sec_edu_title: "Program Jenjang Sekolah",
+    sec_edu_desc: "Struktur kurikulum berjenjang yang disesuaikan dengan tahapan psikologis dan kognitif peserta didik.",
+
+    // Notification
+    toast_msg: "🇮🇩 Bahasa berhasil diubah ke Bahasa Indonesia"
+  },
+  en: {
+    // Topbar & Brand
+    topbar_welcome: "WELCOME TO THE OFFICIAL WEBSITE OF HARAPAN BANGSA FOUNDATION KARAWANG",
+    brand_sub: "Karawang Education Foundation",
+
+    // Navigation Menu
+    nav_home: "Home",
+    nav_profile: "Profile",
+    nav_about: "About School",
+    nav_vision: "Vision & Mission",
+    nav_advantages: "Institutional Excellence",
+    nav_education: "Education",
+    nav_tk: "Harapan Bangsa Kindergarten",
+    nav_sd: "Harapan Bangsa Primary School",
+    nav_smp: "Harapan Bangsa Junior High",
+    nav_facilities: "Facilities",
+    nav_activities: "Activities",
+    nav_achievements: "Achievements",
+    nav_information: "Information",
+    nav_news: "News & Agenda",
+    nav_faq: "FAQ",
+    nav_spmb: "Admissions",
+    nav_contact: "Contact",
+    nav_spmb_mobile: "Online Admission Registration",
+    header_cta_spmb: "Admissions",
+
+    // Hero Section
+    hero_tagline: "Harapan Bangsa Karawang Foundation",
+    hero_prefix: "“BUILDING A GENERATION",
+    hero_subheadline: "Join the Family of <strong>Harapan Bangsa Karawang Foundation</strong>. Providing integrated education for Kindergarten, Elementary, and Junior High focusing on love character, critical reasoning, and student independence.",
+    hero_btn_register: "Register Now (Admissions)",
+    hero_btn_explore: "Explore Academic Levels",
+    hero_fact1_sub: "Integrated Formal Education",
+    hero_fact2_title: "National Curriculum",
+    hero_fact2_sub: "Integrated Character Building",
+    hero_fact3_title: "West Karawang",
+    hero_fact3_sub: "Modern & Comfortable Campus",
+
+    // Section Titles
+    sec_about_label: "Institutional Profile",
+    sec_about_title: "Getting to Know Harapan Bangsa Karawang Foundation",
+    sec_about_desc: "A formal educational institution committed to providing high-quality and civilized education in Karawang Regency.",
+    sec_visimisi_label: "Principles & Foundation",
+    sec_visimisi_title: "Educational Vision & Mission",
+    sec_visimisi_desc: "Guiding principles for all teaching, learning, and character building activities at Harapan Bangsa Karawang Foundation.",
+    sec_edu_label: "Academic Units",
+    sec_edu_title: "School Level Programs",
+    sec_edu_desc: "A structured curriculum tailored to the psychological and cognitive stages of students.",
+
+    // Notification
+    toast_msg: "🇬🇧 Language successfully switched to English"
+  }
+};
+
 document.addEventListener("DOMContentLoaded", () => {
   initTheme();
+  initLanguageSwitcher();
   initCentralizedLinks();
   initNavbar();
+  initSearchModal();
   initFaqAccordion();
   initFacilityFilter();
   initActivityModals();
   initSpmbDummyHandler();
   initBackToTop();
   initHeroSlider();
+  initHeroTypingText();
 });
 
 // Dual theme switcher with localStorage persistence (R-21, R-34)
@@ -213,7 +324,21 @@ function initCentralizedLinks() {
 function initNavbar() {
   const navToggle = document.getElementById("navToggle");
   const navMenu = document.getElementById("navMenu");
-  const navLinks = document.querySelectorAll(".nav-link");
+  const navLinks = document.querySelectorAll(".nav-link:not(.nav-dropdown-trigger), .nav-dropdown-item");
+  const dropdownTriggers = document.querySelectorAll(".nav-dropdown-trigger");
+
+  // Toggle dropdown submenus on tablet/mobile screens
+  dropdownTriggers.forEach(trigger => {
+    trigger.addEventListener("click", (e) => {
+      if (window.innerWidth <= 1120) {
+        e.preventDefault();
+        const parent = trigger.closest(".nav-item-dropdown");
+        if (parent) {
+          parent.classList.toggle("is-open");
+        }
+      }
+    });
+  });
 
   if (navToggle && navMenu) {
     navToggle.addEventListener("click", () => {
@@ -261,6 +386,84 @@ function initNavbar() {
     });
   };
   window.addEventListener("scroll", highlightNavLink, { passive: true });
+}
+
+// Dialog Pencarian Cepat (UNSIKA-Style Search Feature)
+function initSearchModal() {
+  const searchBtn = document.getElementById("headerSearchBtn");
+  const searchModal = document.getElementById("searchModal");
+  const closeBtn = document.getElementById("searchModalClose");
+  const searchInput = document.getElementById("quickSearchInput");
+  const quickChips = document.querySelectorAll(".search-quick-chip");
+
+  if (!searchBtn || !searchModal) return;
+
+  const openSearch = () => {
+    searchModal.classList.add("modal-open");
+    document.body.classList.add("body-scroll-lock");
+    if (searchInput) {
+      setTimeout(() => searchInput.focus(), 80);
+    }
+  };
+
+  const closeSearch = () => {
+    searchModal.classList.remove("modal-open");
+    document.body.classList.remove("body-scroll-lock");
+  };
+
+  searchBtn.addEventListener("click", openSearch);
+  if (closeBtn) closeBtn.addEventListener("click", closeSearch);
+
+  const backdrop = searchModal.querySelector(".modal-backdrop");
+  if (backdrop) backdrop.addEventListener("click", closeSearch);
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && searchModal.classList.contains("modal-open")) {
+      closeSearch();
+    }
+  });
+
+  quickChips.forEach(chip => {
+    chip.addEventListener("click", () => {
+      closeSearch();
+    });
+  });
+
+  if (searchInput) {
+    searchInput.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        const query = searchInput.value.toLowerCase().trim();
+        if (!query) return;
+
+        // Cari section yang relevan
+        let targetId = null;
+        if (query.includes("smp") || query.includes("sd") || query.includes("tk") || query.includes("pendidikan")) {
+          targetId = "pendidikan";
+        } else if (query.includes("spmb") || query.includes("daftar") || query.includes("ppdb")) {
+          targetId = "pendaftaran";
+        } else if (query.includes("fasilitas") || query.includes("lab") || query.includes("gedung")) {
+          targetId = "fasilitas";
+        } else if (query.includes("visi") || query.includes("misi")) {
+          targetId = "visimisi";
+        } else if (query.includes("kontak") || query.includes("lokasi") || query.includes("alamat")) {
+          targetId = "kontak";
+        } else if (query.includes("kegiatan") || query.includes("ekskul")) {
+          targetId = "kegiatan";
+        } else if (query.includes("prestasi")) {
+          targetId = "prestasi";
+        } else {
+          targetId = "tentang";
+        }
+
+        const el = document.getElementById(targetId);
+        if (el) {
+          closeSearch();
+          el.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    });
+  }
 }
 
 // FAQ accordion with accessible states (R-26, R-32)
@@ -510,18 +713,228 @@ function initBackToTop() {
   });
 }
 
-// Background Hero Automatic Slideshow (cross-fade berganti otomatis setiap 2.5 detik)
+// Background Hero Automatic Slideshow (Ken Burns Zoom + Edge-to-Edge Push Slide Transition)
 function initHeroSlider() {
   const slides = document.querySelectorAll(".hero-bg-slide");
   if (!slides || slides.length < 2) return;
 
-  let currentSlide = 0;
-  const slideInterval = 2500; // Pergantian slide setiap 2.5 detik
+  let currentIndex = 0;
+  const slideDuration = 5200; // 5.2 detik per slide
+  const transitionDuration = 850; // Durasi pergeseran slide (snappy, halus, tidak menumpuk)
+
+  // Setup posisi awal: Slide pertama aktif (0), slide lainnya standby di kanan (100%)
+  slides.forEach((slide, idx) => {
+    slide.classList.add("no-trans");
+    if (idx === 0) {
+      slide.classList.add("is-active");
+      slide.classList.remove("is-leaving");
+    } else {
+      slide.classList.remove("is-active", "is-leaving");
+    }
+    void slide.offsetHeight;
+    slide.classList.remove("no-trans");
+  });
 
   setInterval(() => {
-    slides[currentSlide].classList.remove("active");
-    currentSlide = (currentSlide + 1) % slides.length;
-    slides[currentSlide].classList.add("active");
-  }, slideInterval);
+    const prevIndex = currentIndex;
+    currentIndex = (currentIndex + 1) % slides.length;
+
+    const prevSlide = slides[prevIndex];
+    const nextSlide = slides[currentIndex];
+
+    // Pastikan slide berikutnya standby di kanan layar (100%) tanpa animasi sebelum meluncur
+    nextSlide.classList.add("no-trans");
+    nextSlide.classList.remove("is-active", "is-leaving");
+    void nextSlide.offsetHeight; // Kunci posisi awal di 100%
+    nextSlide.classList.remove("no-trans");
+
+    // Jalankan pergeseran berdampingan serempak (Edge-to-Edge Push tanpa efek tumpukan / stack):
+    // 1. Slide aktif saat ini terdorong penuh keluar ke kiri (-100%)
+    prevSlide.classList.remove("is-active");
+    prevSlide.classList.add("is-leaving");
+
+    // 2. Slide berikutnya meluncur masuk dari kanan ke tengah (0%)
+    nextSlide.classList.add("is-active");
+
+    // Setelah transisi selesai, kembalikan posisi slide lama ke standby di kanan (100%) tanpa transisi
+    setTimeout(() => {
+      prevSlide.classList.add("no-trans");
+      prevSlide.classList.remove("is-leaving");
+      void prevSlide.offsetHeight;
+      prevSlide.classList.remove("no-trans");
+    }, transitionDuration + 50);
+
+  }, slideDuration);
+}
+
+// Typing Words Per Language
+const HERO_TYPING_WORDS = {
+  id: ["BERKARAKTER", "CERDAS", "BERDAYA SAING", "BERPRESTASI"],
+  en: ["WITH CHARACTER", "INTELLIGENT", "COMPETITIVE", "ACCOMPLISHED"]
+};
+
+let heroTypingTimer = null;
+let heroTypingState = {
+  lang: "id",
+  wordIndex: 0,
+  charIndex: 0,
+  isDeleting: false
+};
+
+// Efek animasi typing text pada kata kunci headline hero (Mendukung Multi-Bahasa)
+function initHeroTypingText() {
+  const el = document.getElementById("heroTypingText");
+  if (!el) return;
+
+  if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    return;
+  }
+
+  const currentLang = localStorage.getItem("site_lang") || "id";
+  startTypingAnimation(currentLang);
+}
+
+function startTypingAnimation(lang) {
+  const el = document.getElementById("heroTypingText");
+  if (!el) return;
+
+  if (heroTypingTimer) clearTimeout(heroTypingTimer);
+
+  const activeWords = HERO_TYPING_WORDS[lang] || HERO_TYPING_WORDS.id;
+  heroTypingState.lang = lang;
+  heroTypingState.wordIndex = 0;
+  heroTypingState.charIndex = activeWords[0].length;
+  heroTypingState.isDeleting = true;
+  el.textContent = activeWords[0];
+
+  const typeSpeed = 90;
+  const deleteSpeed = 45;
+  const holdDelay = 1800;
+
+  function tick() {
+    const words = HERO_TYPING_WORDS[heroTypingState.lang] || HERO_TYPING_WORDS.id;
+    const currentWord = words[heroTypingState.wordIndex % words.length];
+
+    if (heroTypingState.isDeleting) {
+      heroTypingState.charIndex--;
+      el.textContent = currentWord.substring(0, heroTypingState.charIndex);
+
+      if (heroTypingState.charIndex <= 0) {
+        heroTypingState.isDeleting = false;
+        heroTypingState.wordIndex = (heroTypingState.wordIndex + 1) % words.length;
+        heroTypingTimer = setTimeout(tick, 350);
+        return;
+      }
+      heroTypingTimer = setTimeout(tick, deleteSpeed);
+    } else {
+      heroTypingState.charIndex++;
+      el.textContent = currentWord.substring(0, heroTypingState.charIndex);
+
+      if (heroTypingState.charIndex === currentWord.length) {
+        heroTypingState.isDeleting = true;
+        heroTypingTimer = setTimeout(tick, holdDelay);
+        return;
+      }
+      heroTypingTimer = setTimeout(tick, typeSpeed);
+    }
+  }
+
+  heroTypingTimer = setTimeout(tick, holdDelay);
+}
+
+// Fitur Penggantian Bahasa (Indonesian & English Switcher)
+function initLanguageSwitcher() {
+  const flagButtons = document.querySelectorAll(".flag-badge");
+  const storedLang = localStorage.getItem("site_lang") || "id";
+
+  setLanguage(storedLang, false);
+
+  flagButtons.forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      const targetLang = btn.getAttribute("data-lang");
+      if (targetLang) {
+        setLanguage(targetLang, true);
+      }
+    });
+  });
+}
+
+function setLanguage(lang, showToast = true) {
+  const currentLang = (lang === "en") ? "en" : "id";
+  document.documentElement.setAttribute("lang", currentLang);
+  localStorage.setItem("site_lang", currentLang);
+
+  // Update status tombol bendera aktif
+  const flagButtons = document.querySelectorAll(".flag-badge");
+  flagButtons.forEach(btn => {
+    if (btn.getAttribute("data-lang") === currentLang) {
+      btn.classList.add("active");
+      btn.setAttribute("aria-pressed", "true");
+    } else {
+      btn.classList.remove("active");
+      btn.setAttribute("aria-pressed", "false");
+    }
+  });
+
+  // Perbarui teks yang memiliki atribut data-i18n
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    if (I18N_DICTIONARY[currentLang] && I18N_DICTIONARY[currentLang][key]) {
+      const text = I18N_DICTIONARY[currentLang][key];
+      const svg = el.querySelector("svg");
+      if (svg) {
+        let replaced = false;
+        el.childNodes.forEach(child => {
+          if (child.nodeType === Node.TEXT_NODE && child.textContent.trim().length > 0) {
+            child.textContent = text + " ";
+            replaced = true;
+          }
+        });
+        if (!replaced && el.firstChild) {
+          el.firstChild.textContent = text + " ";
+        }
+      } else {
+        el.textContent = text;
+      }
+    }
+  });
+
+  // Perbarui HTML yang memiliki atribut data-i18n-html
+  document.querySelectorAll("[data-i18n-html]").forEach(el => {
+    const key = el.getAttribute("data-i18n-html");
+    if (I18N_DICTIONARY[currentLang] && I18N_DICTIONARY[currentLang][key]) {
+      el.innerHTML = I18N_DICTIONARY[currentLang][key];
+    }
+  });
+
+  // Sinkronkan animasi typing teks hero
+  startTypingAnimation(currentLang);
+
+  // Tampilkan notifikasi toast jika dipicu oleh klik pengguna
+  if (showToast) {
+    showLangToast(currentLang);
+  }
+}
+
+function showLangToast(lang) {
+  let toast = document.getElementById("langToast");
+  if (!toast) {
+    toast = document.createElement("div");
+    toast.id = "langToast";
+    toast.className = "lang-toast";
+    toast.setAttribute("role", "status");
+    toast.setAttribute("aria-live", "polite");
+    document.body.appendChild(toast);
+  }
+
+  const msg = I18N_DICTIONARY[lang]?.toast_msg || (lang === "en" ? "Language switched" : "Bahasa diubah");
+  toast.textContent = msg;
+  toast.classList.add("show");
+
+  clearTimeout(toast._timer);
+  toast._timer = setTimeout(() => {
+    toast.classList.remove("show");
+  }, 2300);
 }
 
