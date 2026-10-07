@@ -1,7 +1,7 @@
-# Website Resmi Yayasan Harapan Bangsa Karawang
+# Website Resmi Yayasan Pancaran Kasih Karawang
 ### Profil Sekolah: TK Harapan Bangsa • SD Harapan Bangsa • SMP Harapan Bangsa
 
-Website company profile modern, profesional, informatif, dan responsif untuk **Yayasan Harapan Bangsa Karawang**. Dibangun dengan teknologi **Pure Static Web (HTML5, CSS3, Vanilla JavaScript)** tanpa ketergantungan framework berat atau backend database, sehingga sangat ringan, cepat, dan siap di-deploy secara gratis ke **GitHub Pages**.
+Website company profile modern, profesional, informatif, dan responsif untuk **Yayasan Pancaran Kasih Karawang** (Menaungi TK, SD, dan SMP Harapan Bangsa). Dibangun dengan teknologi **Pure Static Web (HTML5, CSS3, Vanilla JavaScript)** tanpa ketergantungan framework berat atau backend database, sehingga sangat ringan, cepat, dan siap di-deploy secara gratis ke **GitHub Pages**.
 
 ---
 
@@ -49,24 +49,23 @@ Cukup buka file `js/script.js` menggunakan text editor (Notepad, VS Code, dll.),
 ```javascript
 const SCHOOL_CONFIG = {
   // 1. LINK GOOGLE FORM RESMI PER JENJANG (TK, SD, SMP)
-  // Ganti link TK dan SD saat formulir resminya sudah siap:
   googleFormUrls: {
     tk: "https://docs.google.com/forms/d/e/dummy-form-tk-harapan-bangsa/viewform", // Dummy sementara
     sd: "https://docs.google.com/forms/d/e/dummy-form-sd-harapan-bangsa/viewform", // Dummy sementara
     smp: "https://docs.google.com/forms/d/e/1FAIpQLSewWRQmo5NNYKYFYo50hCGS_VIiKhXM3bNNrOB65REKsDGXdQ/viewform?usp=header" // Resmi Aktif
   },
-  // 2. KONTAK & ALAMAT
-  phone: "0267-XXXXXXX",
-  email: "info@harapanbangsakarawang.sch.id",
-  address: "Jl. R.E.Martadinata No.8, Adiarsa Bar., Kec. Karawang Bar., Karawang, Jawa Barat 41311",
-  operationalHours: "Senin - Jumat: 07.30 - 15.00 WIB",
+  // 2. KONTAK & ALAMAT RESMI
+  phone: "(0267) 8407123",
+  whatsapp: "082311775434",
+  email: "smpharapanbangsa949@gmail.com",
+  address: "Jln. R.E Martadinata No. 8, RT 02/RW 05, Kelurahan Adiarsa Barat, Kecamatan Karawang Barat, Kabupaten Karawang, Jawa Barat 41311",
+  operationalHours: "Senin - Jumat: 07.00 - 15.00 WIB",
 
   // 3. MEDIA SOSIAL
   socialMedia: {
-    instagram: "https://instagram.com/harapanbangsakarawang",
-    facebook: "https://facebook.com/harapanbangsakarawang",
-    youtube: "https://youtube.com/@harapanbangsakarawang",
-    tiktok: "https://tiktok.com/@harapanbangsakarawang"
+    instagram: "https://www.instagram.com/smpharapanbangsa?stkn=Z285eXR5M2R0OXFt",
+    youtube: "https://youtube.com/@smpharapanbangsakarawang?si=vL2m-ycrEEQayYVH",
+    tiktok: "https://www.tiktok.com/@smp.harapanbangsa?is_from_webapp=1&sender_device=pc"
   }
 };
 ```
@@ -97,7 +96,7 @@ Website ini menggunakan path relatif murni tanpa build tool yang rumit, sehingga
    ```bash
    git init
    git add .
-   git commit -m "Inisialisasi Website Resmi Yayasan Harapan Bangsa Karawang"
+   git commit -m "Inisialisasi Website Resmi Yayasan Pancaran Kasih Karawang"
    git branch -M main
    git remote add origin https://github.com/<username-anda>/<nama-repo>.git
    git push -u origin main
@@ -123,4 +122,4 @@ Website ini menggunakan path relatif murni tanpa build tool yang rumit, sehingga
 
 ---
 
-&copy; 2026 Yayasan Harapan Bangsa Karawang. All Rights Reserved.
+&copy; 2026 Yayasan Pancaran Kasih Karawang. All Rights Reserved.

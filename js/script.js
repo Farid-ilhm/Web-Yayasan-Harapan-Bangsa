@@ -1,5 +1,5 @@
 /**
- * Website Resmi Yayasan Harapan Bangsa Karawang
+ * Website Resmi Yayasan Pancaran Kasih Karawang
  * Script Utama - Vanilla JavaScript
  */
 
@@ -15,18 +15,20 @@ const SCHOOL_CONFIG = {
   // Fallback tautan pendaftaran umum
   googleFormUrl: "https://docs.google.com/forms/d/e/1FAIpQLSewWRQmo5NNYKYFYo50hCGS_VIiKhXM3bNNrOB65REKsDGXdQ/viewform?usp=header",
 
-  // Informasi kontak
-  phone: "[Nomor telepon]",
-  email: "info@harapanbangsakarawang.sch.id",
-  address: "Jl. R.E.Martadinata No.8, Adiarsa Bar., Kec. Karawang Bar., Karawang, Jawa Barat 41311",
-  operationalHours: "Senin - Jumat: 07.30 - 15.00 WIB",
+  // Informasi kontak resmi
+  phone: "(0267) 8407123",
+  whatsapp: "082311775434",
+  whatsappUrl: "https://wa.me/6282311775434",
+  email: "smpharapanbangsa949@gmail.com",
+  address: "Jln. R.E Martadinata No. 8, RT 02/RW 05, Kelurahan Adiarsa Barat, Kecamatan Karawang Barat, Kabupaten Karawang, Jawa Barat 41311",
+  mapsUrl: "https://maps.app.goo.gl/c3XeDPeuTpRbu6qq9",
+  operationalHours: "Senin - Jumat: 07.00 - 15.00 WIB",
 
-  // Media sosial
+  // Media sosial resmi
   socialMedia: {
-    instagram: "https://instagram.com/[username]",
-    facebook: "https://facebook.com/[username]",
-    youtube: "https://youtube.com/[username]",
-    tiktok: "https://tiktok.com/[username]"
+    instagram: "https://www.instagram.com/smpharapanbangsa?stkn=Z285eXR5M2R0OXFt",
+    youtube: "https://youtube.com/@smpharapanbangsakarawang?si=vL2m-ycrEEQayYVH",
+    tiktok: "https://www.tiktok.com/@smp.harapanbangsa?is_from_webapp=1&sender_device=pc"
   }
 };
 
@@ -36,15 +38,15 @@ const EDUCATION_LEVEL_DATA = {
     subtitle: "Pendidikan Anak Usia Dini (Usia 4 - 6 Tahun)",
     badge: "Taman Kanak-Kanak",
     image: "assets/images/jenjang-tk.jpg",
-    description: "TK Harapan Bangsa memfasilitasi pembentukan kemandirian, sosialisasi, budi pekerti, serta eksplorasi motorik dan sensorik dalam suasana belajar yang ceria dan penuh perhatian.",
+    description: "TK Harapan Bangsa memfasilitasi pembentukan karakter kasih, kemandirian, sosialisasi ceria, serta eksplorasi motorik dan sensorik anak dalam lingkungan yang aman dan penuh kasih sayang.",
     highlights: [
-      "Pembiasaan adab dan kemandirian sejak dini",
+      "NPSN: 60728518 • Status Akreditasi B",
+      "Pembiasaan karakter kasih dan kemandirian sejak dini",
       "Stimulasi motorik halus dan kasar secara terarah",
-      "Pengenalan literasi dan numerasi dini secara ceria",
-      "Area bermain aman dengan pengawasan pendidik berdedikasi",
-      "Aktivitas seni rupa dan musik edukatif"
+      "Pengenalan literasi dan numerasi dini secara menyenangkan",
+      "Area bermain (playground) ramah anak dan berkeselamatan"
     ],
-    curriculum: "Kurikulum Merdeka PAUD dengan penguatan karakter",
+    curriculum: "Kurikulum Merdeka PAUD dengan penguatan karakter kasih",
     hours: "07.30 - 11.00 WIB"
   },
   sd: {
@@ -52,13 +54,13 @@ const EDUCATION_LEVEL_DATA = {
     subtitle: "Pendidikan Dasar (Kelas 1 - 6)",
     badge: "Sekolah Dasar",
     image: "assets/images/jenjang-sd.jpg",
-    description: "SD Harapan Bangsa meletakkan fondasi akademik yang kokoh berpadu dengan penanaman nilai moral dan kedisiplinan belajar. Melalui pembelajaran aktif, siswa didorong berpikir kritis dan saling menghargai.",
+    description: "SD Harapan Bangsa meletakkan fondasi akademik yang kokoh berpadu dengan penanaman nilai moral, kedisiplinan belajar, dan kecakapan bernalar kritis melalui pembelajaran aktif.",
     highlights: [
+      "NPSN: 20276409 • Status Akreditasi A",
       "Fondasi literasi baca, logika berhitung, dan sains kontekstual",
-      "Pendidikan budi pekerti dan pembiasaan tertib",
-      "Program pengenalan keterampilan teknologi dasar",
-      "Penyaluran minat melalui ragam kegiatan ekstrakurikuler",
-      "Komunikasi berkala dengan orang tua mengenai capaian anak"
+      "Pendidikan budi pekerti dan pembiasaan disiplin positif",
+      "Program pengenalan keterampilan teknologi & literasi digital dasar",
+      "Penyaluran minat dan bakat melalui 11 pilihan ekstrakurikuler"
     ],
     curriculum: "Kurikulum Merdeka Nasional dengan pendekatan pembelajaran aktif",
     hours: "07.15 - 13.30 WIB"
@@ -68,78 +70,78 @@ const EDUCATION_LEVEL_DATA = {
     subtitle: "Pendidikan Menengah Pertama (Kelas 7 - 9)",
     badge: "Sekolah Menengah Pertama",
     image: "assets/images/jenjang-smp.jpg",
-    description: "SMP Harapan Bangsa membimbing peserta didik pada masa transisi remaja untuk mengasah kecakapan bernalar, wawasan teknologi, kepemimpinan, dan kemandirian berprestasi sebagai persiapan menuju jenjang menengah atas.",
+    description: "SMP Harapan Bangsa membimbing peserta didik pada masa transisi remaja untuk mengasah kecakapan bernalar analitis, wawasan teknologi, kepemimpinan, dan kemandirian berprestasi.",
     highlights: [
-      "Pendekatan pembelajaran analitis dan riset sains dasar",
-      "Pemanfaatan laboratorium dan literasi digital terarah",
-      "Bimbingan konseling dan pemetaan potensi minat bakat",
-      "Organisasi kesiswaan (OSIS) dan kepramukaan",
-      "Pendampingan persiapan seleksi jenjang sekolah lanjutan"
+      "NPSN: 70062135 • Terdaftar Resmi Kemendikbudristek",
+      "Pembelajaran mendalam (Deeper Learning) berbasis masalah (PBL) dan proyek (PjBL)",
+      "Pemanfaatan literasi digital, coding, dan teknologi pembelajaran",
+      "Penerapan disiplin positif, bimbingan konseling, dan pembiasaan budaya sekolah",
+      "Pengembangan minat, bakat, karakter kasih, dan peduli lingkungan"
     ],
-    curriculum: "Kurikulum Merdeka Menengah Pertama dengan pendekatan STEM",
-    hours: "07.15 - 14.30 WIB"
+    curriculum: "Kurikulum Merdeka dengan pendekatan kolaboratif & teknologi",
+    hours: "07.00 - 14.50 WIB"
   }
 };
 
 const ACTIVITY_MODAL_DATA = {
   pembelajaran: {
-    title: "Kegiatan Pembelajaran Interaktif",
+    title: "Pembelajaran Mendalam & Berbasis Proyek",
     category: "Akademik & Kelas",
-    desc: "Proses belajar mengajar dirancang berpusat pada keterlibatan aktif peserta didik, melatih keberanian bertanya, diskusi kelompok, dan percobaan sains terarah.",
+    desc: "Proses KBM dikembangkan melalui pendekatan pembelajaran mendalam (Deeper Learning), berbasis masalah (PBL), berbasis proyek (PjBL), pembelajaran kolaboratif, berdiferensiasi, serta berbasis teknologi modern.",
     points: [
       "Pembelajaran kontekstual yang mengaitkan materi dengan situasi nyata",
-      "Praktikum sederhana di ruang kelas maupun laboratorium",
-      "Pemanfaatan media pembelajaran visual yang mudah dipahami"
+      "Praktikum dan proyek kolaboratif di kelas berfasilitas AC dan TV interaktif",
+      "Pemanfaatan literasi digital dan pengenalan logika pemrograman/coding"
     ]
   },
   ekskul: {
-    title: "Kegiatan Ekstrakurikuler",
+    title: "11 Ekstrakurikuler Minat & Bakat",
     category: "Minat & Bakat",
-    desc: "Wadah bagi siswa untuk mengeksplorasi potensi di luar jam kurikulum wajib, mencakup kepramukaan, cabang olahraga, sains, dan kesenian.",
+    desc: "Wadah bagi siswa untuk mengeksplorasi potensi dan meraih prestasi di bidang akademik, teknologi, olahraga, dan seni musik.",
     points: [
-      "Pramuka sebagai pembina kemandirian dan jiwa gotong royong",
-      "Klub olahraga siswa (futsal, bulutangkis)",
-      "Kelompok sains dan keterampilan terapan"
+      "Akademik & Teknologi: Bahasa Inggris, Matematika, dan Coding",
+      "Cabang Olahraga: Basket, Futsal, Badminton, dan Renang",
+      "Kesenian & Musik: Vocal, Musik, Modern/Traditional Dance, dan Seni Tamborin"
     ]
   },
   keagamaan: {
-    title: "Kegiatan Keagamaan & Pembiasaan Karakter",
+    title: "Pembiasaan Spiritual & Karakter Kasih",
     category: "Spiritual & Adab",
-    desc: "Pembentukan budi pekerti luhur melalui doa bersama sebelum dan sesudah belajar, peringatan hari besar keagamaan, serta penanaman toleransi antarwarga sekolah.",
+    desc: "Pembentukan budi pekerti luhur dan karakter kasih melalui kegiatan rutin keagamaan dan pembiasaan harian.",
     points: [
-      "Doa bersama pembuka dan penutup jam sekolah setiap hari",
-      "Peringatan hari besar keagamaan secara tertib",
-      "Penanaman rasa hormat kepada guru, orang tua, dan sesama teman"
+      "Saat Teduh di kelas setiap hari sebelum memulai kegiatan belajar",
+      "Ibadah bersama setiap hari Kamis",
+      "Peringatan Hari Besar Keagamaan (Paskah dan Natal bersama)"
     ]
   },
   seni: {
-    title: "Kegiatan Seni dan Kreativitas",
+    title: "Kegiatan Seni, Musik & Budaya",
     category: "Kreativitas & Budaya",
-    desc: "Mendorong rasa estetika dan keberanian berekspresi melalui apresiasi karya gambar, kriya tangan, dan pentas unjuk karya siswa berkala.",
+    desc: "Mendorong rasa estetika dan keberanian berekspresi melalui apresiasi karya gambar, vocal, musik instrumental, tari, dan pentas seni berkala.",
     points: [
-      "Pameran karya kerajinan tangan dan lukisan siswa",
-      "Pentas seni dan unjuk bakat sekolah",
-      "Pengenalan dan apresiasi musik Nusantara"
+      "Klub Vocal, Band/Musik Sekolah, dan Tari",
+      "Seni Tamborin untuk pembinaan ekspresi artistik",
+      "Pentas seni dan unjuk bakat kreatif siswa berkala"
     ]
   },
   olahraga: {
-    title: "Kegiatan Olahraga & Kebugaran",
+    title: "Kegiatan Olahraga & Kebugaran Jasmani",
     category: "Kebugaran Fisik",
-    desc: "Menjaga stamina, kebugaran jasmani, serta memupuk sportivitas dan kerjasama antarsiswa melalui senam teratur dan pertandingan persahabatan.",
+    desc: "Menjaga stamina, kebugaran jasmani, serta memupuk sportivitas dan kerjasama tim di lapangan olahraga sekolah yang luas.",
     points: [
-      "Senam kesegaran jasmani berkala",
-      "Pekan olahraga antarkelas (class meeting)",
-      "Edukasi pola hidup bersih, sehat, dan gizi seimbang"
+      "Klub Futsal, Basket, Badminton, dan Renang",
+      "Senam kebugaran jasmani teratur dan pertandingan persahabatan",
+      "Pembinaan mental sportivitas dan kerjasama tim"
     ]
   },
   sosial: {
-    title: "Kegiatan Sosial & Lingkungan",
-    category: "Kepedulian Sosial",
-    desc: "Mengasah kepekaan empati sosial dan kecintaan pada kelestarian lingkungan melalui bakti sosial dan gerakan sekolah bersih.",
+    title: "Kegiatan Rutin, Karakter & Peduli Lingkungan",
+    category: "Kepedulian & Budaya Sekolah",
+    desc: "Mengasah kepekaan empati sosial, kedisiplinan nasionalisme, serta kecintaan pada kelestarian lingkungan hidup.",
     points: [
-      "Gerakan sekolah bersih dan peduli sampah",
-      "Aksi berbagi sukarela untuk masyarakat yang membutuhkan",
-      "Kunjungan edukatif kepedulian lingkungan"
+      "Upacara Bendera khidmat setiap hari Senin untuk melatih kedisiplinan dan cinta tanah air",
+      "Gerakan sekolah peduli lingkungan dan cinta kebersihan",
+      "Program penguatan literasi membaca dan kegiatan Study Tour edukatif"
     ]
   }
 };
@@ -148,7 +150,7 @@ const ACTIVITY_MODAL_DATA = {
 const I18N_DICTIONARY = {
   id: {
     // Topbar & Brand
-    topbar_welcome: "SELAMAT DATANG DI WEBSITE RESMI YAYASAN HARAPAN BANGSA KARAWANG",
+    topbar_welcome: "SELAMAT DATANG DI YAYASAN PANCARAN KASIH KARAWANG",
     brand_sub: "Yayasan Pendidikan Karawang",
 
     // Navigation Menu
@@ -173,9 +175,9 @@ const I18N_DICTIONARY = {
     header_cta_spmb: "SPMB",
 
     // Hero Section
-    hero_tagline: "Yayasan Harapan Bangsa Karawang",
+    hero_tagline: "Yayasan Pancaran Kasih Karawang",
     hero_prefix: "“MEMBANGUN GENERASI",
-    hero_subheadline: "Saatnya Menjadi Bagian Dari <strong>Yayasan Harapan Bangsa Karawang</strong>. Menyelenggarakan pendidikan terpadu jenjang TK, SD, dan SMP dengan pembinaan karakter kasih, nalar kritis, dan kemandirian siswa.",
+    hero_subheadline: "Saatnya Menjadi Bagian Dari <strong>Yayasan Pancaran Kasih Karawang</strong>. Menyelenggarakan pendidikan terpadu jenjang TK, SD, dan SMP dengan pembinaan karakter kasih, nalar kritis, dan kemandirian siswa.",
     hero_btn_register: "Daftar Sekarang (SPMB)",
     hero_btn_explore: "Lihat Jenjang Pendidikan",
     hero_fact1_sub: "Pendidikan Formal Terpadu",
@@ -186,11 +188,11 @@ const I18N_DICTIONARY = {
 
     // Section Titles
     sec_about_label: "Profil Kelembagaan",
-    sec_about_title: "Mengenal Yayasan Harapan Bangsa Karawang",
+    sec_about_title: "Mengenal Yayasan Pancaran Kasih Karawang",
     sec_about_desc: "Lembaga pendidikan formal yang berkomitmen menyediakan pendidikan bermutu dan berkeadaban di wilayah Kabupaten Karawang.",
     sec_visimisi_label: "Arah & Landasan",
     sec_visimisi_title: "Visi dan Misi Pendidikan",
-    sec_visimisi_desc: "Prinsip pemandu seluruh kegiatan belajar mengajar dan pembinaan karakter di Yayasan Harapan Bangsa Karawang.",
+    sec_visimisi_desc: "Prinsip pemandu seluruh kegiatan belajar mengajar dan pembinaan karakter di Yayasan Pancaran Kasih Karawang.",
     sec_edu_label: "Satuan Pendidikan",
     sec_edu_title: "Program Jenjang Sekolah",
     sec_edu_desc: "Struktur kurikulum berjenjang yang disesuaikan dengan tahapan psikologis dan kognitif peserta didik.",
@@ -200,7 +202,7 @@ const I18N_DICTIONARY = {
   },
   en: {
     // Topbar & Brand
-    topbar_welcome: "WELCOME TO THE OFFICIAL WEBSITE OF HARAPAN BANGSA FOUNDATION KARAWANG",
+    topbar_welcome: "WELCOME TO YAYASAN PANCARAN KASIH KARAWANG",
     brand_sub: "Karawang Education Foundation",
 
     // Navigation Menu
@@ -225,9 +227,9 @@ const I18N_DICTIONARY = {
     header_cta_spmb: "Admissions",
 
     // Hero Section
-    hero_tagline: "Harapan Bangsa Karawang Foundation",
+    hero_tagline: "Yayasan Pancaran Kasih Karawang",
     hero_prefix: "“BUILDING A GENERATION",
-    hero_subheadline: "Join the Family of <strong>Harapan Bangsa Karawang Foundation</strong>. Providing integrated education for Kindergarten, Elementary, and Junior High focusing on love character, critical reasoning, and student independence.",
+    hero_subheadline: "Join the Family of <strong>Yayasan Pancaran Kasih Karawang</strong>. Providing integrated education for Kindergarten, Elementary, and Junior High focusing on love character, critical reasoning, and student independence.",
     hero_btn_register: "Register Now (Admissions)",
     hero_btn_explore: "Explore Academic Levels",
     hero_fact1_sub: "Integrated Formal Education",
@@ -238,11 +240,11 @@ const I18N_DICTIONARY = {
 
     // Section Titles
     sec_about_label: "Institutional Profile",
-    sec_about_title: "Getting to Know Harapan Bangsa Karawang Foundation",
+    sec_about_title: "Getting to Know Yayasan Pancaran Kasih Karawang",
     sec_about_desc: "A formal educational institution committed to providing high-quality and civilized education in Karawang Regency.",
     sec_visimisi_label: "Principles & Foundation",
     sec_visimisi_title: "Educational Vision & Mission",
-    sec_visimisi_desc: "Guiding principles for all teaching, learning, and character building activities at Harapan Bangsa Karawang Foundation.",
+    sec_visimisi_desc: "Guiding principles for all teaching, learning, and character building activities at Yayasan Pancaran Kasih Karawang.",
     sec_edu_label: "Academic Units",
     sec_edu_title: "School Level Programs",
     sec_edu_desc: "A structured curriculum tailored to the psychological and cognitive stages of students.",
@@ -767,10 +769,10 @@ function initHeroSlider() {
   }, slideDuration);
 }
 
-// Typing Words Per Language
+// Typing Words Per Language (Sesuai Motto Resmi: Kasih, Disiplin, Cerdas, Berteknologi, Peduli Lingkungan)
 const HERO_TYPING_WORDS = {
-  id: ["BERKARAKTER", "CERDAS", "BERDAYA SAING", "BERPRESTASI"],
-  en: ["WITH CHARACTER", "INTELLIGENT", "COMPETITIVE", "ACCOMPLISHED"]
+  id: ["BERKARAKTER KASIH", "DISIPLIN", "CERDAS", "BERTEKNOLOGI", "PEDULI LINGKUNGAN"],
+  en: ["LOVING CHARACTER", "DISCIPLINED", "INTELLIGENT", "TECH-SAVVY", "CARING FOR NATURE"]
 };
 
 let heroTypingTimer = null;
