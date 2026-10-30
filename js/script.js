@@ -390,7 +390,7 @@ function initSearchModal() {
         if (!query) return;
 
         let targetId = "tentang";
-        if (query.includes("spmb") || query.includes("daftar") || query.includes("ppdb") || query.includes("biaya")) {
+        if (query.includes("spmb") || query.includes("daftar") || query.includes("ppdb") || query.includes("spmb") || query.includes("biaya")) {
           targetId = "pendaftaran";
         } else if (query.includes("kurikulum") || query.includes("stem") || query.includes("merdeka")) {
           targetId = "akademik";
@@ -777,12 +777,17 @@ function showLangToast(lang) {
 
   const msg = I18N_DICTIONARY[lang]?.toast_msg || (lang === "en" ? "Language switched" : "Bahasa diubah");
   toast.textContent = msg;
-  toast.classList.add("show");
 
+  // Trigger smooth upwards entrance
+  requestAnimationFrame(() => {
+    toast.classList.add("show");
+  });
+
+  // Exactly 3 seconds display then smooth fade out and slide down
   clearTimeout(toast._timer);
   toast._timer = setTimeout(() => {
     toast.classList.remove("show");
-  }, 2300);
+  }, 3000);
 }
 
 // Gallery Filter & Lightbox Functionality

@@ -40,7 +40,7 @@ const SCHOOL_CONFIG = {
   // 2. FORMULIR SPMB RESMI
   googleFormUrl: "https://docs.google.com/forms/d/e/1FAIpQLSewWRQmo5NNYKYFYo50hCGS_VIiKhXM3bNNrOB65REKsDGXdQ/viewform?usp=dialog",
 
-  // 3. KONTAK & LAYANAN PPDB
+  // 3. KONTAK & LAYANAN SPMB
   phone: "(0267) 8407123",
   whatsapp: "082311775434",
   email: "smpharapanbangsa949@gmail.com",
@@ -66,4 +66,4 @@ const SCHOOL_CONFIG = {
 - **Dewan Guru:** 8 orang pendidik dan tenaga kependidikan berijazah relevan.
 - **Prestasi Nasional:** Peraih 4 Medali Emas Airlangga Competition 21 (Matematika, Bahasa Inggris, PPKn, Bahasa Indonesia).
 - **Kurikulum:** Kurikulum Merdeka Menengah dengan penguatan STEM, Coding, dan Deeper Learning.
-- **Pendaftaran (SPMB):** Terhubung langsung ke formulir online resmi Google Form dan WhatsApp Admin PPDB (Ibu Diana).
+- **Pendaftaran (SPMB):** Terhubung langsung ke formulir online resmi Google Form dan WhatsApp Admin SPMB (Ibu Diana).
