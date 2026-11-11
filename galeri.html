@@ -38,7 +38,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body data-page="gallery">
 
     <!-- Header / Navigation Bar -->
   <header class="header" id="header">
@@ -55,7 +55,7 @@
             </div>
           </div>
           <div class="topbar-right-group">
-            <div class="topbar-socials" aria-label="Media Sosial Resmi SMP Harapan Bangsa">
+            <div class="topbar-socials" aria-label="Media Sosial Resmi SMP Harapan Bangsa" data-i18n-aria="topbar_socials_aria">
               <a href="https://www.instagram.com/smpharapanbangsa?stkn=Z285eXR5M2R0OXFt" target="_blank" rel="noopener noreferrer"
                 class="topbar-social-link" title="Instagram Resmi @smpharapanbangsa" aria-label="Instagram Resmi SMP Harapan Bangsa">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
@@ -79,7 +79,7 @@
               </a>
             </div>
             <!-- Language Flags (Indonesia / English) -->
-            <div class="topbar-flags" title="Pilihan Bahasa / Select Language">
+            <div class="topbar-flags" title="Pilihan Bahasa / Select Language" data-i18n-title="topbar_flags_title">
               <button type="button" class="flag-badge flag-id active" data-lang="id" title="Bahasa Indonesia" aria-label="Bahasa Indonesia">
                 <span class="flag-stripe-red"></span>
                 <span class="flag-stripe-white"></span>
@@ -108,8 +108,8 @@
     <div class="header-main">
       <div class="container header-container">
         <!-- School Brand -->
-        <a href="index.html#beranda" class="brand-link" aria-label="Beranda SMP Harapan Bangsa Karawang">
-          <img src="assets/images/logo-smp-harapan-bangsa.png" alt="Logo Resmi SMP Harapan Bangsa Karawang" class="brand-logo-img">
+        <a href="index.html#beranda" class="brand-link" aria-label="Beranda SMP Harapan Bangsa Karawang" data-i18n-aria="brand_aria">
+          <img src="assets/images/logo-smp-harapan-bangsa.png" alt="Logo Resmi SMP Harapan Bangsa Karawang" data-i18n-alt="brand_logo_alt" class="brand-logo-img">
           <div class="brand-title-group">
             <span class="brand-name">SMP HARAPAN BANGSA</span>
             <span class="brand-sub" data-i18n="brand_sub">Karawang Barat, Jawa Barat</span>
@@ -117,7 +117,7 @@
         </a>
 
         <!-- Navigation Menu -->
-        <nav class="nav-menu" id="navMenu" aria-label="Menu Utama">
+        <nav class="nav-menu" id="navMenu" aria-label="Menu Utama" data-i18n-aria="nav_main_aria">
           <div class="nav-menu-links">
             <a href="index.html#beranda" class="nav-link" data-i18n="nav_home">Beranda</a>
 
@@ -157,7 +157,8 @@
         <div class="header-utilities">
           <!-- Dual Theme Toggle -->
           <button class="header-icon-btn theme-toggle-btn" id="themeToggleBtn"
-            aria-label="Ganti tema tampilan terang atau gelap" title="Ganti Tema">
+            aria-label="Ganti tema tampilan terang atau gelap" data-i18n-aria="theme_toggle_aria"
+            title="Ganti Tema" data-i18n-title="theme_toggle_title">
             <svg class="theme-icon-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
               aria-hidden="true">
               <circle cx="12" cy="12" r="5"></circle>
@@ -184,8 +185,8 @@
           </a>
 
           <!-- Mobile Menu Toggle Button -->
-          <button class="nav-toggle" id="navToggle" aria-label="Buka menu navigasi" aria-expanded="false"
-            aria-controls="navMenu">
+          <button class="nav-toggle" id="navToggle" aria-label="Buka menu navigasi" data-i18n-aria="nav_toggle_aria"
+            aria-expanded="false" aria-controls="navMenu">
             <span class="nav-toggle-bar"></span>
             <span class="nav-toggle-bar"></span>
             <span class="nav-toggle-bar"></span>
@@ -200,18 +201,18 @@
     <section class="page-hero">
       <div class="container">
         <!-- Breadcrumbs -->
-        <nav class="breadcrumb-nav" aria-label="Navigasi Jejak Halaman">
+        <nav class="breadcrumb-nav" aria-label="Navigasi Jejak Halaman" data-i18n-aria="gal_bc_aria">
           <ol class="breadcrumb-list">
-            <li><a href="index.html" class="breadcrumb-link">Beranda</a></li>
+            <li><a href="index.html" class="breadcrumb-link" data-i18n="gal_bc_home">Beranda</a></li>
             <li class="breadcrumb-separator">/</li>
-            <li class="breadcrumb-current" aria-current="page">Galeri Dokumentasi SMP Harapan Bangsa</li>
+            <li class="breadcrumb-current" aria-current="page" data-i18n="gal_bc_current">Galeri Dokumentasi SMP Harapan Bangsa</li>
           </ol>
         </nav>
 
         <div style="max-width: 820px;">
-          <span class="page-hero-badge">Dokumentasi Nyata SMP Harapan Bangsa</span>
-          <h1 class="page-hero-title">Galeri Kegiatan &amp; Kehidupan Kampus SMP</h1>
-          <p class="page-hero-lead">
+          <span class="page-hero-badge" data-i18n="gal_hero_badge">Dokumentasi Nyata SMP Harapan Bangsa</span>
+          <h1 class="page-hero-title" data-i18n="gal_hero_title">Galeri Kegiatan &amp; Kehidupan Kampus SMP</h1>
+          <p class="page-hero-lead" data-i18n="gal_hero_lead">
             Menyajikan rekaman visual nyata aktivitas belajar mengajar di ruang kelas, praktikum sains di laboratorium, latihan kepramukaan, unjuk bakat ekstrakurikuler, serta kebersamaan murid dan bapak ibu guru di kampus SMP Harapan Bangsa Karawang.
           </p>
         </div>
@@ -223,238 +224,238 @@
       <div class="container">
 
         <!-- Kategori Filter Galeri -->
-        <div class="gallery-filter-bar" role="tablist" aria-label="Kategori Galeri">
-          <button class="gallery-filter-btn active" data-filter="all" role="tab" aria-selected="true">Semua Koleksi (14)</button>
-          <button class="gallery-filter-btn" data-filter="prestasi" role="tab" aria-selected="false">Prestasi Siswa (4)</button>
-          <button class="gallery-filter-btn" data-filter="kegiatan" role="tab" aria-selected="false">KBM &amp; Kesiswaan (5)</button>
-          <button class="gallery-filter-btn" data-filter="karakter" role="tab" aria-selected="false">Karakter &amp; Spiritual (3)</button>
-          <button class="gallery-filter-btn" data-filter="fasilitas" role="tab" aria-selected="false">Kampus &amp; Fasilitas (1)</button>
-          <button class="gallery-filter-btn" data-filter="guru" role="tab" aria-selected="false">Dewan Guru (1)</button>
+        <div class="gallery-filter-bar" role="tablist" aria-label="Kategori Galeri" data-i18n-aria="gal_filter_aria">
+          <button class="gallery-filter-btn active" data-filter="all" role="tab" aria-selected="true" data-i18n="gal_filter_all">Semua Koleksi (14)</button>
+          <button class="gallery-filter-btn" data-filter="prestasi" role="tab" aria-selected="false" data-i18n="gal_filter_ach">Prestasi Siswa (4)</button>
+          <button class="gallery-filter-btn" data-filter="kegiatan" role="tab" aria-selected="false" data-i18n="gal_filter_act">KBM &amp; Kesiswaan (5)</button>
+          <button class="gallery-filter-btn" data-filter="karakter" role="tab" aria-selected="false" data-i18n="gal_filter_char">Karakter &amp; Spiritual (3)</button>
+          <button class="gallery-filter-btn" data-filter="fasilitas" role="tab" aria-selected="false" data-i18n="gal_filter_fac">Kampus &amp; Fasilitas (1)</button>
+          <button class="gallery-filter-btn" data-filter="guru" role="tab" aria-selected="false" data-i18n="gal_filter_guru">Dewan Guru (1)</button>
         </div>
 
         <!-- Gallery Grid Dokumentasi Lengkap SMP Harapan Bangsa -->
         <div class="gallery-grid" style="margin-bottom: 3rem;">
 
           <!-- 1. Prestasi: Sadrakh -->
-          <div class="gallery-card" data-category="prestasi" data-img="assets/images/gallery/prestasi-sadrakh-matematika.jpg" data-title="Penghargaan Medali Emas Matematika Nasional" data-desc="Sadrakh Perwira Bore Sampepadang peraih Medali Emas Bidang Matematika Jenjang SMP pada Airlangga Competition 21 Tingkat Nasional.">
+          <div class="gallery-card" tabindex="0" role="button" data-category="prestasi" data-img="assets/images/gallery/prestasi-sadrakh-matematika.jpg" data-title="Penghargaan Medali Emas Matematika Nasional" data-desc="Sadrakh Perwira Bore Sampepadang peraih Medali Emas Bidang Matematika Jenjang SMP pada Airlangga Competition 21 Tingkat Nasional.">
             <div class="gallery-card-thumb">
-              <img src="assets/images/gallery/prestasi-sadrakh-matematika.jpg" alt="Sadrakh Perwira Bore Sampepadang peraih Medali Emas Matematika" loading="lazy">
-              <span class="gallery-card-badge gallery-badge-smp">Prestasi Nasional</span>
+              <img src="assets/images/gallery/prestasi-sadrakh-matematika.jpg" alt="Sadrakh Perwira Bore Sampepadang peraih Medali Emas Matematika" data-i18n-alt="gal1_alt" loading="lazy">
+              <span class="gallery-card-badge gallery-badge-smp" data-i18n="gal_badge_ach">Prestasi Nasional</span>
             </div>
             <div class="gallery-card-body">
-              <h3 class="gallery-card-title">Medali Emas Matematika Nasional</h3>
-              <p class="gallery-card-desc">Sadrakh Perwira Bore Sampepadang memperlihatkan piagam penghargaan medali emas bidang Matematika tingkat nasional (Airlangga Competition 21).</p>
+              <h3 class="gallery-card-title" data-i18n="gal1_title">Medali Emas Matematika Nasional</h3>
+              <p class="gallery-card-desc" data-i18n="gal1_desc">Sadrakh Perwira Bore Sampepadang memperlihatkan piagam penghargaan medali emas bidang Matematika tingkat nasional (Airlangga Competition 21).</p>
               <div class="gallery-card-action">
-                <span>Perbesar Foto</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                <span data-i18n="gal_zoom">Perbesar Foto</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
               </div>
             </div>
           </div>
 
           <!-- 2. Prestasi: Yemima -->
-          <div class="gallery-card" data-category="prestasi" data-img="assets/images/gallery/prestasi-yemima-bahasa-inggris.jpg" data-title="Penghargaan Medali Emas Bahasa Inggris Nasional" data-desc="Yemima Chrisna Santoso peraih Medali Emas Bidang Bahasa Inggris Jenjang SMP pada Airlangga Competition 21 Tingkat Nasional.">
+          <div class="gallery-card" tabindex="0" role="button" data-category="prestasi" data-img="assets/images/gallery/prestasi-yemima-bahasa-inggris.jpg" data-title="Penghargaan Medali Emas Bahasa Inggris Nasional" data-desc="Yemima Chrisna Santoso peraih Medali Emas Bidang Bahasa Inggris Jenjang SMP pada Airlangga Competition 21 Tingkat Nasional.">
             <div class="gallery-card-thumb">
-              <img src="assets/images/gallery/prestasi-yemima-bahasa-inggris.jpg" alt="Yemima Chrisna Santoso peraih Medali Emas Bahasa Inggris" loading="lazy">
-              <span class="gallery-card-badge gallery-badge-smp">Prestasi Nasional</span>
+              <img src="assets/images/gallery/prestasi-yemima-bahasa-inggris.jpg" alt="Yemima Chrisna Santoso peraih Medali Emas Bahasa Inggris" data-i18n-alt="gal2_alt" loading="lazy">
+              <span class="gallery-card-badge gallery-badge-smp" data-i18n="gal_badge_ach">Prestasi Nasional</span>
             </div>
             <div class="gallery-card-body">
-              <h3 class="gallery-card-title">Medali Emas Bahasa Inggris Nasional</h3>
-              <p class="gallery-card-desc">Yemima Chrisna Santoso dengan medali emas dan sertifikat penghargaan juara 1 bidang Bahasa Inggris tingkat nasional (Airlangga Competition 21).</p>
+              <h3 class="gallery-card-title" data-i18n="gal2_title">Medali Emas Bahasa Inggris Nasional</h3>
+              <p class="gallery-card-desc" data-i18n="gal2_desc">Yemima Chrisna Santoso dengan medali emas dan sertifikat penghargaan juara 1 bidang Bahasa Inggris tingkat nasional (Airlangga Competition 21).</p>
               <div class="gallery-card-action">
-                <span>Perbesar Foto</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                <span data-i18n="gal_zoom">Perbesar Foto</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
               </div>
             </div>
           </div>
 
           <!-- 3. Prestasi: Clarisa Valquira -->
-          <div class="gallery-card" data-category="prestasi" data-img="assets/images/gallery/prestasi-clarisa-ppkn.jpg" data-title="Penghargaan Medali Emas PPKN Nasional" data-desc="Clarisa Valquira peraih Medali Emas Bidang PPKN Jenjang SMP pada Airlangga Competition 21 Tingkat Nasional.">
+          <div class="gallery-card" tabindex="0" role="button" data-category="prestasi" data-img="assets/images/gallery/prestasi-clarisa-ppkn.jpg" data-title="Penghargaan Medali Emas PPKN Nasional" data-desc="Clarisa Valquira peraih Medali Emas Bidang PPKN Jenjang SMP pada Airlangga Competition 21 Tingkat Nasional.">
             <div class="gallery-card-thumb">
-              <img src="assets/images/gallery/prestasi-clarisa-ppkn.jpg" alt="Clarisa Valquira peraih Medali Emas PPKN" loading="lazy">
-              <span class="gallery-card-badge gallery-badge-smp">Prestasi Nasional</span>
+              <img src="assets/images/gallery/prestasi-clarisa-ppkn.jpg" alt="Clarisa Valquira peraih Medali Emas PPKN" data-i18n-alt="gal3_alt" loading="lazy">
+              <span class="gallery-card-badge gallery-badge-smp" data-i18n="gal_badge_ach">Prestasi Nasional</span>
             </div>
             <div class="gallery-card-body">
-              <h3 class="gallery-card-title">Medali Emas PPKN Nasional</h3>
-              <p class="gallery-card-desc">Clarisa Valquira memperlihatkan sertifikat penghargaan juara 1 medali emas bidang PPKN jenjang SMP pada kompetisi nasional Airlangga Competition 21.</p>
+              <h3 class="gallery-card-title" data-i18n="gal3_title">Medali Emas PPKN Nasional</h3>
+              <p class="gallery-card-desc" data-i18n="gal3_desc">Clarisa Valquira memperlihatkan sertifikat penghargaan juara 1 medali emas bidang PPKN jenjang SMP pada kompetisi nasional Airlangga Competition 21.</p>
               <div class="gallery-card-action">
-                <span>Perbesar Foto</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                <span data-i18n="gal_zoom">Perbesar Foto</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
               </div>
             </div>
           </div>
 
           <!-- 4. Prestasi: Hanna M.O -->
-          <div class="gallery-card" data-category="prestasi" data-img="assets/images/gallery/prestasi-hanna-bahasa-indonesia.jpg" data-title="Penghargaan Medali Emas Bahasa Indonesia Nasional" data-desc="Hanna M.O peraih Medali Emas Bidang Bahasa Indonesia Jenjang SMP pada Airlangga Competition 21 Tingkat Nasional.">
+          <div class="gallery-card" tabindex="0" role="button" data-category="prestasi" data-img="assets/images/gallery/prestasi-hanna-bahasa-indonesia.jpg" data-title="Penghargaan Medali Emas Bahasa Indonesia Nasional" data-desc="Hanna M.O peraih Medali Emas Bidang Bahasa Indonesia Jenjang SMP pada Airlangga Competition 21 Tingkat Nasional.">
             <div class="gallery-card-thumb">
-              <img src="assets/images/gallery/prestasi-hanna-bahasa-indonesia.jpg" alt="Hanna M.O peraih Medali Emas Bahasa Indonesia" loading="lazy">
-              <span class="gallery-card-badge gallery-badge-smp">Prestasi Nasional</span>
+              <img src="assets/images/gallery/prestasi-hanna-bahasa-indonesia.jpg" alt="Hanna M.O peraih Medali Emas Bahasa Indonesia" data-i18n-alt="gal4_alt" loading="lazy">
+              <span class="gallery-card-badge gallery-badge-smp" data-i18n="gal_badge_ach">Prestasi Nasional</span>
             </div>
             <div class="gallery-card-body">
-              <h3 class="gallery-card-title">Medali Emas Bahasa Indonesia Nasional</h3>
-              <p class="gallery-card-desc">Hanna M.O dengan medali emas dan piagam penghargaan juara 1 bidang Bahasa Indonesia jenjang SMP pada kompetisi nasional Airlangga Competition 21.</p>
+              <h3 class="gallery-card-title" data-i18n="gal4_title">Medali Emas Bahasa Indonesia Nasional</h3>
+              <p class="gallery-card-desc" data-i18n="gal4_desc">Hanna M.O dengan medali emas dan piagam penghargaan juara 1 bidang Bahasa Indonesia jenjang SMP pada kompetisi nasional Airlangga Competition 21.</p>
               <div class="gallery-card-action">
-                <span>Perbesar Foto</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                <span data-i18n="gal_zoom">Perbesar Foto</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
               </div>
             </div>
           </div>
 
           <!-- 3. Fasilitas: Lapangan & Gedung -->
-          <div class="gallery-card" data-category="fasilitas" data-img="https://res.cloudinary.com/tj778flw/image/upload/v1793326288/WhatsApp_Image_2026-10-30_at_08.16.54.jpg" data-title="Lapangan Olahraga &amp; Gedung Kampus SMP Harapan Bangsa" data-desc="Pemandangan area lapangan serbaguna yang asri dan gedung bertingkat SMP Harapan Bangsa Karawang yang tertata rapi dengan pepohonan rindang.">
+          <div class="gallery-card" tabindex="0" role="button" data-category="fasilitas" data-img="https://res.cloudinary.com/tj778flw/image/upload/v1793326288/WhatsApp_Image_2026-10-30_at_08.16.54.jpg" data-title="Lapangan Olahraga &amp; Gedung Kampus SMP Harapan Bangsa" data-desc="Pemandangan area lapangan serbaguna yang asri dan gedung bertingkat SMP Harapan Bangsa Karawang yang tertata rapi dengan pepohonan rindang.">
             <div class="gallery-card-thumb">
-              <img src="https://res.cloudinary.com/tj778flw/image/upload/v1793326288/WhatsApp_Image_2026-10-30_at_08.16.54.jpg" alt="Pemandangan lapangan olahraga dan gedung kampus SMP Harapan Bangsa" loading="lazy">
-              <span class="gallery-card-badge gallery-badge-smp">Kampus &amp; Fasilitas</span>
+              <img src="https://res.cloudinary.com/tj778flw/image/upload/v1793326288/WhatsApp_Image_2026-10-30_at_08.16.54.jpg" alt="Pemandangan lapangan olahraga dan gedung kampus SMP Harapan Bangsa" data-i18n-alt="gal5_alt" loading="lazy">
+              <span class="gallery-card-badge gallery-badge-smp" data-i18n="gal_badge_fac">Kampus &amp; Fasilitas</span>
             </div>
             <div class="gallery-card-body">
-              <h3 class="gallery-card-title">Lapangan &amp; Gedung Kampus SMP</h3>
-              <p class="gallery-card-desc">Fasilitas luar ruang multifungsi untuk upacara bendera, olahraga futsal dan basket, serta ruang terbuka hijau yang mendukung kenyamanan KBM.</p>
+              <h3 class="gallery-card-title" data-i18n="gal5_title">Lapangan &amp; Gedung Kampus SMP</h3>
+              <p class="gallery-card-desc" data-i18n="gal5_desc">Fasilitas luar ruang multifungsi untuk upacara bendera, olahraga futsal dan basket, serta ruang terbuka hijau yang mendukung kenyamanan KBM.</p>
               <div class="gallery-card-action">
-                <span>Perbesar Foto</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                <span data-i18n="gal_zoom">Perbesar Foto</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
               </div>
             </div>
           </div>
 
           <!-- 4. KBM: Ruang Kelas Ber-AC -->
-          <div class="gallery-card" data-category="kegiatan" data-img="https://res.cloudinary.com/tj778flw/image/upload/v1793326287/WhatsApp_Image_2026-10-30_at_08.16.50.jpg" data-title="KBM &amp; Evaluasi Pembelajaran di Ruang Kelas Ber-AC" data-desc="Peserta didik SMP Harapan Bangsa tekun mengikuti evaluasi akademik di ruang kelas modern berpendingin udara (AC) dengan meja kursi mandiri ergonomis.">
+          <div class="gallery-card" tabindex="0" role="button" data-category="kegiatan" data-img="https://res.cloudinary.com/tj778flw/image/upload/v1793326287/WhatsApp_Image_2026-10-30_at_08.16.50.jpg" data-title="KBM &amp; Evaluasi Pembelajaran di Ruang Kelas Ber-AC" data-desc="Peserta didik SMP Harapan Bangsa tekun mengikuti evaluasi akademik di ruang kelas modern berpendingin udara (AC) dengan meja kursi mandiri ergonomis.">
             <div class="gallery-card-thumb">
-              <img src="https://res.cloudinary.com/tj778flw/image/upload/v1793326287/WhatsApp_Image_2026-10-30_at_08.16.50.jpg" alt="Suasana kegiatan belajar mengajar di ruang kelas SMP Harapan Bangsa" loading="lazy">
-              <span class="gallery-card-badge gallery-badge-smp">Kegiatan Belajar</span>
+              <img src="https://res.cloudinary.com/tj778flw/image/upload/v1793326287/WhatsApp_Image_2026-10-30_at_08.16.50.jpg" alt="Suasana kegiatan belajar mengajar di ruang kelas SMP Harapan Bangsa" data-i18n-alt="gal6_alt" loading="lazy">
+              <span class="gallery-card-badge gallery-badge-smp" data-i18n="gal_badge_kbm">Kegiatan Belajar</span>
             </div>
             <div class="gallery-card-body">
-              <h3 class="gallery-card-title">KBM di Ruang Kelas Modern</h3>
-              <p class="gallery-card-desc">Suasana belajar fokus dan nyaman dengan pencahayaan alami yang baik, pendingin udara, serta bimbingan langsung dari guru pengajar.</p>
+              <h3 class="gallery-card-title" data-i18n="gal6_title">KBM di Ruang Kelas Modern</h3>
+              <p class="gallery-card-desc" data-i18n="gal6_desc">Suasana belajar fokus dan nyaman dengan pencahayaan alami yang baik, pendingin udara, serta bimbingan langsung dari guru pengajar.</p>
               <div class="gallery-card-action">
-                <span>Perbesar Foto</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                <span data-i18n="gal_zoom">Perbesar Foto</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
               </div>
             </div>
           </div>
 
           <!-- 5. Karakter: Salam Pagi 5S -->
-          <div class="gallery-card" data-category="karakter" data-img="https://res.cloudinary.com/tj778flw/image/upload/v1793326283/WhatsApp_Image_2026-10-30_at_08.16.49_1.jpg" data-title="Pembiasaan Karakter Santun 5S &amp; Salam Pagi" data-desc="Siswa-siswi SMP Harapan Bangsa membiasakan salam hormat dan mencium tangan guru saat tiba di sekolah setiap pagi hari.">
+          <div class="gallery-card" tabindex="0" role="button" data-category="karakter" data-img="https://res.cloudinary.com/tj778flw/image/upload/v1793326283/WhatsApp_Image_2026-10-30_at_08.16.49_1.jpg" data-title="Pembiasaan Karakter Santun 5S &amp; Salam Pagi" data-desc="Siswa-siswi SMP Harapan Bangsa membiasakan salam hormat dan mencium tangan guru saat tiba di sekolah setiap pagi hari.">
             <div class="gallery-card-thumb">
-              <img src="https://res.cloudinary.com/tj778flw/image/upload/v1793326283/WhatsApp_Image_2026-10-30_at_08.16.49_1.jpg" alt="Pembiasaan salam pagi santun siswa kepada guru di gerbang sekolah" loading="lazy">
-              <span class="gallery-card-badge gallery-badge-smp">Pembiasaan Karakter</span>
+              <img src="https://res.cloudinary.com/tj778flw/image/upload/v1793326283/WhatsApp_Image_2026-10-30_at_08.16.49_1.jpg" alt="Pembiasaan salam pagi santun siswa kepada guru di gerbang sekolah" data-i18n-alt="gal7_alt" loading="lazy">
+              <span class="gallery-card-badge gallery-badge-smp" data-i18n="gal_badge_char">Pembiasaan Karakter</span>
             </div>
             <div class="gallery-card-body">
-              <h3 class="gallery-card-title">Pembiasaan Karakter 5S &amp; Salam Pagi</h3>
-              <p class="gallery-card-desc">Penerapan budaya Senyum, Sapa, Salam, Sopan, dan Santun untuk memupuk adab santun dan kedekatan emosional positif warga sekolah.</p>
+              <h3 class="gallery-card-title" data-i18n="gal7_title">Pembiasaan Karakter 5S &amp; Salam Pagi</h3>
+              <p class="gallery-card-desc" data-i18n="gal7_desc">Penerapan budaya Senyum, Sapa, Salam, Sopan, dan Santun untuk memupuk adab santun dan kedekatan emosional positif warga sekolah.</p>
               <div class="gallery-card-action">
-                <span>Perbesar Foto</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                <span data-i18n="gal_zoom">Perbesar Foto</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
               </div>
             </div>
           </div>
 
           <!-- 6. Guru: Dewan Guru & Tenaga Pendidik -->
-          <div class="gallery-card" data-category="guru" data-img="assets/images/gallery/dewan-guru-smp.jpg" data-title="Dewan Guru &amp; Tenaga Pendidik SMP Harapan Bangsa" data-desc="Kepala Sekolah Ibu Juliana Ruth Mathilda Hutapea, S.Th. bersama jajaran dewan guru berseragam rapi di kampus SMP Harapan Bangsa Karawang.">
+          <div class="gallery-card" tabindex="0" role="button" data-category="guru" data-img="assets/images/gallery/dewan-guru-smp.jpg" data-title="Dewan Guru &amp; Tenaga Pendidik SMP Harapan Bangsa" data-desc="Kepala Sekolah Ibu Juliana Ruth Mathilda Hutapea, S.Th. bersama jajaran dewan guru berseragam rapi di kampus SMP Harapan Bangsa Karawang.">
             <div class="gallery-card-thumb">
-              <img src="assets/images/gallery/dewan-guru-smp.jpg" alt="Foto bersama Dewan Guru dan Kepala Sekolah SMP Harapan Bangsa" loading="lazy">
-              <span class="gallery-card-badge gallery-badge-smp">Dewan Guru</span>
+              <img src="assets/images/gallery/dewan-guru-smp.jpg" alt="Foto bersama Dewan Guru dan Kepala Sekolah SMP Harapan Bangsa" data-i18n-alt="gal8_alt" loading="lazy">
+              <span class="gallery-card-badge gallery-badge-smp" data-i18n="gal_badge_guru">Dewan Guru</span>
             </div>
             <div class="gallery-card-body">
-              <h3 class="gallery-card-title">Dewan Guru &amp; Tenaga Pendidik</h3>
-              <p class="gallery-card-desc">Jajaran pendidik berdedikasi tinggi yang siap membimbing dan menginspirasi putra-putri Anda menuju prestasi terbaik.</p>
+              <h3 class="gallery-card-title" data-i18n="gal8_title">Dewan Guru &amp; Tenaga Pendidik</h3>
+              <p class="gallery-card-desc" data-i18n="gal8_desc">Jajaran pendidik berdedikasi tinggi yang siap membimbing dan menginspirasi putra-putri Anda menuju prestasi terbaik.</p>
               <div class="gallery-card-action">
-                <span>Perbesar Foto</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                <span data-i18n="gal_zoom">Perbesar Foto</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
               </div>
             </div>
           </div>
 
           <!-- 7. Kegiatan: Upacara Bendera Senin -->
-          <div class="gallery-card" data-category="kegiatan" data-img="https://res.cloudinary.com/tj778flw/image/upload/v1793326287/WhatsApp_Image_2026-10-30_at_08.16.50_1.jpg" data-title="Petugas Upacara Bendera Bersama Kepala Sekolah" data-desc="Siswa-siswi petugas upacara bendera hari Senin berfoto bersama Kepala Sekolah dan Dewan Guru seusai tugas kenegaraan mingguan.">
+          <div class="gallery-card" tabindex="0" role="button" data-category="kegiatan" data-img="https://res.cloudinary.com/tj778flw/image/upload/v1793326287/WhatsApp_Image_2026-10-30_at_08.16.50_1.jpg" data-title="Petugas Upacara Bendera Bersama Kepala Sekolah" data-desc="Siswa-siswi petugas upacara bendera hari Senin berfoto bersama Kepala Sekolah dan Dewan Guru seusai tugas kenegaraan mingguan.">
             <div class="gallery-card-thumb">
-              <img src="https://res.cloudinary.com/tj778flw/image/upload/v1793326287/WhatsApp_Image_2026-10-30_at_08.16.50_1.jpg" alt="Petugas upacara bendera hari Senin bersama kepala sekolah dan dewan guru" loading="lazy">
-              <span class="gallery-card-badge gallery-badge-smp">Upacara &amp; Nasionalisme</span>
+              <img src="https://res.cloudinary.com/tj778flw/image/upload/v1793326287/WhatsApp_Image_2026-10-30_at_08.16.50_1.jpg" alt="Petugas upacara bendera hari Senin bersama kepala sekolah dan dewan guru" data-i18n-alt="gal9_alt" loading="lazy">
+              <span class="gallery-card-badge gallery-badge-smp" data-i18n="gal_badge_upacara">Upacara &amp; Nasionalisme</span>
             </div>
             <div class="gallery-card-body">
-              <h3 class="gallery-card-title">Kedisiplinan Upacara Bendera</h3>
-              <p class="gallery-card-desc">Latihan kepemimpinan dan rasa cinta tanah air melalui upacara pengibaran bendera merah putih rutin setiap awal pekan.</p>
+              <h3 class="gallery-card-title" data-i18n="gal9_title">Kedisiplinan Upacara Bendera</h3>
+              <p class="gallery-card-desc" data-i18n="gal9_desc">Latihan kepemimpinan dan rasa cinta tanah air melalui upacara pengibaran bendera merah putih rutin setiap awal pekan.</p>
               <div class="gallery-card-action">
-                <span>Perbesar Foto</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                <span data-i18n="gal_zoom">Perbesar Foto</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
               </div>
             </div>
           </div>
 
           <!-- 8. Kegiatan: Korps Paskibraka Sekolah -->
-          <div class="gallery-card" data-category="kegiatan" data-img="https://res.cloudinary.com/tj778flw/image/upload/v1793326287/WhatsApp_Image_2026-10-30_at_08.16.51_1.jpg" data-title="Korps Petugas Pengibar Bendera Upacara SMP" data-desc="Barisan siswa-siswi korps petugas pengibar bendera merah putih dan pembaca teks kenegaraan SMP Harapan Bangsa Karawang.">
+          <div class="gallery-card" tabindex="0" role="button" data-category="kegiatan" data-img="https://res.cloudinary.com/tj778flw/image/upload/v1793326287/WhatsApp_Image_2026-10-30_at_08.16.51_1.jpg" data-title="Korps Petugas Pengibar Bendera Upacara SMP" data-desc="Barisan siswa-siswi korps petugas pengibar bendera merah putih dan pembaca teks kenegaraan SMP Harapan Bangsa Karawang.">
             <div class="gallery-card-thumb">
-              <img src="https://res.cloudinary.com/tj778flw/image/upload/v1793326287/WhatsApp_Image_2026-10-30_at_08.16.51_1.jpg" alt="Korps pasukan petugas upacara bendera SMP Harapan Bangsa" loading="lazy">
-              <span class="gallery-card-badge gallery-badge-smp">Korps Petugas Upacara</span>
+              <img src="https://res.cloudinary.com/tj778flw/image/upload/v1793326287/WhatsApp_Image_2026-10-30_at_08.16.51_1.jpg" alt="Korps pasukan petugas upacara bendera SMP Harapan Bangsa" data-i18n-alt="gal10_alt" loading="lazy">
+              <span class="gallery-card-badge gallery-badge-smp" data-i18n="gal_badge_korps">Korps Petugas Upacara</span>
             </div>
             <div class="gallery-card-body">
-              <h3 class="gallery-card-title">Korps Pasukan Upacara Bendera</h3>
-              <p class="gallery-card-desc">Regu pengibar bendera berseragam putih lengkap dengan selempang kehormatan, melatih ketegasan baris-berbaris dan tanggung jawab.</p>
+              <h3 class="gallery-card-title" data-i18n="gal10_title">Korps Pasukan Upacara Bendera</h3>
+              <p class="gallery-card-desc" data-i18n="gal10_desc">Regu pengibar bendera berseragam putih lengkap dengan selempang kehormatan, melatih ketegasan baris-berbaris dan tanggung jawab.</p>
               <div class="gallery-card-action">
-                <span>Perbesar Foto</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                <span data-i18n="gal_zoom">Perbesar Foto</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
               </div>
             </div>
           </div>
 
           <!-- 9. Kegiatan: Perayaan Kemerdekaan & Budaya -->
-          <div class="gallery-card" data-category="kegiatan" data-img="https://res.cloudinary.com/tj778flw/image/upload/v1793326289/WhatsApp_Image_2026-10-30_at_08.16.51.jpg" data-title="Peringatan Kemerdekaan &amp; Gebyar Busana Nusantara" data-desc="Keceriaan siswa-siswi dan dewan guru mengenakan busana adat nusantara dan seragam merah putih dalam rangka memperingati HUT RI di lapangan kampus.">
+          <div class="gallery-card" tabindex="0" role="button" data-category="kegiatan" data-img="https://res.cloudinary.com/tj778flw/image/upload/v1793326289/WhatsApp_Image_2026-10-30_at_08.16.51.jpg" data-title="Peringatan Kemerdekaan &amp; Gebyar Busana Nusantara" data-desc="Keceriaan siswa-siswi dan dewan guru mengenakan busana adat nusantara dan seragam merah putih dalam rangka memperingati HUT RI di lapangan kampus.">
             <div class="gallery-card-thumb">
-              <img src="https://res.cloudinary.com/tj778flw/image/upload/v1793326289/WhatsApp_Image_2026-10-30_at_08.16.51.jpg" alt="Siswa SMP Harapan Bangsa berbusana adat memperingati HUT RI" loading="lazy">
-              <span class="gallery-card-badge gallery-badge-smp">Seni &amp; Budaya</span>
+              <img src="https://res.cloudinary.com/tj778flw/image/upload/v1793326289/WhatsApp_Image_2026-10-30_at_08.16.51.jpg" alt="Siswa SMP Harapan Bangsa berbusana adat memperingati HUT RI" data-i18n-alt="gal11_alt" loading="lazy">
+              <span class="gallery-card-badge gallery-badge-smp" data-i18n="gal_badge_culture">Seni &amp; Budaya</span>
             </div>
             <div class="gallery-card-body">
-              <h3 class="gallery-card-title">Gebyar Peringatan Hari Kemerdekaan</h3>
-              <p class="gallery-card-desc">Ajang pelestarian nilai kebangsaan, toleransi kebinekaan, dan sukacita kebersamaan siswa dalam balutan busana adat daerah.</p>
+              <h3 class="gallery-card-title" data-i18n="gal11_title">Gebyar Peringatan Hari Kemerdekaan</h3>
+              <p class="gallery-card-desc" data-i18n="gal11_desc">Ajang pelestarian nilai kebangsaan, toleransi kebinekaan, dan sukacita kebersamaan siswa dalam balutan busana adat daerah.</p>
               <div class="gallery-card-action">
-                <span>Perbesar Foto</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                <span data-i18n="gal_zoom">Perbesar Foto</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
               </div>
             </div>
           </div>
 
           <!-- 10. Karakter: Ibadah Pembinaan Rohani -->
-          <div class="gallery-card" data-category="karakter" data-img="https://res.cloudinary.com/tj778flw/image/upload/v1793326283/WhatsApp_Image_2026-10-30_at_08.16.53.jpg" data-title="Ibadah Pembinaan Kerohanian &amp; Karakter Kasih" data-desc="Kegiatan ibadah pembinaan budi pekerti dan spiritualitas siswa SMP Harapan Bangsa bersama Kepala Sekolah dan jajaran guru di kapel/aula sekolah.">
+          <div class="gallery-card" tabindex="0" role="button" data-category="karakter" data-img="https://res.cloudinary.com/tj778flw/image/upload/v1793326283/WhatsApp_Image_2026-10-30_at_08.16.53.jpg" data-title="Ibadah Pembinaan Kerohanian &amp; Karakter Kasih" data-desc="Kegiatan ibadah pembinaan budi pekerti dan spiritualitas siswa SMP Harapan Bangsa bersama Kepala Sekolah dan jajaran guru di kapel/aula sekolah.">
             <div class="gallery-card-thumb">
-              <img src="https://res.cloudinary.com/tj778flw/image/upload/v1793326283/WhatsApp_Image_2026-10-30_at_08.16.53.jpg" alt="Ibadah pembinaan rohani siswa SMP Harapan Bangsa di aula" loading="lazy">
-              <span class="gallery-card-badge gallery-badge-smp">Kerohanian &amp; Kasih</span>
+              <img src="https://res.cloudinary.com/tj778flw/image/upload/v1793326283/WhatsApp_Image_2026-10-30_at_08.16.53.jpg" alt="Ibadah pembinaan rohani siswa SMP Harapan Bangsa di aula" data-i18n-alt="gal12_alt" loading="lazy">
+              <span class="gallery-card-badge gallery-badge-smp" data-i18n="gal_badge_spiritual">Kerohanian &amp; Kasih</span>
             </div>
             <div class="gallery-card-body">
-              <h3 class="gallery-card-title">Pembinaan Rohani &amp; Budi Pekerti</h3>
-              <p class="gallery-card-desc">Penanaman nilai budi pekerti luhur, penguatan iman, serta kasih persaudaraan agar siswa tumbuh menjadi pribadi yang berintegritas.</p>
+              <h3 class="gallery-card-title" data-i18n="gal12_title">Pembinaan Rohani &amp; Budi Pekerti</h3>
+              <p class="gallery-card-desc" data-i18n="gal12_desc">Penanaman nilai budi pekerti luhur, penguatan iman, serta kasih persaudaraan agar siswa tumbuh menjadi pribadi yang berintegritas.</p>
               <div class="gallery-card-action">
-                <span>Perbesar Foto</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                <span data-i18n="gal_zoom">Perbesar Foto</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
               </div>
             </div>
           </div>
 
           <!-- 11. Kegiatan: Barisan Siswa Berseragam Lengkap -->
-          <div class="gallery-card" data-category="kegiatan" data-img="https://res.cloudinary.com/tj778flw/image/upload/v1793326286/WhatsApp_Image_2026-10-30_at_08.16.49.jpg" data-title="Siswa SMP Harapan Bangsa Berseragam Lengkap" data-desc="Barisan peserta didik generasi unggul SMP Harapan Bangsa Karawang berseragam resmi putih biru lengkap dengan topi dan dasi sekolah.">
+          <div class="gallery-card" tabindex="0" role="button" data-category="kegiatan" data-img="https://res.cloudinary.com/tj778flw/image/upload/v1793326286/WhatsApp_Image_2026-10-30_at_08.16.49.jpg" data-title="Siswa SMP Harapan Bangsa Berseragam Lengkap" data-desc="Barisan peserta didik generasi unggul SMP Harapan Bangsa Karawang berseragam resmi putih biru lengkap dengan topi dan dasi sekolah.">
             <div class="gallery-card-thumb">
-              <img src="https://res.cloudinary.com/tj778flw/image/upload/v1793326286/WhatsApp_Image_2026-10-30_at_08.16.49.jpg" alt="Barisan siswa berseragam resmi SMP Harapan Bangsa Karawang" loading="lazy">
-              <span class="gallery-card-badge gallery-badge-smp">Profil Peserta Didik</span>
+              <img src="https://res.cloudinary.com/tj778flw/image/upload/v1793326286/WhatsApp_Image_2026-10-30_at_08.16.49.jpg" alt="Barisan siswa berseragam resmi SMP Harapan Bangsa Karawang" data-i18n-alt="gal13_alt" loading="lazy">
+              <span class="gallery-card-badge gallery-badge-smp" data-i18n="gal_badge_profile">Profil Peserta Didik</span>
             </div>
             <div class="gallery-card-body">
-              <h3 class="gallery-card-title">Generasi Muda SMP Harapan Bangsa</h3>
-              <p class="gallery-card-desc">Potret kebanggaan dan kerapian peserta didik SMP Harapan Bangsa dalam balutan seragam nasional putih biru dengan atribut resmi lengkap.</p>
+              <h3 class="gallery-card-title" data-i18n="gal13_title">Generasi Muda SMP Harapan Bangsa</h3>
+              <p class="gallery-card-desc" data-i18n="gal13_desc">Potret kebanggaan dan kerapian peserta didik SMP Harapan Bangsa dalam balutan seragam nasional putih biru dengan atribut resmi lengkap.</p>
               <div class="gallery-card-action">
-                <span>Perbesar Foto</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                <span data-i18n="gal_zoom">Perbesar Foto</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
               </div>
             </div>
           </div>
 
           <!-- 12. Karakter: Kebersamaan & Apresiasi Petugas Upacara -->
-          <div class="gallery-card" data-category="karakter" data-img="https://res.cloudinary.com/tj778flw/image/upload/v1793326289/WhatsApp_Image_2026-10-30_at_08.16.52.jpg" data-title="Apresiasi &amp; Kebersamaan Petugas Upacara Bersama Guru" data-desc="Momen kebersamaan penuh sukacita antara siswa petugas upacara bendera dan bapak ibu guru di lapangan sekolah.">
+          <div class="gallery-card" tabindex="0" role="button" data-category="karakter" data-img="https://res.cloudinary.com/tj778flw/image/upload/v1793326289/WhatsApp_Image_2026-10-30_at_08.16.52.jpg" data-title="Apresiasi &amp; Kebersamaan Petugas Upacara Bersama Guru" data-desc="Momen kebersamaan penuh sukacita antara siswa petugas upacara bendera dan bapak ibu guru di lapangan sekolah.">
             <div class="gallery-card-thumb">
-              <img src="https://res.cloudinary.com/tj778flw/image/upload/v1793326289/WhatsApp_Image_2026-10-30_at_08.16.52.jpg" alt="Apresiasi dan pose kebersamaan siswa petugas upacara dengan guru" loading="lazy">
-              <span class="gallery-card-badge gallery-badge-smp">Kebersamaan &amp; Apresiasi</span>
+              <img src="https://res.cloudinary.com/tj778flw/image/upload/v1793326289/WhatsApp_Image_2026-10-30_at_08.16.52.jpg" alt="Apresiasi dan pose kebersamaan siswa petugas upacara dengan guru" data-i18n-alt="gal14_alt" loading="lazy">
+              <span class="gallery-card-badge gallery-badge-smp" data-i18n="gal_badge_appreciation">Kebersamaan &amp; Apresiasi</span>
             </div>
             <div class="gallery-card-body">
-              <h3 class="gallery-card-title">Apresiasi Kebersamaan Guru &amp; Siswa</h3>
-              <p class="gallery-card-desc">Kedekatan harmonis antara pendidik dan peserta didik yang saling menghargai dedikasi dan kerja sama dalam setiap penugasan sekolah.</p>
+              <h3 class="gallery-card-title" data-i18n="gal14_title">Apresiasi Kebersamaan Guru &amp; Siswa</h3>
+              <p class="gallery-card-desc" data-i18n="gal14_desc">Kedekatan harmonis antara pendidik dan peserta didik yang saling menghargai dedikasi dan kerja sama dalam setiap penugasan sekolah.</p>
               <div class="gallery-card-action">
-                <span>Perbesar Foto</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                <span data-i18n="gal_zoom">Perbesar Foto</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
               </div>
             </div>
           </div>
@@ -464,19 +465,19 @@
         <!-- Kunjungan Kampus & Informasi SPMB Banner -->
         <div class="spmb-cta-banner" style="margin-top: 4.5rem; background: linear-gradient(135deg, #0d2847 0%, #153e6b 100%); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; box-shadow: 0 16px 36px rgba(11,32,56,0.12);">
           <div>
-            <span class="section-label" style="color: #fbbf24; margin-bottom: 0.5rem; display: inline-block;">Kunjungan Kampus &amp; Pendaftaran</span>
-            <h3 class="spmb-cta-title">Ingin Melihat Langsung Kampus SMP Harapan Bangsa?</h3>
-            <p class="spmb-cta-desc">
+            <span class="section-label" style="color: #fbbf24; margin-bottom: 0.5rem; display: inline-block;" data-i18n="gal_cta_label">Kunjungan Kampus &amp; Pendaftaran</span>
+            <h3 class="spmb-cta-title" data-i18n="gal_cta_title">Ingin Melihat Langsung Kampus SMP Harapan Bangsa?</h3>
+            <p class="spmb-cta-desc" data-i18n="gal_cta_desc">
               Kami menyambut hangat kehadiran calon orang tua dan siswa untuk berkeliling kampus, berkonsultasi kurikulum, serta melihat langsung sarana pembelajaran kami di Jl. R.E. Martadinata No. 8, Adiarsa Barat, Karawang Barat.
             </p>
           </div>
           <div class="spmb-cta-actions">
             <a href="https://wa.me/6282311775434?text=Halo%20Admin%20SPMB%20SMP%20Harapan%20Bangsa%20Karawang%2C%20saya%20ingin%20jadwalkan%20kunjungan%20sekolah"
-              target="_blank" rel="noopener noreferrer" class="btn btn-hero-primary" style="text-align: center;">
+              target="_blank" rel="noopener noreferrer" class="btn btn-hero-primary" style="text-align: center;" data-i18n="gal_cta_visit_btn">
               Jadwalkan Kunjungan (WhatsApp)
             </a>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSewWRQmo5NNYKYFYo50hCGS_VIiKhXM3bNNrOB65REKsDGXdQ/viewform?usp=dialog"
-              target="_blank" rel="noopener noreferrer" class="btn btn-hero-secondary" style="text-align: center;">
+              target="_blank" rel="noopener noreferrer" class="btn btn-hero-secondary" style="text-align: center;" data-i18n="gal_cta_form_btn">
               Isi Formulir SPMB Online
             </a>
           </div>
@@ -492,11 +493,11 @@
       <div class="footer-top-grid">
         <div>
           <div class="footer-brand-title">SMP Harapan Bangsa Karawang</div>
-          <p class="footer-brand-desc">
+          <p class="footer-brand-desc" data-i18n="footer_brand_desc">
             Satuan Pendidikan Menengah Pertama berlandaskan budi pekerti luhur, penalaran kritis ilmiah, kecakapan teknologi, dan karakter kasih yang siap mencetak generasi unggul berprestasi.
           </p>
           <div class="footer-jenjang-socials">
-            <div class="footer-subheading">Media Sosial Resmi SMP:</div>
+            <div class="footer-subheading" data-i18n="footer_socials_heading">Media Sosial Resmi SMP:</div>
             <div class="jenjang-social-chips">
               <a href="https://www.instagram.com/smpharapanbangsa?stkn=Z285eXR5M2R0OXFt" target="_blank"
                 rel="noopener noreferrer" class="social-chip chip-instagram"
@@ -531,53 +532,53 @@
         </div>
 
         <div>
-          <div class="footer-column-heading">Navigasi Halaman</div>
+          <div class="footer-column-heading" data-i18n="footer_col_nav">Navigasi Halaman</div>
           <ul class="footer-nav-list">
-            <li><a href="index.html#beranda" class="footer-nav-link">Beranda</a></li>
-            <li><a href="index.html#tentang" class="footer-nav-link">Tentang SMP</a></li>
-            <li><a href="index.html#visimisi" class="footer-nav-link">Visi &amp; Misi</a></li>
-            <li><a href="index.html#akademik" class="footer-nav-link">Kurikulum &amp; STEM</a></li>
-            <li><a href="index.html#guru" class="footer-nav-link">Dewan Guru</a></li>
-            <li><a href="index.html#fasilitas" class="footer-nav-link">Fasilitas Belajar</a></li>
-            <li><a href="index.html#kegiatan" class="footer-nav-link">Kesiswaan &amp; OSIS</a></li>
-            <li><a href="index.html#prestasi" class="footer-nav-link">Prestasi Siswa</a></li>
-            <li><a href="galeri.html" class="footer-nav-link">Galeri Foto</a></li>
+            <li><a href="index.html#beranda" class="footer-nav-link" data-i18n="footer_nav_home">Beranda</a></li>
+            <li><a href="index.html#tentang" class="footer-nav-link" data-i18n="footer_nav_about">Tentang SMP</a></li>
+            <li><a href="index.html#visimisi" class="footer-nav-link" data-i18n="footer_nav_vision">Visi &amp; Misi</a></li>
+            <li><a href="index.html#akademik" class="footer-nav-link" data-i18n="footer_nav_academic">Kurikulum &amp; STEM</a></li>
+            <li><a href="index.html#guru" class="footer-nav-link" data-i18n="footer_nav_teachers">Dewan Guru</a></li>
+            <li><a href="index.html#fasilitas" class="footer-nav-link" data-i18n="footer_nav_facilities">Fasilitas Belajar</a></li>
+            <li><a href="index.html#kegiatan" class="footer-nav-link" data-i18n="footer_nav_activities">Kesiswaan &amp; OSIS</a></li>
+            <li><a href="index.html#prestasi" class="footer-nav-link" data-i18n="footer_nav_achievements">Prestasi Siswa</a></li>
+            <li><a href="galeri.html" class="footer-nav-link" data-i18n="footer_nav_gallery">Galeri Foto</a></li>
           </ul>
         </div>
 
         <div>
-          <div class="footer-column-heading">Pendaftaran &amp; SPMB</div>
+          <div class="footer-column-heading" data-i18n="footer_col_spmb">Pendaftaran &amp; SPMB</div>
           <ul class="footer-nav-list">
-            <li><a href="index.html#pendaftaran" class="footer-nav-link">Alur &amp; Jadwal SPMB</a></li>
+            <li><a href="index.html#pendaftaran" class="footer-nav-link" data-i18n="footer_spmb_flow">Alur &amp; Jadwal SPMB</a></li>
             <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSewWRQmo5NNYKYFYo50hCGS_VIiKhXM3bNNrOB65REKsDGXdQ/viewform?usp=dialog"
                 target="_blank" rel="noopener noreferrer" class="footer-nav-link" data-action="register-smp"
-                data-jenjang="SMP">Google Form SPMB SMP <span class="admin-tag-mini"
-                  style="background-color: rgba(16,185,129,0.2); color: #34d399; border-color: rgba(16,185,129,0.4);">Resmi</span></a></li>
-            <li><a href="https://wa.me/6282311775434" target="_blank" rel="noopener noreferrer" class="footer-nav-link">WhatsApp SPMB: 0823 1177 5434</a></li>
-            <li><a href="index.html#faq" class="footer-nav-link">Tanya Jawab (FAQ)</a></li>
+                data-jenjang="SMP"><span data-i18n="footer_spmb_gform">Google Form SPMB SMP</span> <span class="admin-tag-mini"
+                  style="background-color: rgba(16,185,129,0.2); color: #34d399; border-color: rgba(16,185,129,0.4);" data-i18n="footer_spmb_official">Resmi</span></a></li>
+            <li><a href="https://wa.me/6282311775434" target="_blank" rel="noopener noreferrer" class="footer-nav-link" data-i18n="footer_spmb_wa">WhatsApp SPMB: 0823 1177 5434</a></li>
+            <li><a href="index.html#faq" class="footer-nav-link" data-i18n="footer_spmb_faq">Tanya Jawab (FAQ)</a></li>
           </ul>
         </div>
 
         <div>
-          <div class="footer-column-heading">Kontak Resmi SMP</div>
+          <div class="footer-column-heading" data-i18n="footer_col_contact">Kontak Resmi SMP</div>
           <ul class="footer-nav-list">
-            <li class="footer-nav-link">Jln. R.E Martadinata No. 8, RT 02/RW 05, Kel. Adiarsa Barat, Kec. Karawang Barat, Kab. Karawang 41311</li>
-            <li class="footer-nav-link">Telepon Kantor TU: <a href="tel:02678407123" style="color: inherit; text-decoration: underline;">(0267) 8407123</a></li>
-            <li class="footer-nav-link">WhatsApp SPMB: <a href="https://wa.me/6282311775434" target="_blank" rel="noopener noreferrer" style="color: #34d399; font-weight: 700;">0823-1177-5434</a></li>
+            <li class="footer-nav-link" data-i18n="footer_contact_addr">Jln. R.E Martadinata No. 8, RT 02/RW 05, Kel. Adiarsa Barat, Kec. Karawang Barat, Kab. Karawang 41311</li>
+            <li class="footer-nav-link"><span data-i18n="footer_contact_phone_lbl">Telepon Kantor TU:</span> <a href="tel:02678407123" style="color: inherit; text-decoration: underline;">(0267) 8407123</a></li>
+            <li class="footer-nav-link"><span data-i18n="footer_contact_wa_lbl">WhatsApp SPMB:</span> <a href="https://wa.me/6282311775434" target="_blank" rel="noopener noreferrer" style="color: #34d399; font-weight: 700;">0823-1177-5434</a></li>
             <li class="footer-nav-link">
-              <strong>Email Satuan:</strong><br>
+              <strong data-i18n="footer_contact_email_lbl">Email Satuan:</strong><br>
               <a href="mailto:smpharapanbangsa949@gmail.com" class="email-val-link">smpharapanbangsa949@gmail.com</a>
             </li>
-            <li class="footer-nav-link">Senin - Jumat: 07.00 - 15.00 WIB</li>
+            <li class="footer-nav-link" data-i18n="footer_contact_hours">Senin - Jumat: 07.00 - 15.00 WIB</li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom-bar">
-        <div>
+        <div data-i18n="footer_copyright">
           &copy; 2026 SMP Harapan Bangsa Karawang. Seluruh hak cipta dilindungi.
         </div>
-        <div>
+        <div data-i18n="footer_npsn_note">
           Satuan Pendidikan Menengah Pertama (NPSN: 70062135)
         </div>
       </div>
@@ -585,23 +586,23 @@
   </footer>
 
   <!-- Lightbox Modal for Gallery Images -->
-  <div class="modal" id="galleryModal" role="dialog" aria-modal="true" aria-label="Penampil Foto Layar Penuh">
+  <div class="modal" id="galleryModal" role="dialog" aria-modal="true" aria-label="Penampil Foto Layar Penuh" data-i18n-aria="gal_modal_aria">
     <div class="modal-backdrop"></div>
     <div class="modal-content modal-content-media">
-      <button class="modal-close" id="galleryModalClose" aria-label="Tutup penampil foto">&times;</button>
+      <button class="modal-close" id="galleryModalClose" aria-label="Tutup penampil foto" data-i18n-aria="gal_modal_close_aria">&times;</button>
       <div class="modal-media-wrap">
         <img src="" alt="" id="galleryModalImg" class="modal-media-img">
       </div>
       <div class="modal-caption-wrap">
-        <h3 id="galleryModalTitle" class="modal-caption-title">Judul Foto</h3>
-        <p id="galleryModalDesc" class="modal-caption-desc">Deskripsi foto kegiatan sekolah.</p>
+        <h3 id="galleryModalTitle" class="modal-caption-title" data-i18n="gal_modal_title_default">Judul Foto</h3>
+        <p id="galleryModalDesc" class="modal-caption-desc" data-i18n="gal_modal_desc_default">Deskripsi foto kegiatan sekolah.</p>
       </div>
     </div>
   </div>
 
   <!-- Floating Utilities (Back To Top) -->
   <div class="floating-actions">
-    <button class="back-to-top-btn" id="backToTop" aria-label="Kembali ke atas halaman">
+    <button class="back-to-top-btn" id="backToTop" aria-label="Kembali ke atas halaman" data-i18n-aria="back_to_top_aria">
       <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
         <path fill-rule="evenodd"
           d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"

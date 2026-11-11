@@ -59,7 +59,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body data-page="home">
 
     <!-- Header / Navigation Bar -->
   <header class="header" id="header">
@@ -76,7 +76,7 @@
             </div>
           </div>
           <div class="topbar-right-group">
-            <div class="topbar-socials" aria-label="Media Sosial Resmi SMP Harapan Bangsa">
+            <div class="topbar-socials" aria-label="Media Sosial Resmi SMP Harapan Bangsa" data-i18n-aria="topbar_socials_aria">
               <a href="https://www.instagram.com/smpharapanbangsa?stkn=Z285eXR5M2R0OXFt" target="_blank" rel="noopener noreferrer"
                 class="topbar-social-link" title="Instagram Resmi @smpharapanbangsa" aria-label="Instagram Resmi SMP Harapan Bangsa">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
@@ -100,7 +100,7 @@
               </a>
             </div>
             <!-- Language Flags (Indonesia / English) -->
-            <div class="topbar-flags" title="Pilihan Bahasa / Select Language">
+            <div class="topbar-flags" title="Pilihan Bahasa / Select Language" data-i18n-title="topbar_flags_title">
               <button type="button" class="flag-badge flag-id active" data-lang="id" title="Bahasa Indonesia" aria-label="Bahasa Indonesia">
                 <span class="flag-stripe-red"></span>
                 <span class="flag-stripe-white"></span>
@@ -129,8 +129,8 @@
     <div class="header-main">
       <div class="container header-container">
         <!-- School Brand -->
-        <a href="#beranda" class="brand-link" aria-label="Beranda SMP Harapan Bangsa Karawang">
-          <img src="assets/images/logo-smp-harapan-bangsa.png" alt="Logo Resmi SMP Harapan Bangsa Karawang" class="brand-logo-img">
+        <a href="#beranda" class="brand-link" aria-label="Beranda SMP Harapan Bangsa Karawang" data-i18n-aria="brand_aria">
+          <img src="assets/images/logo-smp-harapan-bangsa.png" alt="Logo Resmi SMP Harapan Bangsa Karawang" data-i18n-alt="brand_logo_alt" class="brand-logo-img">
           <div class="brand-title-group">
             <span class="brand-name">SMP HARAPAN BANGSA</span>
             <span class="brand-sub" data-i18n="brand_sub">Karawang Barat, Jawa Barat</span>
@@ -138,7 +138,7 @@
         </a>
 
         <!-- Navigation Menu -->
-        <nav class="nav-menu" id="navMenu" aria-label="Menu Utama">
+        <nav class="nav-menu" id="navMenu" aria-label="Menu Utama" data-i18n-aria="nav_main_aria">
           <div class="nav-menu-links">
             <a href="#beranda" class="nav-link" data-i18n="nav_home">Beranda</a>
 
@@ -178,7 +178,8 @@
         <div class="header-utilities">
           <!-- Dual Theme Toggle -->
           <button class="header-icon-btn theme-toggle-btn" id="themeToggleBtn"
-            aria-label="Ganti tema tampilan terang atau gelap" title="Ganti Tema">
+            aria-label="Ganti tema tampilan terang atau gelap" data-i18n-aria="theme_toggle_aria"
+            title="Ganti Tema" data-i18n-title="theme_toggle_title">
             <svg class="theme-icon-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
               aria-hidden="true">
               <circle cx="12" cy="12" r="5"></circle>
@@ -205,8 +206,8 @@
           </a>
 
           <!-- Mobile Menu Toggle Button -->
-          <button class="nav-toggle" id="navToggle" aria-label="Buka menu navigasi" aria-expanded="false"
-            aria-controls="navMenu">
+          <button class="nav-toggle" id="navToggle" aria-label="Buka menu navigasi" data-i18n-aria="nav_toggle_aria"
+            aria-expanded="false" aria-controls="navMenu">
             <span class="nav-toggle-bar"></span>
             <span class="nav-toggle-bar"></span>
             <span class="nav-toggle-bar"></span>
@@ -241,7 +242,7 @@
       <div class="container">
         <div class="hero-content-wrapper">
           <!-- Institutional Tagline -->
-          <span class="hero-tagline">
+          <span class="hero-tagline" data-i18n="hero_tagline">
             SEKOLAH MENENGAH PERTAMA (SMP) &bull; NPSN: 70062135
           </span>
 
@@ -271,7 +272,7 @@
               Daftar SPMB SMP Online
             </a>
             <a href="https://wa.me/6282311775434?text=Halo%20SMP%20Harapan%20Bangsa,%20saya%20ingin%20konsultasi%20pendaftaran%20siswa%20baru"
-              target="_blank" rel="noopener noreferrer" class="btn btn-hero-secondary">
+              target="_blank" rel="noopener noreferrer" class="btn btn-hero-secondary" data-i18n="hero_btn_wa">
               Konsultasi WhatsApp SPMB
             </a>
             <a href="#akademik" class="btn btn-hero-secondary" data-i18n="hero_btn_explore">
@@ -282,16 +283,16 @@
           <!-- Fact Summary Grid -->
           <div class="hero-key-facts">
             <div class="key-fact-item">
-              <span class="key-fact-title">NPSN: 70062135</span>
-              <span class="key-fact-subtitle">Terdaftar Resmi Kemendikbud</span>
+              <span class="key-fact-title" data-i18n="hero_fact1_title">NPSN: 70062135</span>
+              <span class="key-fact-subtitle" data-i18n="hero_fact1_sub">Terdaftar Resmi Kemendikbud</span>
             </div>
             <div class="key-fact-item">
               <span class="key-fact-title" data-i18n="hero_fact2_title">Kurikulum Merdeka</span>
               <span class="key-fact-subtitle" data-i18n="hero_fact2_sub">Riset STEM &amp; Digital</span>
             </div>
             <div class="key-fact-item">
-              <span class="key-fact-title">21 Medali Nasional</span>
-              <span class="key-fact-subtitle">Airlangga Competition (4 Emas)</span>
+              <span class="key-fact-title" data-i18n="hero_fact3_title">21 Medali Nasional</span>
+              <span class="key-fact-subtitle" data-i18n="hero_fact3_sub">Airlangga Competition (4 Emas)</span>
             </div>
           </div>
         </div>
@@ -311,76 +312,76 @@
 
         <div class="about-grid">
           <div class="about-narrative">
-            <div class="lead-text">
+            <div class="lead-text" data-i18n="about_lead">
               SMP Harapan Bangsa hadir sebagai ruang bertumbuh yang aman, suportif, dan inspiratif bagi remaja. Kami meyakini bahwa usia 12 hingga 15 tahun merupakan fase keemasan dalam pembentukan integritas pribadi, pola pikir kritis, dan pengenalan potensi karir masa depan.
             </div>
-            <p class="about-body-text">
+            <p class="about-body-text" data-i18n="about_body">
               Melalui rasio pendidik dan peserta didik yang terjaga secara ideal (maksimal 30 murid per rombel), bapak dan ibu guru dapat memberikan pendampingan akademik personal, mendeteksi bakat unik setiap siswa, serta membimbing penyelesaian kesulitan belajar secara menyeluruh.
             </p>
 
             <div class="about-pillars">
               <div class="pillar-item">
-                <h3 class="pillar-title">Karakter Kasih &amp; Disiplin</h3>
-                <p class="pillar-desc">Pembiasaan tata krama, adab kepada sesama, penanaman toleransi, dan komitmen sekolah bebas perundungan (anti-bullying).</p>
+                <h3 class="pillar-title" data-i18n="pillar1_title">Karakter Kasih &amp; Disiplin</h3>
+                <p class="pillar-desc" data-i18n="pillar1_desc">Pembiasaan tata krama, adab kepada sesama, penanaman toleransi, dan komitmen sekolah bebas perundungan (anti-bullying).</p>
               </div>
               <div class="pillar-item">
-                <h3 class="pillar-title">Nalar Analitis &amp; Riset STEM</h3>
-                <p class="pillar-desc">Pembelajaran berbasis masalah (Problem-Based Learning) serta praktikum aktif sains, matematika terapan, dan pengenalan teknologi.</p>
+                <h3 class="pillar-title" data-i18n="pillar2_title">Nalar Analitis &amp; Riset STEM</h3>
+                <p class="pillar-desc" data-i18n="pillar2_desc">Pembelajaran berbasis masalah (Problem-Based Learning) serta praktikum aktif sains, matematika terapan, dan pengenalan teknologi.</p>
               </div>
               <div class="pillar-item">
-                <h3 class="pillar-title">Pendampingan Remaja &amp; BK</h3>
-                <p class="pillar-desc">Layanan bimbingan konseling intensif yang membimbing dinamika emosional remaja dan memetakan peminatan studi lanjut.</p>
+                <h3 class="pillar-title" data-i18n="pillar3_title">Pendampingan Remaja &amp; BK</h3>
+                <p class="pillar-desc" data-i18n="pillar3_desc">Layanan bimbingan konseling intensif yang membimbing dinamika emosional remaja dan memetakan peminatan studi lanjut.</p>
               </div>
               <div class="pillar-item">
-                <h3 class="pillar-title">Kepemimpinan OSIS &amp; Organisasi</h3>
-                <p class="pillar-desc">Melatih kepemimpinan rapat, manajemen kegiatan, kepramukaan penggalang, serta kemampuan berbicara di depan umum.</p>
+                <h3 class="pillar-title" data-i18n="pillar4_title">Kepemimpinan OSIS &amp; Organisasi</h3>
+                <p class="pillar-desc" data-i18n="pillar4_desc">Melatih kepemimpinan rapat, manajemen kegiatan, kepramukaan penggalang, serta kemampuan berbicara di depan umum.</p>
               </div>
             </div>
           </div>
 
           <!-- Official Data Card -->
           <div class="official-info-card">
-            <h3 class="official-card-title">Identitas Resmi Satuan Pendidikan</h3>
+            <h3 class="official-card-title" data-i18n="official_card_title">Identitas Resmi Satuan Pendidikan</h3>
             <table class="info-table">
               <tbody>
                 <tr>
-                  <th>Nama Sekolah</th>
+                  <th data-i18n="info_school_name_label">Nama Sekolah</th>
                   <td><strong>SMP Harapan Bangsa</strong></td>
                 </tr>
                 <tr>
-                  <th>NPSN</th>
-                  <td><strong>70062135</strong> (Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi)</td>
+                  <th data-i18n="info_npsn_label">NPSN</th>
+                  <td data-i18n-html="info_npsn_val"><strong>70062135</strong> (Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi)</td>
                 </tr>
                 <tr>
-                  <th>Kepala Sekolah</th>
+                  <th data-i18n="info_principal_label">Kepala Sekolah</th>
                   <td><strong>Juliana Ruth Mathilda Hutapea, S.Th.</strong></td>
                 </tr>
                 <tr>
-                  <th>Tingkat Kelas</th>
-                  <td>Kelas 7, Kelas 8, dan Kelas 9</td>
+                  <th data-i18n="info_grades_label">Tingkat Kelas</th>
+                  <td data-i18n="info_grades_val">Kelas 7, Kelas 8, dan Kelas 9</td>
                 </tr>
                 <tr>
-                  <th>Kurikulum</th>
-                  <td><strong>Kurikulum Merdeka Menengah</strong></td>
+                  <th data-i18n="info_curriculum_label">Kurikulum</th>
+                  <td><strong data-i18n="info_curriculum_val">Kurikulum Merdeka Menengah</strong></td>
                 </tr>
                 <tr>
-                  <th>Waktu Belajar</th>
-                  <td>Senin s.d. Jumat (07.00 - 14.50 WIB)</td>
+                  <th data-i18n="info_hours_label">Waktu Belajar</th>
+                  <td data-i18n="info_hours_val">Senin s.d. Jumat (07.00 - 14.50 WIB)</td>
                 </tr>
                 <tr>
-                  <th>Alamat Kampus</th>
-                  <td>Jln. R.E Martadinata No. 8, RT 02/RW 05, Kel. Adiarsa Barat, Kec. Karawang Barat, Kab. Karawang 41311</td>
+                  <th data-i18n="info_address_label">Alamat Kampus</th>
+                  <td data-i18n="info_address_val">Jln. R.E Martadinata No. 8, RT 02/RW 05, Kel. Adiarsa Barat, Kec. Karawang Barat, Kab. Karawang 41311</td>
                 </tr>
                 <tr>
-                  <th>Telepon Kantor TU</th>
+                  <th data-i18n="info_phone_label">Telepon Kantor TU</th>
                   <td><a href="tel:02678407123" style="color: inherit; text-decoration: underline;">(0267) 8407123</a></td>
                 </tr>
                 <tr>
-                  <th>Layanan SPMB</th>
-                  <td>WhatsApp: <strong>0823 1177 5434</strong> (Ibu Diana)</td>
+                  <th data-i18n="info_spmb_label">Layanan SPMB</th>
+                  <td data-i18n-html="info_spmb_val">WhatsApp: <strong>0823 1177 5434</strong> (Ibu Diana)</td>
                 </tr>
                 <tr>
-                  <th>Email Resmi</th>
+                  <th data-i18n="info_email_label">Email Resmi</th>
                   <td><a href="mailto:smpharapanbangsa949@gmail.com" style="color: inherit; text-decoration: underline;">smpharapanbangsa949@gmail.com</a></td>
                 </tr>
               </tbody>
@@ -403,35 +404,35 @@
 
         <div class="visi-misi-grid">
           <div class="visi-card">
-            <span class="card-header-label">Panduan Utama</span>
-            <h3 class="card-main-title">Visi SMP Harapan Bangsa</h3>
-            <div class="visi-content-quote">
+            <span class="card-header-label" data-i18n="visi_badge">Panduan Utama</span>
+            <h3 class="card-main-title" data-i18n="visi_title">Visi SMP Harapan Bangsa</h3>
+            <div class="visi-content-quote" data-i18n="visi_quote">
               &ldquo;Mewujudkan peserta didik yang cerdas bernalar, mandiri, berkarakter kasih, dan siap bersaing serta berdampak positif bagi masyarakat.&rdquo;
             </div>
-            <p class="notice-caption">
+            <p class="notice-caption" data-i18n="visi_caption">
               Menyiapkan lulusan berdaya saing akademik tinggi yang memiliki integritas moral kokoh dalam menyongsong tantangan zaman.
             </p>
           </div>
 
           <div class="misi-card">
-            <span class="card-header-label">Langkah Strategis</span>
-            <h3 class="card-main-title">Misi SMP Harapan Bangsa</h3>
+            <span class="card-header-label" data-i18n="misi_badge">Langkah Strategis</span>
+            <h3 class="card-main-title" data-i18n="misi_title">Misi SMP Harapan Bangsa</h3>
             <div class="misi-ordered-list">
               <div class="misi-item-row">
                 <span class="misi-idx">1</span>
-                <span class="misi-txt"><strong>Pendidikan Bermutu &amp; Saintifik</strong>: Menyelenggarakan proses pembelajaran interaktif berbasis nalar kritis, eksplorasi sains, matematika terapan, dan literasi teknologi digital.</span>
+                <span class="misi-txt" data-i18n-html="misi_1"><strong>Pendidikan Bermutu &amp; Saintifik</strong>: Menyelenggarakan proses pembelajaran interaktif berbasis nalar kritis, eksplorasi sains, matematika terapan, dan literasi teknologi digital.</span>
               </div>
               <div class="misi-item-row">
                 <span class="misi-idx">2</span>
-                <span class="misi-txt"><strong>Pembinaan Budi Pekerti Kasih</strong>: Menanamkan nilai cinta kasih, kejujuran, disiplin, kepedulian antarsesama, dan sikap toleransi dalam keseharian sekolah.</span>
+                <span class="misi-txt" data-i18n-html="misi_2"><strong>Pembinaan Budi Pekerti Kasih</strong>: Menanamkan nilai cinta kasih, kejujuran, disiplin, kepedulian antarsesama, dan sikap toleransi dalam keseharian sekolah.</span>
               </div>
               <div class="misi-item-row">
                 <span class="misi-idx">3</span>
-                <span class="misi-txt"><strong>Pengembangan Kepemimpinan &amp; Bakat</strong>: Mengasah jiwa kepemimpinan, kemandirian berorganisasi, serta bakat seni dan olahraga melalui OSIS, Pramuka, dan ekstrakurikuler terarah.</span>
+                <span class="misi-txt" data-i18n-html="misi_3"><strong>Pengembangan Kepemimpinan &amp; Bakat</strong>: Mengasah jiwa kepemimpinan, kemandirian berorganisasi, serta bakat seni dan olahraga melalui OSIS, Pramuka, dan ekstrakurikuler terarah.</span>
               </div>
               <div class="misi-item-row">
                 <span class="misi-idx">4</span>
-                <span class="misi-txt"><strong>Kesiapan Menuju Jenjang Lanjutan</strong>: Membekali siswa dengan kemandirian belajar dan pemetaan minat studi agar siap beradaptasi di jenjang SMA/SMK favorit.</span>
+                <span class="misi-txt" data-i18n-html="misi_4"><strong>Kesiapan Menuju Jenjang Lanjutan</strong>: Membekali siswa dengan kemandirian belajar dan pemetaan minat studi agar siap beradaptasi di jenjang SMA/SMK favorit.</span>
               </div>
             </div>
           </div>
@@ -443,9 +444,9 @@
     <section class="section section-alt" id="akademik">
       <div class="container">
         <div class="section-header">
-          <span class="section-label">Struktur Pembelajaran</span>
-          <h2 class="section-title">Kurikulum &amp; Pendekatan Edukasi SMP</h2>
-          <p class="section-desc">
+          <span class="section-label" data-i18n="sec_acad_label">Struktur Pembelajaran</span>
+          <h2 class="section-title" data-i18n="sec_acad_title">Kurikulum &amp; Pendekatan Edukasi SMP</h2>
+          <p class="section-desc" data-i18n="sec_acad_desc">
             Kurikulum Merdeka Menengah yang dipadukan dengan pembelajaran mendalam (Deeper Learning) berbasis proyek dan penguatan wawasan global.
           </p>
         </div>
@@ -459,8 +460,8 @@
                 <polyline points="2 12 12 17 22 12"></polyline>
               </svg>
             </div>
-            <h3 class="curriculum-card-title">Pembelajaran Analitis &amp; STEM</h3>
-            <p class="curriculum-card-desc">
+            <h3 class="curriculum-card-title" data-i18n="curr1_title">Pembelajaran Analitis &amp; STEM</h3>
+            <p class="curriculum-card-desc" data-i18n="curr1_desc">
               Penerapan metode investigasi ilmiah, pembelajaran berbasis masalah (PBL), dan proyek kolaboratif lintas mata pelajaran sains, matematika, serta rekayasa sederhana.
             </p>
           </div>
@@ -473,8 +474,8 @@
                 <line x1="12" y1="17" x2="12" y2="21"></line>
               </svg>
             </div>
-            <h3 class="curriculum-card-title">Literasi Digital &amp; TIK</h3>
-            <p class="curriculum-card-desc">
+            <h3 class="curriculum-card-title" data-i18n="curr2_title">Literasi Digital &amp; TIK</h3>
+            <p class="curriculum-card-desc" data-i18n="curr2_desc">
               Praktikum komputer berkala di laboratorium, etika bermedia digital, pengolahan data dokumen, pengenalan logika pemrograman (coding), dan kesiapan asesmen berbasis komputer.
             </p>
           </div>
@@ -487,18 +488,18 @@
                 <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
               </svg>
             </div>
-            <h3 class="curriculum-card-title">Pengayaan Dwibahasa</h3>
-            <p class="curriculum-card-desc">
+            <h3 class="curriculum-card-title" data-i18n="curr3_title">Pengayaan Dwibahasa</h3>
+            <p class="curriculum-card-desc" data-i18n="curr3_desc">
               Penguatan kemampuan komunikasi Bahasa Inggris terapan serta pembelajaran dasar Bahasa Mandarin guna memperluas wawasan pergaulan lintas bahasa sejak bangku SMP.
             </p>
           </div>
         </div>
 
         <div class="program-list-box" style="margin-top: 2rem;">
-          <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--color-text-main); margin-bottom: 0.5rem;">
+          <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--color-text-main); margin-bottom: 0.5rem;" data-i18n="prog_box_title">
             6 Program Pembelajaran Unggulan SMP Harapan Bangsa
           </h3>
-          <p style="font-size: 0.95rem; color: var(--color-text-muted); margin-bottom: 1.5rem;">
+          <p style="font-size: 0.95rem; color: var(--color-text-muted); margin-bottom: 1.5rem;" data-i18n="prog_box_desc">
             Mempersiapkan lulusan yang mandiri, berbudi luhur, dan siap melanjutkan ke jenjang SMA atau SMK favorit.
           </p>
 
@@ -506,48 +507,48 @@
             <div class="program-highlight-item">
               <span class="program-highlight-num">1</span>
               <div>
-                <h4 class="program-highlight-title">Pendampingan Riset &amp; Praktikum Sains</h4>
-                <p class="program-highlight-desc">Membimbing peserta didik melakukan observasi biologi, fisika, dan kimia dasar menggunakan alat peraga laboratorium sekolah.</p>
+                <h4 class="program-highlight-title" data-i18n="prog1_title">Pendampingan Riset &amp; Praktikum Sains</h4>
+                <p class="program-highlight-desc" data-i18n="prog1_desc">Membimbing peserta didik melakukan observasi biologi, fisika, dan kimia dasar menggunakan alat peraga laboratorium sekolah.</p>
               </div>
             </div>
 
             <div class="program-highlight-item">
               <span class="program-highlight-num">2</span>
               <div>
-                <h4 class="program-highlight-title">Organisasi Siswa Intra Sekolah (OSIS)</h4>
-                <p class="program-highlight-desc">Melatih manajemen waktu, kepemimpinan rapat, kerjasama tim kerja, dan kemampuan public speaking di depan umum.</p>
+                <h4 class="program-highlight-title" data-i18n="prog2_title">Organisasi Siswa Intra Sekolah (OSIS)</h4>
+                <p class="program-highlight-desc" data-i18n="prog2_desc">Melatih manajemen waktu, kepemimpinan rapat, kerjasama tim kerja, dan kemampuan public speaking di depan umum.</p>
               </div>
             </div>
 
             <div class="program-highlight-item">
               <span class="program-highlight-num">3</span>
               <div>
-                <h4 class="program-highlight-title">Pramuka Penggalang &amp; Kepedulian Sosial</h4>
-                <p class="program-highlight-desc">Menumbuhkan kesetiakawanan, ketahanan fisik di alam terbuka, kecintaan tanah air, serta kegiatan bakti sosial berkala.</p>
+                <h4 class="program-highlight-title" data-i18n="prog3_title">Pramuka Penggalang &amp; Kepedulian Sosial</h4>
+                <p class="program-highlight-desc" data-i18n="prog3_desc">Menumbuhkan kesetiakawanan, ketahanan fisik di alam terbuka, kecintaan tanah air, serta kegiatan bakti sosial berkala.</p>
               </div>
             </div>
 
             <div class="program-highlight-item">
               <span class="program-highlight-num">4</span>
               <div>
-                <h4 class="program-highlight-title">Klub Minat Olahraga &amp; Seni Budaya</h4>
-                <p class="program-highlight-desc">Penyaluran minat futsal, basket, badminton, paduan suara, kriya desain, dan seni pertunjukan.</p>
+                <h4 class="program-highlight-title" data-i18n="prog4_title">Klub Minat Olahraga &amp; Seni Budaya</h4>
+                <p class="program-highlight-desc" data-i18n="prog4_desc">Penyaluran minat futsal, basket, badminton, paduan suara, kriya desain, dan seni pertunjukan.</p>
               </div>
             </div>
 
             <div class="program-highlight-item">
               <span class="program-highlight-num">5</span>
               <div>
-                <h4 class="program-highlight-title">Bimbingan Prestasi Kompetisi Akademik</h4>
-                <p class="program-highlight-desc">Pendampingan intensif bagi siswa berbakat dalam mengikuti olimpiade sains, matematika, dan kejuaraan bahasa tingkat nasional.</p>
+                <h4 class="program-highlight-title" data-i18n="prog5_title">Bimbingan Prestasi Kompetisi Akademik</h4>
+                <p class="program-highlight-desc" data-i18n="prog5_desc">Pendampingan intensif bagi siswa berbakat dalam mengikuti olimpiade sains, matematika, dan kejuaraan bahasa tingkat nasional.</p>
               </div>
             </div>
 
             <div class="program-highlight-item">
               <span class="program-highlight-num">6</span>
               <div>
-                <h4 class="program-highlight-title">Pembinaan Karakter Kasih &amp; Bimbingan Konseling</h4>
-                <p class="program-highlight-desc">Pendampingan transisi emosional remaja secara suportif dan pembentukan pribadi yang menghargai keberagaman.</p>
+                <h4 class="program-highlight-title" data-i18n="prog6_title">Pembinaan Karakter Kasih &amp; Bimbingan Konseling</h4>
+                <p class="program-highlight-desc" data-i18n="prog6_desc">Pendampingan transisi emosional remaja secara suportif dan pembentukan pribadi yang menghargai keberagaman.</p>
               </div>
             </div>
           </div>
@@ -559,9 +560,9 @@
     <section class="section" id="guru">
       <div class="container">
         <div class="section-header">
-          <span class="section-label">Tenaga Pendidik Profesional</span>
-          <h2 class="section-title">Dewan Guru &amp; Staf SMP Harapan Bangsa</h2>
-          <p class="section-desc">
+          <span class="section-label" data-i18n="sec_guru_label">Tenaga Pendidik Profesional</span>
+          <h2 class="section-title" data-i18n="sec_guru_title">Dewan Guru &amp; Staf SMP Harapan Bangsa</h2>
+          <p class="section-desc" data-i18n="sec_guru_desc">
             Para pendidik berdedikasi yang siap membimbing peserta didik dalam proses pembelajaran akademik dan pendampingan karakter harian.
           </p>
         </div>
@@ -571,12 +572,13 @@
           <div class="guru-hero-img-wrap">
             <img src="assets/images/dewan-guru-smp.jpg"
               alt="Dewan Guru dan Kepala Sekolah SMP Harapan Bangsa Karawang"
+              data-i18n-alt="guru_img_alt"
               class="guru-hero-img" loading="lazy">
           </div>
           <div class="guru-hero-caption">
-            <span class="guru-hero-badge">Pendidik Berdedikasi &amp; Berkarakter</span>
-            <h3 class="guru-hero-title">Kepala Sekolah &amp; Dewan Guru SMP Harapan Bangsa Karawang</h3>
-            <p class="guru-hero-desc">
+            <span class="guru-hero-badge" data-i18n="guru_hero_badge">Pendidik Berdedikasi &amp; Berkarakter</span>
+            <h3 class="guru-hero-title" data-i18n="guru_hero_title">Kepala Sekolah &amp; Dewan Guru SMP Harapan Bangsa Karawang</h3>
+            <p class="guru-hero-desc" data-i18n="guru_hero_desc">
               Kepala Sekolah Ibu Juliana Ruth Mathilda Hutapea, S.Th. bersama segenap dewan guru profesional berkomitmen mendampingi tumbuh kembang intelektual, emosional, dan budi pekerti peserta didik dalam suasana belajar yang ramah dan inspiratif.
             </p>
           </div>
@@ -584,51 +586,51 @@
 
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem;">
           <div class="value-card" style="border-top: 3px solid var(--color-primary);">
-            <div style="font-size: 0.82rem; font-weight: 800; color: var(--color-accent); text-transform: uppercase; margin-bottom: 0.35rem;">Kepemimpinan &amp; Karakter</div>
+            <div style="font-size: 0.82rem; font-weight: 800; color: var(--color-accent); text-transform: uppercase; margin-bottom: 0.35rem;" data-i18n="guru1_role">Kepemimpinan &amp; Karakter</div>
             <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--color-text-main); margin-bottom: 0.4rem;">Juliana Ruth Mathilda Hutapea, S.Th.</h3>
-            <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: 0;">Kepala Sekolah &amp; Guru Pendidikan Agama Kristen / Bimbingan Pribadi</p>
+            <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: 0;" data-i18n="guru1_desc">Kepala Sekolah &amp; Guru Pendidikan Agama Kristen / Bimbingan Pribadi</p>
           </div>
 
           <div class="value-card" style="border-top: 3px solid var(--color-primary);">
-            <div style="font-size: 0.82rem; font-weight: 800; color: var(--color-accent); text-transform: uppercase; margin-bottom: 0.35rem;">Wali Kelas 7 &amp; Bahasa</div>
+            <div style="font-size: 0.82rem; font-weight: 800; color: var(--color-accent); text-transform: uppercase; margin-bottom: 0.35rem;" data-i18n="guru2_role">Wali Kelas 7 &amp; Bahasa</div>
             <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--color-text-main); margin-bottom: 0.4rem;">Farida Donna Gultom, S.Pd.</h3>
-            <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: 0;">Wali Kelas 7, Guru Bahasa Inggris, dan Pembina Seni Tari</p>
+            <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: 0;" data-i18n="guru2_desc">Wali Kelas 7, Guru Bahasa Inggris, dan Pembina Seni Tari</p>
           </div>
 
           <div class="value-card" style="border-top: 3px solid var(--color-primary);">
-            <div style="font-size: 0.82rem; font-weight: 800; color: var(--color-accent); text-transform: uppercase; margin-bottom: 0.35rem;">Sains &amp; Numerasi</div>
+            <div style="font-size: 0.82rem; font-weight: 800; color: var(--color-accent); text-transform: uppercase; margin-bottom: 0.35rem;" data-i18n="guru3_role">Sains &amp; Numerasi</div>
             <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--color-text-main); margin-bottom: 0.4rem;">Sepania Siahaan, S.Pd.</h3>
-            <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: 0;">Guru Matematika &amp; Ilmu Pengetahuan Alam (IPA)</p>
+            <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: 0;" data-i18n="guru3_desc">Guru Matematika &amp; Ilmu Pengetahuan Alam (IPA)</p>
           </div>
 
           <div class="value-card" style="border-top: 3px solid var(--color-primary);">
-            <div style="font-size: 0.82rem; font-weight: 800; color: var(--color-accent); text-transform: uppercase; margin-bottom: 0.35rem;">Bahasa Asing</div>
+            <div style="font-size: 0.82rem; font-weight: 800; color: var(--color-accent); text-transform: uppercase; margin-bottom: 0.35rem;" data-i18n="guru4_role">Bahasa Asing</div>
             <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--color-text-main); margin-bottom: 0.4rem;">Sri Rahayu, S.IP.</h3>
-            <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: 0;">Guru Pengayaan Bahasa Mandarin</p>
+            <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: 0;" data-i18n="guru4_desc">Guru Pengayaan Bahasa Mandarin</p>
           </div>
 
           <div class="value-card" style="border-top: 3px solid var(--color-primary);">
-            <div style="font-size: 0.82rem; font-weight: 800; color: var(--color-accent); text-transform: uppercase; margin-bottom: 0.35rem;">Literasi &amp; Seni</div>
+            <div style="font-size: 0.82rem; font-weight: 800; color: var(--color-accent); text-transform: uppercase; margin-bottom: 0.35rem;" data-i18n="guru5_role">Literasi &amp; Seni</div>
             <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--color-text-main); margin-bottom: 0.4rem;">Melva Saragih, S.Pd.</h3>
-            <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: 0;">Guru Bahasa Indonesia &amp; Pembina Seni Teater</p>
+            <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: 0;" data-i18n="guru5_desc">Guru Bahasa Indonesia &amp; Pembina Seni Teater</p>
           </div>
 
           <div class="value-card" style="border-top: 3px solid var(--color-primary);">
-            <div style="font-size: 0.82rem; font-weight: 800; color: var(--color-accent); text-transform: uppercase; margin-bottom: 0.35rem;">Sosial &amp; Teknologi</div>
+            <div style="font-size: 0.82rem; font-weight: 800; color: var(--color-accent); text-transform: uppercase; margin-bottom: 0.35rem;" data-i18n="guru6_role">Sosial &amp; Teknologi</div>
             <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--color-text-main); margin-bottom: 0.4rem;">Robertus Hadi Wijaya, S.Pd., Gr.</h3>
-            <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: 0;">Guru Ilmu Pengetahuan Sosial (IPS) &amp; Informatika (TIK)</p>
+            <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: 0;" data-i18n="guru6_desc">Guru Ilmu Pengetahuan Sosial (IPS) &amp; Informatika (TIK)</p>
           </div>
 
           <div class="value-card" style="border-top: 3px solid var(--color-primary);">
-            <div style="font-size: 0.82rem; font-weight: 800; color: var(--color-accent); text-transform: uppercase; margin-bottom: 0.35rem;">Kewarganegaraan &amp; Musik</div>
+            <div style="font-size: 0.82rem; font-weight: 800; color: var(--color-accent); text-transform: uppercase; margin-bottom: 0.35rem;" data-i18n="guru7_role">Kewarganegaraan &amp; Musik</div>
             <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--color-text-main); margin-bottom: 0.4rem;">Difa Ganda Limbong, S.Pd.</h3>
-            <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: 0;">Guru Pendidikan Pancasila (PPKn) &amp; Seni Musik</p>
+            <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: 0;" data-i18n="guru7_desc">Guru Pendidikan Pancasila (PPKn) &amp; Seni Musik</p>
           </div>
 
           <div class="value-card" style="border-top: 3px solid var(--color-primary);">
-            <div style="font-size: 0.82rem; font-weight: 800; color: var(--color-accent); text-transform: uppercase; margin-bottom: 0.35rem;">Kebugaran &amp; Budaya Lokal</div>
+            <div style="font-size: 0.82rem; font-weight: 800; color: var(--color-accent); text-transform: uppercase; margin-bottom: 0.35rem;" data-i18n="guru8_role">Kebugaran &amp; Budaya Lokal</div>
             <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--color-text-main); margin-bottom: 0.4rem;">Chorry Seviana Amung, S.Pd., Gr., M.Pd.</h3>
-            <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: 0;">Guru PJOK (Pendidikan Jasmani) &amp; Bahasa Sunda</p>
+            <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: 0;" data-i18n="guru8_desc">Guru PJOK (Pendidikan Jasmani) &amp; Bahasa Sunda</p>
           </div>
         </div>
       </div>
@@ -638,9 +640,9 @@
     <section class="section section-alt" id="keunggulan">
       <div class="container">
         <div class="section-header">
-          <span class="section-label">Mengapa Memilih Kami</span>
-          <h2 class="section-title">Nilai Keunggulan SMP Harapan Bangsa</h2>
-          <p class="section-desc">
+          <span class="section-label" data-i18n="sec_adv_label">Mengapa Memilih Kami</span>
+          <h2 class="section-title" data-i18n="sec_adv_title">Nilai Keunggulan SMP Harapan Bangsa</h2>
+          <p class="section-desc" data-i18n="sec_adv_desc">
             Standar pembelajaran terencana yang memastikan setiap murid mendapatkan perhatian belajar optimal.
           </p>
         </div>
@@ -649,9 +651,9 @@
           <div class="value-card">
             <div class="value-header">
               <span class="value-num">01</span>
-              <h3 class="value-card-title">Karakter Kasih &amp; Budaya Positif</h3>
+              <h3 class="value-card-title" data-i18n="adv1_title">Karakter Kasih &amp; Budaya Positif</h3>
             </div>
-            <p class="value-card-desc">
+            <p class="value-card-desc" data-i18n="adv1_desc">
               Pembiasaan saat teduh, ibadah rutin hari Kamis, adab santun, serta pembinaan kedisiplinan berkarakter kasih yang membentuk pribadi berbudi pekerti luhur.
             </p>
           </div>
@@ -659,9 +661,9 @@
           <div class="value-card">
             <div class="value-header">
               <span class="value-num">02</span>
-              <h3 class="value-card-title">Rasio Kelas Ideal</h3>
+              <h3 class="value-card-title" data-i18n="adv2_title">Rasio Kelas Ideal</h3>
             </div>
-            <p class="value-card-desc">
+            <p class="value-card-desc" data-i18n="adv2_desc">
               Jumlah siswa per kelas dibatasi maksimal 30 murid sehingga guru dapat mengenal karakter belajar dan mendampingi kemajuan setiap peserta didik secara personal.
             </p>
           </div>
@@ -669,9 +671,9 @@
           <div class="value-card">
             <div class="value-header">
               <span class="value-num">03</span>
-              <h3 class="value-card-title">Deeper Learning &amp; Coding</h3>
+              <h3 class="value-card-title" data-i18n="adv3_title">Deeper Learning &amp; Coding</h3>
             </div>
-            <p class="value-card-desc">
+            <p class="value-card-desc" data-i18n="adv3_desc">
               Metode pembelajaran berbasis masalah (PBL) dan proyek kolaboratif yang terintegrasi dengan pengenalan logika pemrograman komputer dan literasi digital sehat.
             </p>
           </div>
@@ -679,9 +681,9 @@
           <div class="value-card">
             <div class="value-header">
               <span class="value-num">04</span>
-              <h3 class="value-card-title">11 Ekstrakurikuler Pilihan</h3>
+              <h3 class="value-card-title" data-i18n="adv4_title">11 Ekstrakurikuler Pilihan</h3>
             </div>
-            <p class="value-card-desc">
+            <p class="value-card-desc" data-i18n="adv4_desc">
               Wadah pengembangan minat di bidang olahraga (futsal, basket, badminton, renang), sains, bahasa Inggris, musik band, vocal, tari, teater, hingga coding.
             </p>
           </div>
@@ -689,9 +691,9 @@
           <div class="value-card">
             <div class="value-header">
               <span class="value-num">05</span>
-              <h3 class="value-card-title">Fasilitas Nyaman &amp; Terstandar</h3>
+              <h3 class="value-card-title" data-i18n="adv5_title">Fasilitas Nyaman &amp; Terstandar</h3>
             </div>
-            <p class="value-card-desc">
+            <p class="value-card-desc" data-i18n="adv5_desc">
               Ruang kelas ber-AC dengan TV layar lebar interaktif, laboratorium komputer, laboratorium IPA, perpustakaan, lapangan olahraga luas, dan aula pertemuan.
             </p>
           </div>
@@ -699,9 +701,9 @@
           <div class="value-card">
             <div class="value-header">
               <span class="value-num">06</span>
-              <h3 class="value-card-title">Prestasi Terbukti Tingkat Nasional</h3>
+              <h3 class="value-card-title" data-i18n="adv6_title">Prestasi Terbukti Tingkat Nasional</h3>
             </div>
-            <p class="value-card-desc">
+            <p class="value-card-desc" data-i18n="adv6_desc">
               Rekam jejak capaian siswa yang membanggakan, termasuk perolehan 4 medali emas pada kompetisi akademik tingkat nasional di berbagai mata pelajaran.
             </p>
           </div>
@@ -713,18 +715,18 @@
     <section class="section" id="fasilitas">
       <div class="container">
         <div class="section-header">
-          <span class="section-label">Sarana Belajar Nyata</span>
-          <h2 class="section-title">Fasilitas SMP Harapan Bangsa</h2>
-          <p class="section-desc">
+          <span class="section-label" data-i18n="sec_fac_label">Sarana Belajar Nyata</span>
+          <h2 class="section-title" data-i18n="sec_fac_title">Fasilitas SMP Harapan Bangsa</h2>
+          <p class="section-desc" data-i18n="sec_fac_desc">
             Sarana dan prasarana belajar yang dirancang untuk mendukung kenyamanan, eksplorasi sains, dan kegiatan siswa di lingkungan kampus.
           </p>
         </div>
 
-        <div class="facilities-filter" role="tablist" aria-label="Kategori Fasilitas">
-          <button class="facility-filter-btn active" data-filter="all" role="tab" aria-selected="true">Semua Fasilitas</button>
-          <button class="facility-filter-btn" data-filter="kelas" role="tab" aria-selected="false">Ruang Kelas &amp; Belajar</button>
-          <button class="facility-filter-btn" data-filter="olahraga" role="tab" aria-selected="false">Olahraga &amp; Lapangan</button>
-          <button class="facility-filter-btn" data-filter="penunjang" role="tab" aria-selected="false">Fasilitas Penunjang</button>
+        <div class="facilities-filter" role="tablist" aria-label="Kategori Fasilitas" data-i18n-aria="fac_filter_aria">
+          <button class="facility-filter-btn active" data-filter="all" role="tab" aria-selected="true" data-i18n="fac_filter_all">Semua Fasilitas</button>
+          <button class="facility-filter-btn" data-filter="kelas" role="tab" aria-selected="false" data-i18n="fac_filter_class">Ruang Kelas &amp; Belajar</button>
+          <button class="facility-filter-btn" data-filter="olahraga" role="tab" aria-selected="false" data-i18n="fac_filter_sports">Olahraga &amp; Lapangan</button>
+          <button class="facility-filter-btn" data-filter="penunjang" role="tab" aria-selected="false" data-i18n="fac_filter_support">Fasilitas Penunjang</button>
         </div>
 
         <div class="facilities-grid">
@@ -732,48 +734,48 @@
           <div class="facility-card" data-category="kelas">
             <div class="facility-img-wrapper">
               <img src="https://res.cloudinary.com/tj778flw/image/upload/v1793326287/WhatsApp_Image_2026-10-30_at_08.16.50.jpg" alt="Ruang kelas ber-AC SMP Harapan Bangsa Karawang"
-                class="facility-img" loading="lazy">
-              <span class="facility-category-badge">Ruang Kelas</span>
+                data-i18n-alt="fac1_alt" class="facility-img" loading="lazy">
+              <span class="facility-category-badge" data-i18n="fac1_badge">Ruang Kelas</span>
             </div>
             <div class="facility-info">
-              <h3 class="facility-name">Ruang Kelas Ber-AC &amp; Multimedia</h3>
-              <p class="facility-caption">Dilengkapi penyejuk udara (AC), Smart TV layar besar untuk presentasi interaktif, whiteboard, dan ventilasi udara yang baik.</p>
+              <h3 class="facility-name" data-i18n="fac1_name">Ruang Kelas Ber-AC &amp; Multimedia</h3>
+              <p class="facility-caption" data-i18n="fac1_desc">Dilengkapi penyejuk udara (AC), Smart TV layar besar untuk presentasi interaktif, whiteboard, dan ventilasi udara yang baik.</p>
             </div>
           </div>
 
           <!-- 2. Perpustakaan -->
           <div class="facility-card" data-category="kelas">
             <div class="facility-img-wrapper">
-              <img src="assets/images/fasilitas-perpustakaan.jpg" alt="Perpustakaan sekolah SMP Harapan Bangsa" class="facility-img">
-              <span class="facility-category-badge">Perpustakaan</span>
+              <img src="assets/images/fasilitas-perpustakaan.jpg" alt="Perpustakaan sekolah SMP Harapan Bangsa" data-i18n-alt="fac2_alt" class="facility-img">
+              <span class="facility-category-badge" data-i18n="fac2_badge">Perpustakaan</span>
             </div>
             <div class="facility-info">
-              <h3 class="facility-name">Perpustakaan Sekolah</h3>
-              <p class="facility-caption">Koleksi buku teks Kurikulum Merdeka, ensiklopedia ilmiah, novel sastra remaja, serta ruang baca yang tenang untuk literasi harian.</p>
+              <h3 class="facility-name" data-i18n="fac2_name">Perpustakaan Sekolah</h3>
+              <p class="facility-caption" data-i18n="fac2_desc">Koleksi buku teks Kurikulum Merdeka, ensiklopedia ilmiah, novel sastra remaja, serta ruang baca yang tenang untuk literasi harian.</p>
             </div>
           </div>
 
           <!-- 3. Lapangan Olahraga (Cloudinary CDN) -->
           <div class="facility-card" data-category="olahraga">
             <div class="facility-img-wrapper">
-              <img src="https://res.cloudinary.com/tj778flw/image/upload/v1793326288/WhatsApp_Image_2026-10-30_at_08.16.54.jpg" alt="Lapangan olahraga dan upacara SMP Harapan Bangsa" class="facility-img" loading="lazy">
-              <span class="facility-category-badge">Olahraga</span>
+              <img src="https://res.cloudinary.com/tj778flw/image/upload/v1793326288/WhatsApp_Image_2026-10-30_at_08.16.54.jpg" alt="Lapangan olahraga dan upacara SMP Harapan Bangsa" data-i18n-alt="fac3_alt" class="facility-img" loading="lazy">
+              <span class="facility-category-badge" data-i18n="fac3_badge">Olahraga</span>
             </div>
             <div class="facility-info">
-              <h3 class="facility-name">Lapangan Olahraga Luas</h3>
-              <p class="facility-caption">Area luar ruang multifungsi untuk kegiatan upacara bendera hari Senin, latihan futsal, bola basket, badminton, dan kebugaran fisik.</p>
+              <h3 class="facility-name" data-i18n="fac3_name">Lapangan Olahraga Luas</h3>
+              <p class="facility-caption" data-i18n="fac3_desc">Area luar ruang multifungsi untuk kegiatan upacara bendera hari Senin, latihan futsal, bola basket, badminton, dan kebugaran fisik.</p>
             </div>
           </div>
 
           <!-- 4. Laboratorium Komputer -->
           <div class="facility-card" data-category="kelas">
             <div class="facility-img-wrapper">
-              <img src="assets/images/gallery/gallery-books.jpg" alt="Gedung ruang belajar dan laboratorium SMP" class="facility-img">
-              <span class="facility-category-badge">Teknologi</span>
+              <img src="assets/images/gallery/gallery-books.jpg" alt="Gedung ruang belajar dan laboratorium SMP" data-i18n-alt="fac4_alt" class="facility-img">
+              <span class="facility-category-badge" data-i18n="fac4_badge">Teknologi</span>
             </div>
             <div class="facility-info">
-              <h3 class="facility-name">Laboratorium Komputer &amp; TIK</h3>
-              <p class="facility-caption">Fasilitas perangkat komputer terhubung internet untuk praktikum informatika, logika pemrograman, dan pelaksanaan ANBK.</p>
+              <h3 class="facility-name" data-i18n="fac4_name">Laboratorium Komputer &amp; TIK</h3>
+              <p class="facility-caption" data-i18n="fac4_desc">Fasilitas perangkat komputer terhubung internet untuk praktikum informatika, logika pemrograman, dan pelaksanaan ANBK.</p>
             </div>
           </div>
 
@@ -783,11 +785,11 @@
               <div class="facility-img-fallback-badge">
                 <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
               </div>
-              <span class="facility-category-badge">Kesehatan</span>
+              <span class="facility-category-badge" data-i18n="fac5_badge">Kesehatan</span>
             </div>
             <div class="facility-info">
-              <h3 class="facility-name">Ruang UKS (Unit Kesehatan Siswa)</h3>
-              <p class="facility-caption">Penyediaan perlengkapan medis pertolongan pertama, tempat istirahat siswa, dan pemantauan kesehatan berkala warga sekolah.</p>
+              <h3 class="facility-name" data-i18n="fac5_name">Ruang UKS (Unit Kesehatan Siswa)</h3>
+              <p class="facility-caption" data-i18n="fac5_desc">Penyediaan perlengkapan medis pertolongan pertama, tempat istirahat siswa, dan pemantauan kesehatan berkala warga sekolah.</p>
             </div>
           </div>
 
@@ -797,23 +799,23 @@
               <div class="facility-img-fallback-badge">
                 <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2" aria-hidden="true"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
               </div>
-              <span class="facility-category-badge">Konsumsi</span>
+              <span class="facility-category-badge" data-i18n="fac6_badge">Konsumsi</span>
             </div>
             <div class="facility-info">
-              <h3 class="facility-name">Kantin Bersih &amp; Sehat</h3>
-              <p class="facility-caption">Menyediakan menu makanan dan minuman higienis, bergizi seimbang, dan diawasi kebersihannya untuk seluruh peserta didik.</p>
+              <h3 class="facility-name" data-i18n="fac6_name">Kantin Bersih &amp; Sehat</h3>
+              <p class="facility-caption" data-i18n="fac6_desc">Menyediakan menu makanan dan minuman higienis, bergizi seimbang, dan diawasi kebersihannya untuk seluruh peserta didik.</p>
             </div>
           </div>
 
           <!-- 7. Aula Pertemuan (Cloudinary CDN) -->
           <div class="facility-card" data-category="penunjang">
             <div class="facility-img-wrapper">
-              <img src="https://res.cloudinary.com/tj778flw/image/upload/v1793326283/WhatsApp_Image_2026-10-30_at_08.16.53.jpg" alt="Aula pertemuan dan ibadah SMP Harapan Bangsa" class="facility-img" loading="lazy">
-              <span class="facility-category-badge">Serbaguna</span>
+              <img src="https://res.cloudinary.com/tj778flw/image/upload/v1793326283/WhatsApp_Image_2026-10-30_at_08.16.53.jpg" alt="Aula pertemuan dan ibadah SMP Harapan Bangsa" data-i18n-alt="fac7_alt" class="facility-img" loading="lazy">
+              <span class="facility-category-badge" data-i18n="fac7_badge">Serbaguna</span>
             </div>
             <div class="facility-info">
-              <h3 class="facility-name">Aula Pertemuan Serbaguna</h3>
-              <p class="facility-caption">Gedung pertemuan untuk kegiatan ibadah bersama hari Kamis, pertemuan orang tua murid, seminar kesiswaan, dan pentas unjuk seni.</p>
+              <h3 class="facility-name" data-i18n="fac7_name">Aula Pertemuan Serbaguna</h3>
+              <p class="facility-caption" data-i18n="fac7_desc">Gedung pertemuan untuk kegiatan ibadah bersama hari Kamis, pertemuan orang tua murid, seminar kesiswaan, dan pentas unjuk seni.</p>
             </div>
           </div>
 
@@ -823,11 +825,11 @@
               <div class="facility-img-fallback-badge">
                 <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
               </div>
-              <span class="facility-category-badge">Kenyamanan</span>
+              <span class="facility-category-badge" data-i18n="fac8_badge">Kenyamanan</span>
             </div>
             <div class="facility-info">
-              <h3 class="facility-name">Ruang Tunggu &amp; Informasi SPMB</h3>
-              <p class="facility-caption">Area pelayanan tamu dan penjemput yang tertib dan nyaman selama jam kunjungan atau menantikan kepulangan siswa.</p>
+              <h3 class="facility-name" data-i18n="fac8_name">Ruang Tunggu &amp; Informasi SPMB</h3>
+              <p class="facility-caption" data-i18n="fac8_desc">Area pelayanan tamu dan penjemput yang tertib dan nyaman selama jam kunjungan atau menantikan kepulangan siswa.</p>
             </div>
           </div>
         </div>
@@ -838,82 +840,82 @@
     <section class="section section-alt" id="kegiatan">
       <div class="container">
         <div class="section-header">
-          <span class="section-label">Aktivitas Remaja</span>
-          <h2 class="section-title">Kesiswaan &amp; Ekstrakurikuler SMP</h2>
-          <p class="section-desc">
+          <span class="section-label" data-i18n="sec_act_label">Aktivitas Remaja</span>
+          <h2 class="section-title" data-i18n="sec_act_title">Kesiswaan &amp; Ekstrakurikuler SMP</h2>
+          <p class="section-desc" data-i18n="sec_act_desc">
             Pengembangan karakter mandiri, kepemimpinan organisasi, serta wadah eksplorasi minat bakat di luar jam kegiatan belajar mengajar.
           </p>
         </div>
 
         <div class="activities-grid">
           <div class="activity-card">
-            <span class="activity-card-category">Akademik &amp; Digital</span>
-            <h3 class="activity-card-title">Deeper Learning &amp; Coding</h3>
-            <p class="activity-card-desc">
+            <span class="activity-card-category" data-i18n="act1_cat">Akademik &amp; Digital</span>
+            <h3 class="activity-card-title" data-i18n="act1_title">Deeper Learning &amp; Coding</h3>
+            <p class="activity-card-desc" data-i18n="act1_desc">
               Pembelajaran mendalam berbasis masalah (PBL) dan proyek nyata, didukung pengenalan logika coding dan literasi digital di laboratorium komputer.
             </p>
             <button class="btn btn-secondary btn-sm" data-activity-info="pembelajaran"
-              aria-label="Buka rincian kegiatan pembelajaran interaktif">
+              aria-label="Buka rincian kegiatan pembelajaran interaktif" data-i18n-aria="act1_aria" data-i18n="act_btn_details">
               Rincian Aktivitas
             </button>
           </div>
 
           <div class="activity-card">
-            <span class="activity-card-category">Minat &amp; Bakat</span>
-            <h3 class="activity-card-title">11 Ekstrakurikuler Aktif</h3>
-            <p class="activity-card-desc">
+            <span class="activity-card-category" data-i18n="act2_cat">Minat &amp; Bakat</span>
+            <h3 class="activity-card-title" data-i18n="act2_title">11 Ekstrakurikuler Aktif</h3>
+            <p class="activity-card-desc" data-i18n="act2_desc">
               Klub Bahasa Inggris, Matematika, Basket, Badminton, Futsal, Vocal, Tamborin, Renang, Dance, Musik Band, dan Coding untuk mengasah talenta siswa.
             </p>
             <button class="btn btn-secondary btn-sm" data-activity-info="ekskul"
-              aria-label="Buka rincian kegiatan ekstrakurikuler">
+              aria-label="Buka rincian kegiatan ekstrakurikuler" data-i18n-aria="act2_aria" data-i18n="act_btn_details">
               Rincian Aktivitas
             </button>
           </div>
 
           <div class="activity-card">
-            <span class="activity-card-category">Spiritual &amp; Karakter</span>
-            <h3 class="activity-card-title">Saat Teduh &amp; Ibadah Rutin</h3>
-            <p class="activity-card-desc">
+            <span class="activity-card-category" data-i18n="act3_cat">Spiritual &amp; Karakter</span>
+            <h3 class="activity-card-title" data-i18n="act3_title">Saat Teduh &amp; Ibadah Rutin</h3>
+            <p class="activity-card-desc" data-i18n="act3_desc">
               Saat Teduh harian di kelas sebelum jam pelajaran dimulai, ibadah bersama setiap hari Kamis, serta perayaan hari besar keagamaan Paskah dan Natal.
             </p>
             <button class="btn btn-secondary btn-sm" data-activity-info="keagamaan"
-              aria-label="Buka rincian kegiatan keagamaan">
+              aria-label="Buka rincian kegiatan keagamaan" data-i18n-aria="act3_aria" data-i18n="act_btn_details">
               Rincian Aktivitas
             </button>
           </div>
 
           <div class="activity-card">
-            <span class="activity-card-category">Seni &amp; Kreativitas</span>
-            <h3 class="activity-card-title">Musik, Band, Tari &amp; Teater</h3>
-            <p class="activity-card-desc">
+            <span class="activity-card-category" data-i18n="act4_cat">Seni &amp; Kreativitas</span>
+            <h3 class="activity-card-title" data-i18n="act4_title">Musik, Band, Tari &amp; Teater</h3>
+            <p class="activity-card-desc" data-i18n="act4_desc">
               Pembinaan talenta seni musik instrumental, olah vocal, modern/traditional dance, dan teater untuk melatih rasa percaya diri dan estetika.
             </p>
             <button class="btn btn-secondary btn-sm" data-activity-info="seni"
-              aria-label="Buka rincian kegiatan seni dan kreativitas">
+              aria-label="Buka rincian kegiatan seni dan kreativitas" data-i18n-aria="act4_aria" data-i18n="act_btn_details">
               Rincian Aktivitas
             </button>
           </div>
 
           <div class="activity-card">
-            <span class="activity-card-category">Kebugaran Jasmani</span>
-            <h3 class="activity-card-title">Klub Olahraga (Futsal &amp; Basket)</h3>
-            <p class="activity-card-desc">
+            <span class="activity-card-category" data-i18n="act5_cat">Kebugaran Jasmani</span>
+            <h3 class="activity-card-title" data-i18n="act5_title">Klub Olahraga (Futsal &amp; Basket)</h3>
+            <p class="activity-card-desc" data-i18n="act5_desc">
               Pembinaan cabang olahraga basket, futsal, bulutangkis, dan renang di lapangan sekolah untuk membangun kebugaran fisik dan sportivitas.
             </p>
             <button class="btn btn-secondary btn-sm" data-activity-info="olahraga"
-              aria-label="Buka rincian kegiatan olahraga">
+              aria-label="Buka rincian kegiatan olahraga" data-i18n-aria="act5_aria" data-i18n="act_btn_details">
               Rincian Aktivitas
             </button>
           </div>
 
           <div class="activity-card">
-            <span class="activity-card-category">Kepemimpinan</span>
-            <h3 class="activity-card-title">OSIS, Pramuka &amp; Bakti Sosial</h3>
-            <p class="activity-card-desc">
+            <span class="activity-card-category" data-i18n="act6_cat">Kepemimpinan</span>
+            <h3 class="activity-card-title" data-i18n="act6_title">OSIS, Pramuka &amp; Bakti Sosial</h3>
+            <p class="activity-card-desc" data-i18n="act6_desc">
               Organisasi Siswa Intra Sekolah (OSIS), kepramukaan penggalang, upacara bendera hari Senin, gerakan peduli lingkungan, dan aksi sosial berkala.
             </p>
             <button class="btn btn-secondary btn-sm" data-activity-info="sosial"
-              aria-label="Buka rincian kegiatan sosial">
+              aria-label="Buka rincian kegiatan sosial" data-i18n-aria="act6_aria" data-i18n="act_btn_details">
               Rincian Aktivitas
             </button>
           </div>
@@ -925,9 +927,9 @@
     <section class="section" id="prestasi">
       <div class="container">
         <div class="section-header">
-          <span class="section-label">Apresiasi Siswa</span>
-          <h2 class="section-title">Prestasi Siswa SMP Harapan Bangsa</h2>
-          <p class="section-desc">
+          <span class="section-label" data-i18n="sec_ach_label">Apresiasi Siswa</span>
+          <h2 class="section-title" data-i18n="sec_ach_title">Prestasi Siswa SMP Harapan Bangsa</h2>
+          <p class="section-desc" data-i18n="sec_ach_desc">
             Capaian kejuaraan nyata yang diraih oleh peserta didik SMP Harapan Bangsa Karawang pada ajang kompetisi tingkat regional dan nasional.
           </p>
         </div>
@@ -937,22 +939,22 @@
           <!-- Card 1: Sadrakh Perwira Bore Sampepadang -->
           <div class="achiever-card">
             <div class="achiever-photo-wrap">
-              <img src="assets/images/prestasi/prestasi-sadrakh-matematika.jpg" alt="Sadrakh Perwira Bore Sampepadang peraih Medali Emas Matematika Airlangga Competition 21" class="achiever-photo" loading="lazy">
+              <img src="assets/images/prestasi/prestasi-sadrakh-matematika.jpg" alt="Sadrakh Perwira Bore Sampepadang peraih Medali Emas Matematika Airlangga Competition 21" data-i18n-alt="ach1_alt" class="achiever-photo" loading="lazy">
               <div class="achiever-medal-ribbon">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                <span>Medali Emas</span>
+                <span data-i18n="medal_gold">Medali Emas</span>
               </div>
             </div>
             <div class="achiever-info">
-              <span class="achiever-comp-badge">Airlangga Competition 21 &bull; Tingkat Nasional</span>
+              <span class="achiever-comp-badge" data-i18n="comp_airlangga_nat">Airlangga Competition 21 &bull; Tingkat Nasional</span>
               <h3 class="achiever-name">Sadrakh Perwira Bore Sampepadang</h3>
-              <p class="achiever-desc">
+              <p class="achiever-desc" data-i18n="ach1_desc">
                 Peraih Medali Emas Matematika Jenjang SMP pada ajang bergengsi Airlangga Competition 21 tingkat nasional, membuktikan ketajaman logika berpikir dan penalaran numerasi peserta didik SMP Harapan Bangsa.
               </p>
               <div class="achiever-tags">
-                <span class="achiever-tag gold">Medali Emas</span>
-                <span class="achiever-tag">Matematika SMP</span>
-                <span class="achiever-tag">Tingkat Nasional</span>
+                <span class="achiever-tag gold" data-i18n="medal_gold">Medali Emas</span>
+                <span class="achiever-tag" data-i18n="ach1_tag_subj">Matematika SMP</span>
+                <span class="achiever-tag" data-i18n="tag_national">Tingkat Nasional</span>
               </div>
             </div>
           </div>
@@ -960,44 +962,44 @@
           <!-- Card 2: Yemima Chrisna Santoso -->
           <div class="achiever-card">
             <div class="achiever-photo-wrap">
-              <img src="assets/images/prestasi/prestasi-yemima-bahasa-inggris.jpg" alt="Yemima Chrisna Santoso peraih Medali Emas Bahasa Inggris Airlangga Competition 21" class="achiever-photo" loading="lazy">
+              <img src="assets/images/prestasi/prestasi-yemima-bahasa-inggris.jpg" alt="Yemima Chrisna Santoso peraih Medali Emas Bahasa Inggris Airlangga Competition 21" data-i18n-alt="ach2_alt" class="achiever-photo" loading="lazy">
               <div class="achiever-medal-ribbon">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                <span>Medali Emas</span>
+                <span data-i18n="medal_gold">Medali Emas</span>
               </div>
             </div>
             <div class="achiever-info">
-              <span class="achiever-comp-badge">Airlangga Competition 21 &bull; Tingkat Nasional</span>
+              <span class="achiever-comp-badge" data-i18n="comp_airlangga_nat">Airlangga Competition 21 &bull; Tingkat Nasional</span>
               <h3 class="achiever-name">Yemima Chrisna Santoso</h3>
-              <p class="achiever-desc">
+              <p class="achiever-desc" data-i18n="ach2_desc">
                 Peraih Medali Emas Bahasa Inggris Jenjang SMP pada ajang bergengsi Airlangga Competition 21 tingkat nasional, menunjukkan keunggulan literasi bahasa dan komunikasi global yang dibina di SMP Harapan Bangsa.
               </p>
               <div class="achiever-tags">
-                <span class="achiever-tag gold">Medali Emas</span>
-                <span class="achiever-tag">Bahasa Inggris SMP</span>
-                <span class="achiever-tag">Tingkat Nasional</span>
+                <span class="achiever-tag gold" data-i18n="medal_gold">Medali Emas</span>
+                <span class="achiever-tag" data-i18n="ach2_tag_subj">Bahasa Inggris SMP</span>
+                <span class="achiever-tag" data-i18n="tag_national">Tingkat Nasional</span>
               </div>
             </div>
           </div>
           <!-- Card 3: Clarisa Valquira -->
           <div class="achiever-card">
             <div class="achiever-photo-wrap">
-              <img src="assets/images/prestasi/prestasi-clarisa-ppkn.jpg" alt="Clarisa Valquira peraih Medali Emas PPKN Airlangga Competition 21" class="achiever-photo" loading="lazy">
+              <img src="assets/images/prestasi/prestasi-clarisa-ppkn.jpg" alt="Clarisa Valquira peraih Medali Emas PPKN Airlangga Competition 21" data-i18n-alt="ach3_alt" class="achiever-photo" loading="lazy">
               <div class="achiever-medal-ribbon">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                <span>Medali Emas</span>
+                <span data-i18n="medal_gold">Medali Emas</span>
               </div>
             </div>
             <div class="achiever-info">
-              <span class="achiever-comp-badge">Airlangga Competition 21 &bull; Tingkat Nasional</span>
+              <span class="achiever-comp-badge" data-i18n="comp_airlangga_nat">Airlangga Competition 21 &bull; Tingkat Nasional</span>
               <h3 class="achiever-name">Clarisa Valquira</h3>
-              <p class="achiever-desc">
+              <p class="achiever-desc" data-i18n="ach3_desc">
                 Peraih Medali Emas PPKN Jenjang SMP pada kompetisi akademik nasional Airlangga Competition 21, mencerminkan pemahaman mendalam tentang wawasan kebangsaan, konstitusi, dan nilai-nilai luhur Pancasila.
               </p>
               <div class="achiever-tags">
-                <span class="achiever-tag gold">Medali Emas</span>
-                <span class="achiever-tag">PPKN SMP</span>
-                <span class="achiever-tag">Tingkat Nasional</span>
+                <span class="achiever-tag gold" data-i18n="medal_gold">Medali Emas</span>
+                <span class="achiever-tag" data-i18n="ach3_tag_subj">PPKN SMP</span>
+                <span class="achiever-tag" data-i18n="tag_national">Tingkat Nasional</span>
               </div>
             </div>
           </div>
@@ -1005,22 +1007,22 @@
           <!-- Card 4: Hanna M.O -->
           <div class="achiever-card">
             <div class="achiever-photo-wrap">
-              <img src="assets/images/prestasi/prestasi-hanna-bahasa-indonesia.jpg" alt="Hanna M.O peraih Medali Emas Bahasa Indonesia Airlangga Competition 21" class="achiever-photo" loading="lazy">
+              <img src="assets/images/prestasi/prestasi-hanna-bahasa-indonesia.jpg" alt="Hanna M.O peraih Medali Emas Bahasa Indonesia Airlangga Competition 21" data-i18n-alt="ach4_alt" class="achiever-photo" loading="lazy">
               <div class="achiever-medal-ribbon">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                <span>Medali Emas</span>
+                <span data-i18n="medal_gold">Medali Emas</span>
               </div>
             </div>
             <div class="achiever-info">
-              <span class="achiever-comp-badge">Airlangga Competition 21 &bull; Tingkat Nasional</span>
+              <span class="achiever-comp-badge" data-i18n="comp_airlangga_nat">Airlangga Competition 21 &bull; Tingkat Nasional</span>
               <h3 class="achiever-name">Hanna M.O</h3>
-              <p class="achiever-desc">
+              <p class="achiever-desc" data-i18n="ach4_desc">
                 Peraih Medali Emas Bahasa Indonesia Jenjang SMP pada kompetisi akademik nasional Airlangga Competition 21, membuktikan penguasaan tata bahasa, literasi sastra, dan kecakapan berbahasa Indonesia yang unggul.
               </p>
               <div class="achiever-tags">
-                <span class="achiever-tag gold">Medali Emas</span>
-                <span class="achiever-tag">Bahasa Indonesia SMP</span>
-                <span class="achiever-tag">Tingkat Nasional</span>
+                <span class="achiever-tag gold" data-i18n="medal_gold">Medali Emas</span>
+                <span class="achiever-tag" data-i18n="ach4_tag_subj">Bahasa Indonesia SMP</span>
+                <span class="achiever-tag" data-i18n="tag_national">Tingkat Nasional</span>
               </div>
             </div>
           </div>
@@ -1028,28 +1030,28 @@
 
         <div class="achievements-grid">
           <div class="achievement-card" style="border-top: 3px solid #d97706;">
-            <span class="achievement-year-badge">2026 &bull; Tingkat Nasional</span>
-            <h3 class="achievement-title">Airlangga Competition 21 (SMP)</h3>
-            <div class="achievement-winner">Sadrakh, Yemima, Clarissa &amp; Hana Michell</div>
-            <p class="achievement-notes">
+            <span class="achievement-year-badge" data-i18n="ach_sum1_badge">2026 &bull; Tingkat Nasional</span>
+            <h3 class="achievement-title" data-i18n="ach_sum1_title">Airlangga Competition 21 (SMP)</h3>
+            <div class="achievement-winner" data-i18n="ach_sum1_winner">Sadrakh, Yemima, Clarissa &amp; Hana Michell</div>
+            <p class="achievement-notes" data-i18n="ach_sum1_notes">
               Meraih 4 Medali Emas: Sadrakh (Matematika), Yemima (Bahasa Inggris), Clarissa (PPKn), dan Hana Michell (Bahasa Indonesia).
             </p>
           </div>
 
           <div class="achievement-card" style="border-top: 3px solid var(--color-primary);">
-            <span class="achievement-year-badge">Kompetisi Pelajar</span>
-            <h3 class="achievement-title">Olimpiade Sains &amp; Numerasi Menengah</h3>
-            <div class="achievement-winner">Klub Sains &amp; Matematika SMP Harapan Bangsa</div>
-            <p class="achievement-notes">
+            <span class="achievement-year-badge" data-i18n="ach_sum2_badge">Kompetisi Pelajar</span>
+            <h3 class="achievement-title" data-i18n="ach_sum2_title">Olimpiade Sains &amp; Numerasi Menengah</h3>
+            <div class="achievement-winner" data-i18n="ach_sum2_winner">Klub Sains &amp; Matematika SMP Harapan Bangsa</div>
+            <p class="achievement-notes" data-i18n="ach_sum2_notes">
               Partisipasi aktif dan perolehan penghargaan pada kompetisi nalar sains serta kecakapan logika matematika antarsekolah menengah.
             </p>
           </div>
 
           <div class="achievement-card" style="border-top: 3px solid var(--color-primary);">
-            <span class="achievement-year-badge">Minat &amp; Bakat</span>
-            <h3 class="achievement-title">Kejuaraan Seni Pertunjukan &amp; Olahraga Beregu</h3>
-            <div class="achievement-winner">Tim Siswa Ekskul Seni &amp; Futsal SMP</div>
-            <p class="achievement-notes">
+            <span class="achievement-year-badge" data-i18n="ach_sum3_badge">Minat &amp; Bakat</span>
+            <h3 class="achievement-title" data-i18n="ach_sum3_title">Kejuaraan Seni Pertunjukan &amp; Olahraga Beregu</h3>
+            <div class="achievement-winner" data-i18n="ach_sum3_winner">Tim Siswa Ekskul Seni &amp; Futsal SMP</div>
+            <p class="achievement-notes" data-i18n="ach_sum3_notes">
               Meraih apresiasi dalam ajang unjuk bakat seni pentas tari dan pertandingan persahabatan olahraga antarpelajar di Kabupaten Karawang.
             </p>
           </div>
@@ -1061,7 +1063,7 @@
             <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
             <polyline points="22 4 12 14.01 9 11.01"></polyline>
           </svg>
-          <div class="admin-tip-text">
+          <div class="admin-tip-text" data-i18n-html="ach_verified_tip">
             <strong>Prestasi Terverifikasi:</strong> Catatan kejuaraan resmi peserta didik SMP Harapan Bangsa Karawang yang tercatat pada buku induk pembinaan kesiswaan sekolah.
           </div>
         </div>
@@ -1074,42 +1076,42 @@
     <section class="ppdb-section" id="pendaftaran">
       <div class="container">
         <div class="ppdb-header">
-          <div class="ppdb-tagline">Tahun Ajaran 2027/2028 &bull; Periode Juli 2026 &ndash; Juni 2027</div>
-          <h2 class="ppdb-title">Penerimaan Peserta Didik Baru (SPMB SMP)</h2>
-          <p class="ppdb-subtitle">
+          <div class="ppdb-tagline" data-i18n="spmb_tagline">Tahun Ajaran 2027/2028 &bull; Periode Juli 2026 - Juni 2027</div>
+          <h2 class="ppdb-title" data-i18n="spmb_title">Penerimaan Peserta Didik Baru (SPMB SMP)</h2>
+          <p class="ppdb-subtitle" data-i18n="spmb_subtitle">
             Pendaftaran peserta didik baru jenjang SMP Harapan Bangsa Karawang dibuka untuk lulusan SD/MI sederajat.
           </p>
         </div>
 
         <div class="ppdb-procedure-grid">
           <div class="procedure-card">
-            <div class="procedure-step-num">Tahap 1</div>
-            <h3 class="procedure-step-title">Pengisian Formulir Online</h3>
-            <p class="procedure-step-desc">
+            <div class="procedure-step-num" data-i18n="spmb_step1_num">Tahap 1</div>
+            <h3 class="procedure-step-title" data-i18n="spmb_step1_title">Pengisian Formulir Online</h3>
+            <p class="procedure-step-desc" data-i18n="spmb_step1_desc">
               Orang tua atau calon siswa mengisi formulir pendaftaran melalui Google Form resmi sekolah atau konsultasi via WhatsApp layanan SPMB.
             </p>
           </div>
 
           <div class="procedure-card">
-            <div class="procedure-step-num">Tahap 2</div>
-            <h3 class="procedure-step-title">Kelengkapan Berkas Administrasi</h3>
-            <p class="procedure-step-desc">
+            <div class="procedure-step-num" data-i18n="spmb_step2_num">Tahap 2</div>
+            <h3 class="procedure-step-title" data-i18n="spmb_step2_title">Kelengkapan Berkas Administrasi</h3>
+            <p class="procedure-step-desc" data-i18n="spmb_step2_desc">
               Menyerahkan dokumen pendukung: Fotokopi Rapor SD, Akta Kelahiran, Kartu Keluarga (KK), dan Fotokopi KTP orang tua.
             </p>
           </div>
 
           <div class="procedure-card">
-            <div class="procedure-step-num">Tahap 3</div>
-            <h3 class="procedure-step-title">Verifikasi &amp; Pemetaan Minat</h3>
-            <p class="procedure-step-desc">
+            <div class="procedure-step-num" data-i18n="spmb_step3_num">Tahap 3</div>
+            <h3 class="procedure-step-title" data-i18n="spmb_step3_title">Verifikasi &amp; Pemetaan Minat</h3>
+            <p class="procedure-step-desc" data-i18n="spmb_step3_desc">
               Observasi ramah dan pemetaan potensi minat bakat siswa serta konsultasi rincian biaya pendidikan secara transparan.
             </p>
           </div>
 
           <div class="procedure-card">
-            <div class="procedure-step-num">Tahap 4</div>
-            <h3 class="procedure-step-title">Registrasi Ulang &amp; Perlengkapan</h3>
-            <p class="procedure-step-desc">
+            <div class="procedure-step-num" data-i18n="spmb_step4_num">Tahap 4</div>
+            <h3 class="procedure-step-title" data-i18n="spmb_step4_title">Registrasi Ulang &amp; Perlengkapan</h3>
+            <p class="procedure-step-desc" data-i18n="spmb_step4_desc">
               Penyelesaian administrasi registrasi ulang, pengukuran seragam sekolah, dan persiapan Masa Pengenalan Lingkungan Sekolah (MPLS).
             </p>
           </div>
@@ -1119,28 +1121,28 @@
         <div style="background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; color: #ffffff;">
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; align-items: center;">
             <div>
-              <h3 style="font-size: 1.15rem; font-weight: 700; color: #ffffff; margin-bottom: 0.65rem;">
-                📋 Syarat Berkas Pendaftaran Siswa Baru SMP
+              <h3 style="font-size: 1.15rem; font-weight: 700; color: #ffffff; margin-bottom: 0.65rem;" data-i18n="spmb_req_title">
+                Syarat Berkas Pendaftaran Siswa Baru SMP
               </h3>
               <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.4rem; font-size: 0.92rem; opacity: 0.95;">
-                <li>✓ Fotokopi Akta Kelahiran Calon Siswa (2 lembar)</li>
-                <li>✓ Fotokopi Kartu Keluarga (KK) yang masih berlaku</li>
-                <li>✓ Fotokopi KTP Orang Tua (Ayah dan Ibu)</li>
-                <li>✓ Fotokopi Rapor SD / Surat Keterangan Lulus (SKL)</li>
-                <li>✓ Pasfoto terbaru calon siswa ukuran 3x4 (3 lembar)</li>
+                <li data-i18n="spmb_req_1">✓ Fotokopi Akta Kelahiran Calon Siswa (2 lembar)</li>
+                <li data-i18n="spmb_req_2">✓ Fotokopi Kartu Keluarga (KK) yang masih berlaku</li>
+                <li data-i18n="spmb_req_3">✓ Fotokopi KTP Orang Tua (Ayah dan Ibu)</li>
+                <li data-i18n="spmb_req_4">✓ Fotokopi Rapor SD / Surat Keterangan Lulus (SKL)</li>
+                <li data-i18n="spmb_req_5">✓ Pasfoto terbaru calon siswa ukuran 3x4 (3 lembar)</li>
               </ul>
             </div>
             <div style="background: rgba(0, 0, 0, 0.25); border-radius: 8px; padding: 1.25rem; border-left: 4px solid #34d399;">
-              <h4 style="font-size: 1.05rem; font-weight: 700; color: #34d399; margin-bottom: 0.4rem;">
-                💬 Konsultasi Biaya &amp; Formulir Pendaftaran
+              <h4 style="font-size: 1.05rem; font-weight: 700; color: #34d399; margin-bottom: 0.4rem;" data-i18n="spmb_fee_title">
+                Konsultasi Biaya &amp; Formulir Pendaftaran
               </h4>
-              <p style="font-size: 0.88rem; line-height: 1.5; margin-bottom: 0.85rem; opacity: 0.9;">
+              <p style="font-size: 0.88rem; line-height: 1.5; margin-bottom: 0.85rem; opacity: 0.9;" data-i18n="spmb_fee_desc">
                 Rincian formulir, uang pangkal, SPP bulanan, dan seragam dapat langsung dikonsultasikan melalui layanan WhatsApp resmi panitia SPMB:
               </p>
               <a href="https://wa.me/6282311775434?text=Halo%20Ibu%20Diana%20(Admin%20SPMB)%2C%20saya%20ingin%20konsultasi%20mengenai%20rincian%20biaya%20dan%20pendaftaran%20SMP%20Harapan%20Bangsa%20Karawang."
                 target="_blank" rel="noopener noreferrer" class="btn btn-accent btn-sm" style="display: inline-flex; align-items: center; gap: 0.5rem;">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.634.085-1.748-.378-1.425-.592-2.338-2.042-2.41-2.137-.071-.094-.572-.763-.572-1.455 0-.693.364-1.034.494-1.176.13-.143.286-.179.382-.179.096 0 .191.002.274.006.09.004.21.034.321.299.115.275.393.957.427 1.026.035.07.058.152.012.245-.047.093-.07.151-.139.233-.07.082-.147.183-.21.246-.07.07-.143.146-.062.285.082.139.363.6.782.973.541.482.996.632 1.136.702.139.07.221.058.303-.035.083-.094.353-.411.448-.553.094-.141.189-.118.318-.07.13.047.824.388.966.459.142.07.236.106.27.165.035.059.035.342-.109.747z"/></svg>
-                Konsultasi WhatsApp (0823-1177-5434)
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.634.085-1.748-.378-1.425-.592-2.338-2.042-2.41-2.137-.071-.094-.572-.763-.572-1.455 0-.693.364-1.034.494-1.176.13-.143.286-.179.382-.179.096 0 .191.002.274.006.09.004.21.034.321.299.115.275.393.957.427 1.026.035.07.058.152.012.245-.047.093-.07.151-.139.233-.07.082-.147.183-.21.246-.07.07-.143.146-.062.285.082.139.363.6.782.973.541.482.996.632 1.136.702.139.07.221.058.303-.035.083-.094.353-.411.448-.553.094-.141.189-.118.318-.07.13.047.824.388.966.459.142.07.236.106.27.165.035.059.035.342-.109.747z"/></svg>
+                <span data-i18n="spmb_fee_btn">Konsultasi WhatsApp (0823-1177-5434)</span>
               </a>
             </div>
           </div>
@@ -1148,20 +1150,20 @@
 
         <!-- Tombol Aksi SPMB Online Langsung -->
         <div class="ppdb-cta-box" style="text-align: center;">
-          <h3 style="font-size: 1.35rem; font-weight: 800; color: #ffffff; margin-bottom: 0.75rem;">
+          <h3 style="font-size: 1.35rem; font-weight: 800; color: #ffffff; margin-bottom: 0.75rem;" data-i18n="spmb_cta_title">
             Siap Bergabung dengan SMP Harapan Bangsa?
           </h3>
-          <p style="font-size: 0.95rem; opacity: 0.9; margin-bottom: 1.5rem; max-width: 680px; margin-left: auto; margin-right: auto;">
+          <p style="font-size: 0.95rem; opacity: 0.9; margin-bottom: 1.5rem; max-width: 680px; margin-left: auto; margin-right: auto;" data-i18n="spmb_cta_desc">
             Isi formulir pendaftaran online resmi melalui Google Form di bawah ini, atau hubungi sekretariat pendaftaran kami untuk jadwal peninjauan lingkungan sekolah.
           </p>
           <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSewWRQmo5NNYKYFYo50hCGS_VIiKhXM3bNNrOB65REKsDGXdQ/viewform?usp=dialog"
               target="_blank" rel="noopener noreferrer" class="btn btn-hero-primary" data-action="register-smp"
-              data-jenjang="SMP">
+              data-jenjang="SMP" data-i18n="spmb_cta_form_btn">
               Isi Formulir SPMB SMP Online (Google Form)
             </a>
             <a href="https://wa.me/6282311775434?text=Halo%20Ibu%20Diana%20(Admin%20SPMB)%2C%20saya%20ingin%20konsultasi%20pendaftaran%20SMP%20Harapan%20Bangsa%20Karawang"
-              target="_blank" rel="noopener noreferrer" class="btn btn-hero-secondary">
+              target="_blank" rel="noopener noreferrer" class="btn btn-hero-secondary" data-i18n="spmb_cta_wa_btn">
               WhatsApp Layanan SPMB (Diana)
             </a>
           </div>
@@ -1173,9 +1175,9 @@
     <section class="section section-alt" id="faq">
       <div class="container">
         <div class="section-header">
-          <span class="section-label">Pertanyaan Umum</span>
-          <h2 class="section-title">Informasi yang Sering Ditanyakan</h2>
-          <p class="section-desc">
+          <span class="section-label" data-i18n="sec_faq_label">Pertanyaan Umum</span>
+          <h2 class="section-title" data-i18n="sec_faq_title">Informasi yang Sering Ditanyakan</h2>
+          <p class="section-desc" data-i18n="sec_faq_desc">
             Jawaban praktis seputar kurikulum, pendaftaran, dan kegiatan belajar di SMP Harapan Bangsa Karawang.
           </p>
         </div>
@@ -1183,7 +1185,7 @@
         <div class="faq-wrapper">
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false">
-              <span>Kurikulum apa yang diterapkan di SMP Harapan Bangsa?</span>
+              <span data-i18n="faq1_q">Kurikulum apa yang diterapkan di SMP Harapan Bangsa?</span>
               <svg class="faq-chevron" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                 <path fill-rule="evenodd"
                   d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
@@ -1191,7 +1193,7 @@
               </svg>
             </button>
             <div class="faq-answer">
-              <div class="faq-answer-inner">
+              <div class="faq-answer-inner" data-i18n="faq1_a">
                 SMP Harapan Bangsa menerapkan Kurikulum Merdeka Menengah yang dipadukan dengan pendekatan Deeper Learning berbasis masalah (PBL) dan proyek sains (STEM), didukung pengenalan logika pemrograman (coding) dan pengayaan dwibahasa (Inggris dan Mandarin).
               </div>
             </div>
@@ -1199,7 +1201,7 @@
 
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false">
-              <span>Berapa kapasitas murid di setiap kelas?</span>
+              <span data-i18n="faq2_q">Berapa kapasitas murid di setiap kelas?</span>
               <svg class="faq-chevron" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                 <path fill-rule="evenodd"
                   d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
@@ -1207,7 +1209,7 @@
               </svg>
             </button>
             <div class="faq-answer">
-              <div class="faq-answer-inner">
+              <div class="faq-answer-inner" data-i18n="faq2_a">
                 Kapasitas kelas dijaga maksimal 30 murid per rombongan belajar. Rasio kelas yang ideal ini bertujuan agar guru dapat memantau perkembangan akademik dan mendampingi karakter setiap peserta didik secara mendalam.
               </div>
             </div>
@@ -1215,7 +1217,7 @@
 
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false">
-              <span>Bagaimana jam belajar di SMP Harapan Bangsa?</span>
+              <span data-i18n="faq3_q">Bagaimana jam belajar di SMP Harapan Bangsa?</span>
               <svg class="faq-chevron" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                 <path fill-rule="evenodd"
                   d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
@@ -1223,7 +1225,7 @@
               </svg>
             </button>
             <div class="faq-answer">
-              <div class="faq-answer-inner">
+              <div class="faq-answer-inner" data-i18n="faq3_a">
                 Kegiatan belajar mengajar berlangsung dari hari Senin sampai Jumat, dimulai pukul 07.00 WIB dan berakhir pukul 14.50 WIB. Sebelum KBM dimulai, diadakan saat teduh harian di masing-masing kelas.
               </div>
             </div>
@@ -1231,7 +1233,7 @@
 
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false">
-              <span>Bagaimana prosedur pendaftaran murid baru (SPMB)?</span>
+              <span data-i18n="faq4_q">Bagaimana prosedur pendaftaran murid baru (SPMB)?</span>
               <svg class="faq-chevron" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                 <path fill-rule="evenodd"
                   d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
@@ -1239,7 +1241,7 @@
               </svg>
             </button>
             <div class="faq-answer">
-              <div class="faq-answer-inner">
+              <div class="faq-answer-inner" data-i18n="faq4_a">
                 Pendaftaran diawali dengan mengisi formulir Google Form resmi melalui tombol "SPMB Online" pada website ini. Setelah formulir masuk, panitia penerimaan akan menghubungi nomor WhatsApp orang tua untuk verifikasi berkas dan jadwal konsultasi.
               </div>
             </div>
@@ -1247,7 +1249,7 @@
 
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false">
-              <span>Apakah orang tua dapat berkunjung untuk melihat lingkungan sekolah?</span>
+              <span data-i18n="faq5_q">Apakah orang tua dapat berkunjung untuk melihat lingkungan sekolah?</span>
               <svg class="faq-chevron" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                 <path fill-rule="evenodd"
                   d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
@@ -1255,7 +1257,7 @@
               </svg>
             </button>
             <div class="faq-answer">
-              <div class="faq-answer-inner">
+              <div class="faq-answer-inner" data-i18n="faq5_a">
                 Tentu. Orang tua calon siswa sangat dipersilakan berkunjung pada hari kerja (Senin sampai Jumat, 08.00 s.d. 14.00 WIB) dengan menghubungi panitia SPMB terlebih dahulu melalui WhatsApp agar dapat dipandu berkeliling kampus.
               </div>
             </div>
@@ -1268,9 +1270,9 @@
     <section class="section" id="kontak">
       <div class="container">
         <div class="section-header">
-          <span class="section-label">Sekretariat &amp; Layanan</span>
-          <h2 class="section-title">Hubungi SMP Harapan Bangsa</h2>
-          <p class="section-desc">
+          <span class="section-label" data-i18n="sec_contact_label">Sekretariat &amp; Layanan</span>
+          <h2 class="section-title" data-i18n="sec_contact_title">Hubungi SMP Harapan Bangsa</h2>
+          <p class="section-desc" data-i18n="sec_contact_desc">
             Informasi alamat, nomor telepon kantor, dan kanal komunikasi resmi SMP Harapan Bangsa Karawang.
           </p>
         </div>
@@ -1278,16 +1280,16 @@
         <div class="contact-grid">
           <div class="contact-info-list">
             <div class="contact-card-box">
-              <span class="contact-label-title">Alamat Kampus Sekolah</span>
-              <div class="contact-value-text">
+              <span class="contact-label-title" data-i18n="contact_addr_label">Alamat Kampus Sekolah</span>
+              <div class="contact-value-text" data-i18n-html="contact_addr_val">
                 <strong>SMP Harapan Bangsa Karawang</strong><br>
                 Jln. R.E Martadinata No. 8, RT 02/RW 05, Kelurahan Adiarsa Barat, Kecamatan Karawang Barat, Kabupaten Karawang, Jawa Barat 41311
               </div>
             </div>
 
             <div class="contact-card-box">
-              <span class="contact-label-title">Kontak Resmi &amp; Pelayanan</span>
-              <div class="contact-value-text">
+              <span class="contact-label-title" data-i18n="contact_channels_label">Kontak Resmi &amp; Pelayanan</span>
+              <div class="contact-value-text" data-i18n-html="contact_channels_val">
                 Telepon Kantor TU: <a href="tel:02678407123" style="color: inherit; font-weight: 700;">(0267) 8407123</a><br>
                 WhatsApp Layanan SPMB: <a href="https://wa.me/6282311775434" target="_blank" rel="noopener noreferrer" style="color: var(--color-primary); font-weight: 700;">0823-1177-5434 (Ibu Diana) &rarr;</a><br>
                 Email Resmi: <a href="mailto:smpharapanbangsa949@gmail.com" style="color: inherit; text-decoration: underline;">smpharapanbangsa949@gmail.com</a>
@@ -1295,8 +1297,8 @@
             </div>
 
             <div class="contact-card-box">
-              <span class="contact-label-title">Waktu Layanan Tata Usaha</span>
-              <div class="contact-value-text">
+              <span class="contact-label-title" data-i18n="contact_hours_label">Waktu Layanan Tata Usaha</span>
+              <div class="contact-value-text" data-i18n-html="contact_hours_val">
                 Senin s.d. Jumat: 07.00 - 15.00 WIB (Sabtu, Minggu &amp; Hari Libur Nasional: Tutup)
               </div>
             </div>
@@ -1306,8 +1308,8 @@
           <div class="map-card-box">
             <div class="map-header">
               <div>
-                <h3 class="map-title">Peta Lokasi Kampus SMP</h3>
-                <p class="map-subtitle">
+                <h3 class="map-title" data-i18n="map_title">Peta Lokasi Kampus SMP</h3>
+                <p class="map-subtitle" data-i18n="map_subtitle">
                   Jln. R.E Martadinata No. 8, Adiarsa Barat, Karawang Barat 41311
                 </p>
               </div>
@@ -1318,13 +1320,13 @@
                   <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
                   <circle cx="12" cy="9" r="2.5" />
                 </svg>
-                Buka di Google Maps
+                <span data-i18n="map_btn">Buka di Google Maps</span>
               </a>
             </div>
             <div class="map-frame-wrapper">
               <iframe src="https://maps.google.com/maps?q=-6.3155209,107.304646&amp;hl=id&amp;z=16&amp;output=embed"
                 width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade" title="Peta Lokasi SMP Harapan Bangsa Karawang">
+                referrerpolicy="no-referrer-when-downgrade" title="Peta Lokasi SMP Harapan Bangsa Karawang" data-i18n-title="map_iframe_title">
               </iframe>
             </div>
           </div>
@@ -1339,11 +1341,11 @@
       <div class="footer-top-grid">
         <div>
           <div class="footer-brand-title">SMP Harapan Bangsa Karawang</div>
-          <p class="footer-brand-desc">
+          <p class="footer-brand-desc" data-i18n="footer_brand_desc">
             Satuan Pendidikan Menengah Pertama berlandaskan budi pekerti luhur, penalaran kritis ilmiah, kecakapan teknologi, dan karakter kasih yang siap mencetak generasi unggul berprestasi.
           </p>
           <div class="footer-jenjang-socials">
-            <div class="footer-subheading">Media Sosial Resmi SMP:</div>
+            <div class="footer-subheading" data-i18n="footer_socials_heading">Media Sosial Resmi SMP:</div>
             <div class="jenjang-social-chips">
               <a href="https://www.instagram.com/smpharapanbangsa?stkn=Z285eXR5M2R0OXFt" target="_blank"
                 rel="noopener noreferrer" class="social-chip chip-instagram"
@@ -1378,53 +1380,53 @@
         </div>
 
         <div>
-          <div class="footer-column-heading">Navigasi Halaman</div>
+          <div class="footer-column-heading" data-i18n="footer_col_nav">Navigasi Halaman</div>
           <ul class="footer-nav-list">
-            <li><a href="#beranda" class="footer-nav-link">Beranda</a></li>
-            <li><a href="#tentang" class="footer-nav-link">Tentang SMP</a></li>
-            <li><a href="#visimisi" class="footer-nav-link">Visi &amp; Misi</a></li>
-            <li><a href="#akademik" class="footer-nav-link">Kurikulum &amp; STEM</a></li>
-            <li><a href="#guru" class="footer-nav-link">Dewan Guru</a></li>
-            <li><a href="#fasilitas" class="footer-nav-link">Fasilitas Belajar</a></li>
-            <li><a href="#kegiatan" class="footer-nav-link">Kesiswaan &amp; OSIS</a></li>
-            <li><a href="#prestasi" class="footer-nav-link">Prestasi Siswa</a></li>
-            <li><a href="galeri.html" class="footer-nav-link">Galeri Foto</a></li>
+            <li><a href="#beranda" class="footer-nav-link" data-i18n="footer_nav_home">Beranda</a></li>
+            <li><a href="#tentang" class="footer-nav-link" data-i18n="footer_nav_about">Tentang SMP</a></li>
+            <li><a href="#visimisi" class="footer-nav-link" data-i18n="footer_nav_vision">Visi &amp; Misi</a></li>
+            <li><a href="#akademik" class="footer-nav-link" data-i18n="footer_nav_academic">Kurikulum &amp; STEM</a></li>
+            <li><a href="#guru" class="footer-nav-link" data-i18n="footer_nav_teachers">Dewan Guru</a></li>
+            <li><a href="#fasilitas" class="footer-nav-link" data-i18n="footer_nav_facilities">Fasilitas Belajar</a></li>
+            <li><a href="#kegiatan" class="footer-nav-link" data-i18n="footer_nav_activities">Kesiswaan &amp; OSIS</a></li>
+            <li><a href="#prestasi" class="footer-nav-link" data-i18n="footer_nav_achievements">Prestasi Siswa</a></li>
+            <li><a href="galeri.html" class="footer-nav-link" data-i18n="footer_nav_gallery">Galeri Foto</a></li>
           </ul>
         </div>
 
         <div>
-          <div class="footer-column-heading">Pendaftaran &amp; SPMB</div>
+          <div class="footer-column-heading" data-i18n="footer_col_spmb">Pendaftaran &amp; SPMB</div>
           <ul class="footer-nav-list">
-            <li><a href="#pendaftaran" class="footer-nav-link">Alur &amp; Jadwal SPMB</a></li>
+            <li><a href="#pendaftaran" class="footer-nav-link" data-i18n="footer_spmb_flow">Alur &amp; Jadwal SPMB</a></li>
             <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSewWRQmo5NNYKYFYo50hCGS_VIiKhXM3bNNrOB65REKsDGXdQ/viewform?usp=dialog"
                 target="_blank" rel="noopener noreferrer" class="footer-nav-link" data-action="register-smp"
-                data-jenjang="SMP">Google Form SPMB SMP <span class="admin-tag-mini"
-                  style="background-color: rgba(16,185,129,0.2); color: #34d399; border-color: rgba(16,185,129,0.4);">Resmi</span></a></li>
-            <li><a href="https://wa.me/6282311775434" target="_blank" rel="noopener noreferrer" class="footer-nav-link">WhatsApp SPMB: 0823 1177 5434</a></li>
-            <li><a href="#faq" class="footer-nav-link">Tanya Jawab (FAQ)</a></li>
+                data-jenjang="SMP"><span data-i18n="footer_spmb_gform">Google Form SPMB SMP</span> <span class="admin-tag-mini"
+                  style="background-color: rgba(16,185,129,0.2); color: #34d399; border-color: rgba(16,185,129,0.4);" data-i18n="footer_spmb_official">Resmi</span></a></li>
+            <li><a href="https://wa.me/6282311775434" target="_blank" rel="noopener noreferrer" class="footer-nav-link" data-i18n="footer_spmb_wa">WhatsApp SPMB: 0823 1177 5434</a></li>
+            <li><a href="#faq" class="footer-nav-link" data-i18n="footer_spmb_faq">Tanya Jawab (FAQ)</a></li>
           </ul>
         </div>
 
         <div>
-          <div class="footer-column-heading">Kontak Resmi SMP</div>
+          <div class="footer-column-heading" data-i18n="footer_col_contact">Kontak Resmi SMP</div>
           <ul class="footer-nav-list">
-            <li class="footer-nav-link">Jln. R.E Martadinata No. 8, RT 02/RW 05, Kel. Adiarsa Barat, Kec. Karawang Barat, Kab. Karawang 41311</li>
-            <li class="footer-nav-link">Telepon Kantor TU: <a href="tel:02678407123" style="color: inherit; text-decoration: underline;">(0267) 8407123</a></li>
-            <li class="footer-nav-link">WhatsApp SPMB: <a href="https://wa.me/6282311775434" target="_blank" rel="noopener noreferrer" style="color: #34d399; font-weight: 700;">0823-1177-5434</a></li>
+            <li class="footer-nav-link" data-i18n="footer_contact_addr">Jln. R.E Martadinata No. 8, RT 02/RW 05, Kel. Adiarsa Barat, Kec. Karawang Barat, Kab. Karawang 41311</li>
+            <li class="footer-nav-link"><span data-i18n="footer_contact_phone_lbl">Telepon Kantor TU:</span> <a href="tel:02678407123" style="color: inherit; text-decoration: underline;">(0267) 8407123</a></li>
+            <li class="footer-nav-link"><span data-i18n="footer_contact_wa_lbl">WhatsApp SPMB:</span> <a href="https://wa.me/6282311775434" target="_blank" rel="noopener noreferrer" style="color: #34d399; font-weight: 700;">0823-1177-5434</a></li>
             <li class="footer-nav-link">
-              <strong>Email Satuan:</strong><br>
+              <strong data-i18n="footer_contact_email_lbl">Email Satuan:</strong><br>
               <a href="mailto:smpharapanbangsa949@gmail.com" class="email-val-link">smpharapanbangsa949@gmail.com</a>
             </li>
-            <li class="footer-nav-link">Senin - Jumat: 07.00 - 15.00 WIB</li>
+            <li class="footer-nav-link" data-i18n="footer_contact_hours">Senin - Jumat: 07.00 - 15.00 WIB</li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom-bar">
-        <div>
+        <div data-i18n="footer_copyright">
           &copy; 2026 SMP Harapan Bangsa Karawang. Seluruh hak cipta dilindungi.
         </div>
-        <div>
+        <div data-i18n="footer_npsn_note">
           Satuan Pendidikan Menengah Pertama (NPSN: 70062135)
         </div>
       </div>
@@ -1433,7 +1435,7 @@
 
   <!-- Floating Utilities (Back To Top) -->
   <div class="floating-actions">
-    <button class="back-to-top-btn" id="backToTop" aria-label="Kembali ke atas halaman">
+    <button class="back-to-top-btn" id="backToTop" aria-label="Kembali ke atas halaman" data-i18n-aria="back_to_top_aria">
       <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
         <path fill-rule="evenodd"
           d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"
@@ -1448,23 +1450,23 @@
     <div class="modal-content">
       <div class="modal-header">
         <div>
-          <span class="modal-category" id="activityModalCategory">Kategori Aktivitas</span>
-          <h3 class="modal-title" id="activityModalTitle">Judul Kegiatan Siswa</h3>
+          <span class="modal-category" id="activityModalCategory" data-i18n="modal_cat_default">Kategori Aktivitas</span>
+          <h3 class="modal-title" id="activityModalTitle" data-i18n="modal_title_default">Judul Kegiatan Siswa</h3>
         </div>
-        <button class="modal-close" id="activityModalClose" aria-label="Tutup jendela informasi">&times;</button>
+        <button class="modal-close" id="activityModalClose" aria-label="Tutup jendela informasi" data-i18n-aria="modal_close_aria">&times;</button>
       </div>
       <div class="modal-body">
-        <p class="modal-desc" id="activityModalDesc">Deskripsi kegiatan pembelajaran dan kesiswaan SMP Harapan Bangsa.</p>
+        <p class="modal-desc" id="activityModalDesc" data-i18n="modal_desc_default">Deskripsi kegiatan pembelajaran dan kesiswaan SMP Harapan Bangsa.</p>
         <div class="modal-points-wrapper">
-          <h4 class="modal-points-title">Poin Utama Aktivitas:</h4>
+          <h4 class="modal-points-title" data-i18n="modal_points_title">Poin Utama Aktivitas:</h4>
           <ul class="modal-points-list" id="activityModalPoints">
             <li>Memuat informasi aktivitas siswa...</li>
           </ul>
         </div>
       </div>
       <div class="modal-footer">
-        <button class="btn btn-secondary btn-sm" id="activityModalDismiss">Tutup</button>
-        <a href="#pendaftaran" class="btn btn-primary btn-sm" id="activityModalCta">Daftar SPMB SMP</a>
+        <button class="btn btn-secondary btn-sm" id="activityModalDismiss" data-i18n="modal_close_btn">Tutup</button>
+        <a href="#pendaftaran" class="btn btn-primary btn-sm" id="activityModalCta" data-i18n="modal_cta_spmb">Daftar SPMB SMP</a>
       </div>
     </div>
   </div>
@@ -1472,16 +1474,16 @@
   <!-- JavaScript -->
   <script src="js/script.js"></script>
   <!-- Lightbox Modal for Gallery Images -->
-  <div class="modal" id="galleryModal" role="dialog" aria-modal="true" aria-label="Penampil Foto Layar Penuh">
+  <div class="modal" id="galleryModal" role="dialog" aria-modal="true" aria-label="Penampil Foto Layar Penuh" data-i18n-aria="gal_modal_aria">
     <div class="modal-backdrop"></div>
     <div class="modal-content modal-content-media">
-      <button class="modal-close" id="galleryModalClose" aria-label="Tutup penampil foto">&times;</button>
+      <button class="modal-close" id="galleryModalClose" aria-label="Tutup penampil foto" data-i18n-aria="gal_modal_close_aria">&times;</button>
       <div class="modal-media-wrap">
         <img src="" alt="" id="galleryModalImg" class="modal-media-img">
       </div>
       <div class="modal-caption-wrap">
-        <h3 id="galleryModalTitle" class="modal-caption-title">Judul Foto</h3>
-        <p id="galleryModalDesc" class="modal-caption-desc">Deskripsi foto</p>
+        <h3 id="galleryModalTitle" class="modal-caption-title" data-i18n="gal_modal_title_default">Judul Foto</h3>
+        <p id="galleryModalDesc" class="modal-caption-desc" data-i18n="gal_modal_desc_default">Deskripsi foto</p>
       </div>
     </div>
   </div>
